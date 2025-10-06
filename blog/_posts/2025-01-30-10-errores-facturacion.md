@@ -254,8 +254,7 @@ Fecha de vencimiento: 15/02/2025  ← ¡Solo 15 días!
 ## 🆘 Recursos de Ayuda
 
 ### **Formación:**
-- **Guía completa:** [Facturación para Autónomos](/guias/alta-facturas-emitidas.html)
-- **Vídeos:** [Canal YouTube Fáctico](https://youtube.com/facticoapp)
+- **Guía completa:** [Guías Formativas](https://pacomedina1959.github.io/facticoapp_website/#guias)
 - **Webinars:** Consulta fechas en el blog
 
 ### **Software:**

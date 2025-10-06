@@ -202,8 +202,7 @@ RESULTADO: 3.000
 ## 🆘 Recursos de Ayuda
 
 ### **Formación:**
-- **Curso básico:** [Contabilidad para Autónomos](/guias/contabilidad-basica.html)
-- **Vídeos:** [Canal YouTube Fáctico](https://youtube.com/facticoapp)
+- **Guía completa:** [Guías Formativas](https://pacomedina1959.github.io/facticoapp_website/#guias)
 - **Webinars:** Consulta fechas en el blog
 
 ### **Software:**
