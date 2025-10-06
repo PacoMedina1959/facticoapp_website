@@ -1,0 +1,24 @@
+# Configuración principal del sitio
+title: "Fáctico"
+description: "Facturación con IA para autónomos y PYMES"
+url: "https://pacomedina1959.github.io"
+baseurl: "/facticoapp_website"
+
+# Excluir el subdirectorio blog de procesamiento Jekyll en la raíz
+exclude:
+  - blog/_posts
+  - blog/_layouts
+  - blog/_includes
+  - blog/_config.yml
+  - blog/Gemfile
+  - blog/Gemfile.lock
+  - blog/vendor
+  - blog/.bundle
+  - blog/.jekyll-cache
+
+# No procesar estos archivos
+keep_files:
+  - blog
+
+# Configuración básica
+markdown: kramdown
