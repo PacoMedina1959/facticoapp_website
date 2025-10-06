@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos de Configuración | Fáctico</title>
+    <meta name="description" content="Vídeos formativos para configurar Fáctico. Aprende a configurar tu cuenta, datos fiscales, tipos impositivos y más.">
+    <meta name="keywords" content="configuración, vídeos, tutoriales, datos fiscales, tipos impositivos, autónomos">
+    <link rel="canonical" href="https://facticoapp.es/guias/configuracion">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .guide-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .guide-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .guide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+        .guide-meta {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Tabs Styles */
+        .tabs-container {
+            margin: 40px 0;
+        }
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-light);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .tab-button:hover {
+            color: var(--primary-color);
+            background: #f8f9fa;
+        }
+        .tab-button.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background: #f8f9fa;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Video Grid */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .video-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-button {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        .video-card:hover .play-button {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+        .video-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .video-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .video-available {
+            background: #e8f5e8;
+            color: var(--accent-color);
+        }
+        .video-coming-soon {
+            background: #fff3e0;
+            color: #ff9800;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tabs-nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .tab-button {
+                text-align: left;
+                padding: 12px 20px;
+            }
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit;">
+                        <h1>Fáctico</h1>
+                        <span class="nav-tagline">Facturación con IA</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html#demo" class="nav-link">Demo</a>
+                    <a href="../precios.html" class="nav-link">Precios</a>
+                    <a href="../index.html#guias" class="nav-link">Guías</a>
+                    <a href="../blog/" class="nav-link">Blog</a>
+                    <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Usar GRATIS</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Guide Content -->
+    <main class="guide-content">
+        <a href="../index.html#guias" class="back-link">
+            ← Volver a Guías
+        </a>
+
+        <div class="guide-header">
+            <h1 class="guide-title">Vídeos de configuración</h1>
+            <p class="guide-meta">Aprende a configurar Fáctico con vídeos paso a paso | Actualizado: Enero 2025</p>
+        </div>
+
+        <!-- Tabs Container -->
+        <div class="tabs-container">
+            <div class="tabs-nav">
+                <button class="tab-button active" data-tab="directorio">DIRECTORIO</button>
+                <button class="tab-button" data-tab="datos-empresa">DATOS EMPRESA</button>
+                <button class="tab-button" data-tab="tipos-impositivos">TIPOS IMPOSITIVOS</button>
+                <button class="tab-button" data-tab="diseno">DISEÑO</button>
+                <button class="tab-button" data-tab="pdf-mail">PDF-MAIL</button>
+                <button class="tab-button" data-tab="series-facturacion">SERIES DE FACTURACIÓN</button>
+                <button class="tab-button" data-tab="metodos-cobro">MÉTODOS DE COBRO</button>
+                <button class="tab-button" data-tab="contador-entradas">CONTADOR ENTRADAS</button>
+                <button class="tab-button" data-tab="saldo-inicial-iva">SALDO INICIAL IVA</button>
+                <button class="tab-button" data-tab="facturae">FACTURAE</button>
+                <button class="tab-button" data-tab="verifactu">VERIFACTU</button>
+                <button class="tab-button" data-tab="contabilidad">CONTABILIDAD</button>
+            </div>
+
+            <!-- Tab: Directorio -->
+            <div class="tab-content active" id="directorio">
+                <h2>Configuración del Directorio</h2>
+                <p>Gestiona el directorio de trabajo, rutas de archivos y configuración de backups.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Directorio de Trabajo</h3>
+                            <p>Configurar rutas de archivos y directorio principal</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configuración de Backup</h3>
+                            <p>Configurar backups automáticos y exportación NDJSON</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Workspace Explorer</h3>
+                            <p>Explorar y gestionar archivos del workspace</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Inicializar Workspace</h3>
+                            <p>Crear y configurar un nuevo workspace desde cero</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Datos Empresa -->
+            <div class="tab-content" id="datos-empresa">
+                <h2>Datos de la Empresa</h2>
+                <p>Configura tus datos fiscales y de contacto que aparecerán en las facturas.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Datos Fiscales Básicos</h3>
+                            <p>Configurar nombre, NIF, dirección y datos de contacto</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:10</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Datos Bancarios</h3>
+                            <p>Añadir cuenta bancaria para recibir pagos</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Logo y Marca</h3>
+                            <p>Subir logo y personalizar colores corporativos</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Actividad Económica</h3>
+                            <p>Configurar CNAE y descripción de la actividad</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Tipos Impositivos -->
+            <div class="tab-content" id="tipos-impositivos">
+                <h2>Tipos Impositivos</h2>
+                <p>Configura los tipos de IVA e IRPF que usas habitualmente en tu actividad.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">7:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar IVA</h3>
+                            <p>Establecer tipos de IVA general, reducido y exento</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:40</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar IRPF</h3>
+                            <p>Configurar retenciones de IRPF para profesionales</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Casos Especiales</h3>
+                            <p>IVA intracomunitario, inversión del sujeto pasivo</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Validar Configuración</h3>
+                            <p>Verificar que los tipos impositivos están correctos</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Numeración -->
+            <div class="tab-content" id="numeracion">
+                <h2>Numeración de Facturas</h2>
+                <p>Configura el formato de numeración para tus facturas emitidas.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:50</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Formato de Numeración</h3>
+                            <p>Configurar formato F-2024-001, 2024/001, etc.</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:25</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Series Múltiples</h3>
+                            <p>Crear diferentes series (F-2024, A-2024, etc.)</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:35</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Numeración Automática</h3>
+                            <p>Configurar numeración correlativa automática</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Diseño -->
+            <div class="tab-content" id="diseno">
+                <h2>Configuración de Diseño</h2>
+                <p>Personaliza el diseño y apariencia de tus facturas y documentos.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">8:10</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Diseño Personalizado</h3>
+                            <p>Personalizar colores, fuentes y layout de facturas</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Logo y Marca</h3>
+                            <p>Configurar logo, colores corporativos y elementos de marca</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Plantillas Múltiples</h3>
+                            <p>Crear diferentes plantillas para diferentes tipos de documento</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: PDF-MAIL -->
+            <div class="tab-content" id="pdf-mail">
+                <h2>Configuración PDF y Email</h2>
+                <p>Configura la generación de PDFs y el envío automático de emails.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">7:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configuración PDF</h3>
+                            <p>Configurar formato, calidad y opciones de PDF</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configuración Email</h3>
+                            <p>Configurar servidor SMTP y plantillas de email</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:40</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Envió Automático</h3>
+                            <p>Configurar envío automático de facturas por email</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Series de Facturación -->
+            <div class="tab-content" id="series-facturacion">
+                <h2>Series de Facturación</h2>
+                <p>Configura las series de numeración para tus facturas y documentos.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Crear Series</h3>
+                            <p>Crear diferentes series de facturación (F-2024, A-2024, etc.)</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Numeración Automática</h3>
+                            <p>Configurar numeración correlativa automática</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Gestionar Series</h3>
+                            <p>Editar, eliminar y reorganizar series existentes</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Métodos de Cobro -->
+            <div class="tab-content" id="metodos-cobro">
+                <h2>Métodos de Cobro</h2>
+                <p>Configura los métodos de pago y cobro para tus facturas.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Métodos</h3>
+                            <p>Configurar transferencia, efectivo, tarjeta, etc.</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Datos Bancarios</h3>
+                            <p>Configurar datos bancarios para transferencias</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:00</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Plazos de Pago</h3>
+                            <p>Configurar plazos de pago y condiciones</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Contador Entradas -->
+            <div class="tab-content" id="contador-entradas">
+                <h2>Contador de Entradas</h2>
+                <p>Configura el contador de entradas para el registro de facturas recibidas.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Contador</h3>
+                            <p>Configurar numeración para facturas recibidas</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Formato Numeración</h3>
+                            <p>Personalizar formato de numeración de entradas</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Saldo Inicial IVA -->
+            <div class="tab-content" id="saldo-inicial-iva">
+                <h2>Saldo Inicial IVA</h2>
+                <p>Configura el saldo inicial de IVA para el inicio del ejercicio.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Saldo Inicial</h3>
+                            <p>Establecer saldo inicial de IVA repercutido y soportado</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Importar desde Anterior</h3>
+                            <p>Importar saldos desde ejercicio anterior</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Facturae -->
+            <div class="tab-content" id="facturae">
+                <h2>Configuración Facturae</h2>
+                <p>Configura el certificado digital y parámetros para facturas a Administraciones Públicas.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">7:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Subir Certificado Digital</h3>
+                            <p>Subir certificado .p12/.pfx y configurar contraseña</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Versión Facturae</h3>
+                            <p>Establecer versión 3.2.1 y parámetros de firma</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Firma B2B</h3>
+                            <p>Configurar firma automática B2B y modo EPES</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar FACe</h3>
+                            <p>Configurar envío real a FACe y endpoint</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Declaración Responsable</h3>
+                            <p>Completar y firmar la declaración responsable</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Probar Certificado</h3>
+                            <p>Probar y validar el certificado digital</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: VeriFactu -->
+            <div class="tab-content" id="verifactu">
+                <h2>Configuración VeriFactu</h2>
+                <p>Configura el envío automático de facturas a la AEAT y gestión de registros.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">6:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Envío Automático</h3>
+                            <p>Activar envío automático a AEAT y configurar endpoint</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Endpoint AEAT</h3>
+                            <p>Configurar URL de producción y preproducción</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Modo Sandbox</h3>
+                            <p>Configurar modo de pruebas y testing</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Libro de Registros</h3>
+                            <p>Gestionar libro de registros encadenados VeriFactu</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:50</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Envíos VeriFactu</h3>
+                            <p>Revisar y gestionar envíos a la AEAT</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Guardar Configuración</h3>
+                            <p>Guardar configuración VeriFactu y aplicar cambios</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Contabilidad -->
+            <div class="tab-content" id="contabilidad">
+                <h2>Configuración Contabilidad</h2>
+                <p>Gestiona la contabilidad y utilidades de mantenimiento de asientos.</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">5:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Renumerar Asientos</h3>
+                            <p>Renumerar asientos contables por año y ámbito</p>
+                            <span class="video-status video-available">Disponible</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Simular Renumeración</h3>
+                            <p>Simular renumeración antes de aplicar cambios</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">3:45</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Configurar Ámbito</h3>
+                            <p>Seleccionar ámbito de renumeración (usuario/empresa)</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="play-button">▶</div>
+                            <div class="video-duration">4:20</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Seleccionar Año</h3>
+                            <p>Configurar año para la renumeración de asientos</p>
+                            <span class="video-status video-coming-soon">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Próximos pasos -->
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 40px 0; text-align: center;">
+            <h2 style="color: var(--text-color); margin-bottom: 20px;">¿Necesitas ayuda con la configuración?</h2>
+            <p style="color: var(--text-light); margin-bottom: 25px;">Si tienes dudas o necesitas soporte personalizado, estamos aquí para ayudarte.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://facticoapp.es" class="btn btn-primary" target="_blank">
+                    🚀 Empezar Configuración GRATIS
+                </a>
+                <a href="mailto:administrador@facticoapp.es" class="btn btn-secondary">
+                    📧 Contactar Soporte
+                </a>
+            </div>
+        </div>
+
+        <!-- Recursos adicionales -->
+        <div style="margin: 40px 0;">
+            <h2 style="text-align: center; margin-bottom: 30px;">Recursos adicionales</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <a href="alta-facturas-emitidas.html" style="display: block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-decoration: none; transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+                    <div style="font-size: 2rem; margin-bottom: 10px; text-align: center;">📤</div>
+                    <h4 style="color: var(--text-color); margin-bottom: 8px; text-align: center;">Facturas Emitidas</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; text-align: center; margin: 0;">Vídeos de facturación</p>
+                </a>
+                <a href="alta-facturas-recibidas.html" style="display: block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-decoration: none; transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+                    <div style="font-size: 2rem; margin-bottom: 10px; text-align: center;">📥</div>
+                    <h4 style="color: var(--text-color); margin-bottom: 8px; text-align: center;">Facturas Recibidas</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; text-align: center; margin: 0;">Registrar gastos e IVA</p>
+                </a>
+                <a href="verifactu-2025.html" style="display: block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-decoration: none; transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+                    <div style="font-size: 2rem; margin-bottom: 10px; text-align: center;">📋</div>
+                    <h4 style="color: var(--text-color); margin-bottom: 8px; text-align: center;">VeriFactu 2025</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; text-align: center; margin: 0;">Nuevo sistema AEAT</p>
+                </a>
+                <a href="../blog/" style="display: block; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-decoration: none; transition: all 0.3s ease; border: 1px solid #e0e0e0;">
+                    <div style="font-size: 2rem; margin-bottom: 10px; text-align: center;">📝</div>
+                    <h4 style="color: var(--text-color); margin-bottom: 8px; text-align: center;">Blog</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; text-align: center; margin: 0;">Artículos y consejos</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fáctico</h3>
+                    <p>Facturación con IA para autónomos</p>
+                    <div class="footer-contact">
+                        <p>📧 administrador@facticoapp.es</p>
+                        <p>🌐 facticoapp.es</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="../index.html#demo">Demo</a></li>
+                        <li><a href="../precios.html">Precios</a></li>
+                        <li><a href="https://facticoapp.es" target="_blank">Usar app</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="../index.html#guias">Guías</a></li>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacidad</a></li>
+                        <li><a href="#terms">Términos</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fáctico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

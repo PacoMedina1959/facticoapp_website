@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriFactu 2025: Guía Completa para Autónomos | Fáctico</title>
+    <meta name="description" content="Guía completa de VeriFactu 2025 para autónomos. Qué es, quién debe usarlo, cómo implementarlo y sanciones. Todo lo que necesitas saber.">
+    <meta name="keywords" content="VeriFactu, AEAT, facturación, autónomos, 2025, normativa, sanciones">
+    <link rel="canonical" href="https://facticoapp.es/guias/verifactu-2025">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .guide-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .guide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+        .guide-meta {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .guide-section {
+            margin-bottom: 40px;
+        }
+        .guide-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .guide-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 30px 0 15px 0;
+        }
+        .guide-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        .guide-section ul, .guide-section ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        .guide-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .success-box {
+            background: #e8f5e8;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .video-embed {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .video-embed iframe {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit;">
+                        <h1>Fáctico</h1>
+                        <span class="nav-tagline">Facturación con IA</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html#demo" class="nav-link">Demo</a>
+                    <a href="../precios.html" class="nav-link">Precios</a>
+                    <a href="../index.html#guias" class="nav-link">Guías</a>
+                    <a href="../blog/" class="nav-link">Blog</a>
+                    <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Usar GRATIS</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Guide Content -->
+    <main class="guide-content">
+        <a href="../index.html#guias" class="back-link">
+            ← Volver a Guías
+        </a>
+
+        <div class="guide-header">
+            <h1 class="guide-title">VeriFactu 2025: Guía Completa para Autónomos</h1>
+            <p class="guide-meta">Actualizado: Octubre 2025 | Tiempo de lectura: 8 minutos</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>¿Qué es VeriFactu?</h2>
+            <p>VeriFactu es el nuevo sistema de facturación electrónica obligatorio en España, establecido por el Real Decreto 1007/2023. Es un sistema que permite a la AEAT verificar la autenticidad e integridad de las facturas emitidas por empresas y autónomos.</p>
+            
+            <div class="highlight-box">
+                <strong>Objetivo principal:</strong> Combatir el fraude fiscal mediante la verificación en tiempo real de las facturas emitidas y recibidas.
+            </div>
+
+            <p>El sistema funciona mediante registros encadenados criptográficamente, donde cada factura se vincula con la anterior mediante un hash SHA-256, creando una cadena inmutable de registros.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>¿Quién debe usar VeriFactu?</h2>
+            
+            <h3>Obligatorio para:</h3>
+            <ul>
+                <li><strong>Empresas y autónomos</strong> que facturen más de 6.000€ anuales</li>
+                <li><strong>Profesionales</strong> en estimación directa (régimen general)</li>
+                <li><strong>Empresarios</strong> en estimación objetiva (módulos) con facturación superior a 6.000€</li>
+                <li><strong>Actividades económicas</strong> que requieran facturación</li>
+            </ul>
+
+            <h3>Exentos:</h3>
+            <ul>
+                <li>Autónomos con facturación inferior a 6.000€ anuales</li>
+                <li>Actividades exentas de IVA (salvo excepciones)</li>
+                <li>Operaciones no sujetas a facturación</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Importante:</strong> Aunque estés exento, es recomendable implementar VeriFactu si planeas crecer o si trabajas con empresas que sí están obligadas.
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>¿Cuándo entra en vigor?</h2>
+            
+            <h3>Calendario de implantación actualizado:</h3>
+            <ul>
+                <li><strong>29 de julio de 2025:</strong> Fin del plazo para desarrolladores de software</li>
+                <li><strong>1 de enero de 2026:</strong> Empresas (todas las empresas)</li>
+                <li><strong>1 de julio de 2026:</strong> Autónomos y comunidades de bienes</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Buenas noticias:</strong> Los autónomos tienen hasta julio de 2026 para implementar VeriFactu.
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>¿Cómo funciona VeriFactu?</h2>
+            
+            <h3>1. Registro de facturas</h3>
+            <p>Cada factura emitida debe registrarse en el sistema VeriFactu con:</p>
+            <ul>
+                <li>Datos del emisor y receptor</li>
+                <li>Importe total y base imponible</li>
+                <li>Fecha de emisión</li>
+                <li>Número de factura</li>
+                <li>Hash criptográfico</li>
+            </ul>
+
+            <h3>2. Cadena de registros</h3>
+            <p>Los registros se encadenan criptográficamente:</p>
+            <ol>
+                <li>Se genera un hash SHA-256 de la factura</li>
+                <li>Se incluye el hash de la factura anterior</li>
+                <li>Se crea un registro único e inmutable</li>
+                <li>Se envía a la AEAT (opcional pero recomendado)</li>
+            </ol>
+
+            <div class="video-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PLACEHOLDER_VIDEO_ID" 
+                        frameborder="0" allowfullscreen>
+                </iframe>
+                <p><em>Vídeo explicativo: Cómo funciona VeriFactu (próximamente)</em></p>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Implementación práctica</h2>
+            
+            <h3>Opciones disponibles:</h3>
+            <ol>
+                <li><strong>Software de facturación compatible</strong> (recomendado)</li>
+                <li><strong>API de la AEAT</strong> (para desarrolladores)</li>
+                <li><strong>Portal web de la AEAT</strong> (manual, no recomendado)</li>
+            </ol>
+
+            <h3>Requisitos técnicos:</h3>
+            <ul>
+                <li>Certificado digital válido</li>
+                <li>Conexión a internet</li>
+                <li>Software compatible con VeriFactu</li>
+                <li>Registro en el sistema de la AEAT</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Con Fáctico:</strong> VeriFactu está completamente integrado. Solo necesitas configurar tu certificado digital y el sistema se encarga de todo automáticamente.
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Sanciones y multas</h2>
+            
+            <h3>Sanciones por incumplimiento de VeriFactu:</h3>
+            <ul>
+                <li><strong>50.000€ fijos:</strong> Por cada ejercicio en que se use software no adaptado a VeriFactu</li>
+                <li><strong>150.000€ fijos:</strong> Para fabricantes de software no certificado (por ejercicio y tipo de software)</li>
+                <li><strong>1.000€ fijos:</strong> Por cada sistema comercializado sin certificado</li>
+            </ul>
+
+            <h3>Requisitos técnicos obligatorios:</h3>
+            <ul>
+                <li>Registro secuencial de cada operación</li>
+                <li>Generación de hash criptográfico único</li>
+                <li>Encadenamiento de registros mediante hash</li>
+                <li>Código QR estandarizado en facturas</li>
+                <li>Capacidad de remisión telemática a la AEAT</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Importante:</strong> Las sanciones son muy elevadas. Es fundamental usar software certificado y adaptado a VeriFactu.
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Ventajas de VeriFactu</h2>
+            
+            <h3>Para el autónomo:</h3>
+            <ul>
+                <li>Mayor seguridad en las facturas</li>
+                <li>Reducción del fraude</li>
+                <li>Mejor control fiscal</li>
+                <li>Automatización de procesos</li>
+            </ul>
+
+            <h3>Para la AEAT:</h3>
+            <ul>
+                <li>Control en tiempo real</li>
+                <li>Detección de fraudes</li>
+                <li>Mejor recaudación</li>
+                <li>Reducción de inspecciones</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>Casos prácticos</h2>
+            
+            <h3>Caso 1: Autónomo con facturación de 50.000€ anuales</h3>
+            <p><strong>Situación:</strong> María es consultora y factura unos 4.000€ mensuales.</p>
+            <p><strong>Obligación:</strong> Debe implementar VeriFactu antes del 1 de julio de 2026.</p>
+            <p><strong>Solución:</strong> Usar Fáctico con VeriFactu integrado. Solo necesita configurar su certificado digital.</p>
+
+            <h3>Caso 2: Autónomo con facturación de 3.000€ anuales</h3>
+            <p><strong>Situación:</strong> Juan es fontanero y factura poco, pero trabaja para empresas.</p>
+            <p><strong>Obligación:</strong> No está obligado, pero es recomendable.</p>
+            <p><strong>Solución:</strong> Implementar VeriFactu para estar preparado y dar confianza a sus clientes.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>Próximos pasos</h2>
+            
+            <ol>
+                <li><strong>Verifica si estás obligado</strong> según tu facturación anual</li>
+                <li><strong>Obtén un certificado digital</strong> si no lo tienes</li>
+                <li><strong>Elige un software compatible</strong> como Fáctico</li>
+                <li><strong>Configura VeriFactu</strong> en tu software</li>
+                <li><strong>Prueba el sistema</strong> antes de la fecha límite</li>
+                <li><strong>Mantén actualizado</strong> tu software</li>
+            </ol>
+
+            <div class="success-box">
+                <strong>¿Necesitas ayuda?</strong> Fáctico incluye soporte completo para VeriFactu. Contacta con nosotros en administrador@facticoapp.es
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Recursos adicionales</h2>
+            
+            <ul>
+                <li><a href="https://www.agenciatributaria.es/verifactu" target="_blank">Página oficial de VeriFactu (AEAT)</a></li>
+                <li><a href="../guias/modelo-303.html">Guía del Modelo 303</a></li>
+                <li><a href="../blog/">Blog de Fáctico</a></li>
+                <li><a href="https://facticoapp.es" target="_blank">Probar Fáctico GRATIS</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fáctico</h3>
+                    <p>Facturación con IA para autónomos</p>
+                    <div class="footer-contact">
+                        <p>📧 administrador@facticoapp.es</p>
+                        <p>🌐 facticoapp.es</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="../index.html#demo">Demo</a></li>
+                        <li><a href="../precios.html">Precios</a></li>
+                        <li><a href="https://facticoapp.es" target="_blank">Usar app</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="../index.html#guias">Guías</a></li>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacidad</a></li>
+                        <li><a href="#terms">Términos</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fáctico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

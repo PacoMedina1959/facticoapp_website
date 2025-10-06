@@ -1,0 +1,59 @@
+# Jekyll Configuration for Fáctico Blog
+title: "Fáctico Blog"
+description: "Guías, tutoriales y noticias sobre facturación, contabilidad y fiscalidad para autónomos y PYMES"
+baseurl: "/blog"
+url: "https://facticoapp.es"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: Europe/Madrid
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Francisco Medina"
+      category: "Tutorial"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+social:
+  name: Fáctico
+  links:
+    - https://facticoapp.es
+    - mailto:administrador@facticoapp.es
+
+# Navigation
+navigation:
+  - title: "Inicio"
+    url: "/"
+  - title: "App"
+    url: "https://facticoapp.es"
+  - title: "Guías"
+    url: "/guias"
+  - title: "Contacto"
+    url: "mailto:administrador@facticoapp.es"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

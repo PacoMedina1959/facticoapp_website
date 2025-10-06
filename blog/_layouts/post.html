@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<article class="blog-post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <span class="post-date">
+                <i class="fas fa-calendar"></i>
+                {{ page.date | date: "%d de %B de %Y" }}
+            </span>
+            <span class="post-author">
+                <i class="fas fa-user"></i>
+                {{ page.author | default: site.author }}
+            </span>
+            {% if page.category %}
+            <span class="post-category">
+                <i class="fas fa-tag"></i>
+                {{ page.category }}
+            </span>
+            {% endif %}
+        </div>
+        {% if page.description %}
+        <p class="post-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-tags">
+            {% if page.tags %}
+            <h4>Etiquetas:</h4>
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="post-navigation">
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">
+                <i class="fas fa-arrow-left"></i>
+                Volver al blog
+            </a>
+            <a href="https://facticoapp.es" class="btn btn-primary" target="_blank">
+                <i class="fas fa-rocket"></i>
+                Usar Fáctico
+            </a>
+        </div>
+    </footer>
+</article>

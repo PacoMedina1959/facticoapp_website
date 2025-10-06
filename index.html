@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fáctico - Facturación con IA que se instala en tu móvil</title>
+    <meta name="description" content="Escanea tickets, crea facturas y lleva la contabilidad en 15 segundos. IA integrada, VeriFactu completo, PWA instalable. ¡GRATIS!">
+    <meta name="keywords" content="facturación, autónomos, VeriFactu, IA, móvil, contabilidad, PWA">
+    <link rel="canonical" href="https://facticoapp.es">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Fáctico</h1>
+                    <span class="nav-tagline">Facturación con IA</span>
+                </div>
+                        <div class="nav-menu">
+                            <a href="#demo" class="nav-link">Demo</a>
+                            <a href="precios.html" class="nav-link">Precios</a>
+                            <a href="#guias" class="nav-link">Guías</a>
+                            <a href="blog/" class="nav-link">Blog</a>
+                            <a href="#contact" class="nav-link">Contacto</a>
+                            <a href="#sobre-proyecto" class="nav-link" onclick="toggleAbout()">Sobre el Proyecto</a>
+                            <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Usar GRATIS</a>
+                        </div>
+                <button class="nav-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Facturación con <span class="highlight">IA</span> que se instala en tu móvil
+                </h1>
+                <p class="hero-subtitle">
+                    Escanea tickets, crea facturas y lleva la contabilidad en 15 segundos. 
+                    Sin apps nativas, sin complicaciones. <strong>¡Completamente GRATIS!</strong>
+                </p>
+                <div class="hero-cta">
+                    <a href="https://facticoapp.es" class="btn btn-primary" target="_blank">
+                        🚀 Usar GRATIS ahora
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">
+                        📱 Ver demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">segundos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">gratis</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">IA</span>
+                        <span class="stat-label">integrada</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="demo-animation">
+                            <div class="scan-animation">
+                                <div class="scan-line"></div>
+                                <div class="ticket-preview">
+                                    <div class="ticket-content">
+                                        <div class="ticket-header">FERRETERÍA LÓPEZ</div>
+                                        <div class="ticket-line">Martillo 15,80€</div>
+                                        <div class="ticket-line">Tornillos 3,20€</div>
+                                        <div class="ticket-total">TOTAL: 19,00€</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow">↓</div>
+                            <div class="invoice-preview">
+                                <div class="invoice-header">FACTURA F-2024-001</div>
+                                <div class="invoice-line">Martillo 15,80€</div>
+                                <div class="invoice-line">Tornillos 3,20€</div>
+                                <div class="invoice-total">TOTAL: 19,00€</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">¿Por qué Fáctico es diferente?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>IA Integrada</h3>
+                    <p>Chat inteligente que te ayuda con fiscalidad y contabilidad. OCR automático para escanear tickets.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>PWA Instalable</h3>
+                    <p>Se instala como una app nativa en tu móvil. Sin descargas de tiendas, sin complicaciones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>15 Segundos</h3>
+                    <p>De ticket escaneado a factura contabilizada. El proceso más rápido del mercado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>VeriFactu Completo</h3>
+                    <p>Cumplimiento total con la normativa AEAT. Registros encadenados y envío automático.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Contabilidad PGC</h3>
+                    <p>Plan General Contable integrado. Libro Diario, Mayor y conciliación bancaria automática.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Gratis</h3>
+                    <p>Sin límites, sin tarjetas, sin sorpresas. Todas las funcionalidades incluidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Mira cómo funciona</h2>
+            <div class="demo-content">
+                <div class="demo-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Escanea el ticket</h3>
+                            <p>Usa la cámara de tu móvil para capturar cualquier ticket o factura</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>IA extrae los datos</h3>
+                            <p>Nuestra IA lee automáticamente proveedor, importe y conceptos</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Revisa y confirma</h3>
+                            <p>Verifica los datos extraídos y haz los ajustes necesarios</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>¡Listo!</h3>
+                            <p>La factura se crea y contabiliza automáticamente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                        <p>Vídeo demo en YouTube</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">Fáctico vs Competencia</h2>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="feature-column">Funcionalidad</div>
+                    <div class="company-column">Fáctico</div>
+                    <div class="company-column">Holded</div>
+                    <div class="company-column">Quipu</div>
+                    <div class="company-column">Anfix</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">Precio mensual</div>
+                    <div class="factico-cell">GRATIS</div>
+                    <div class="competitor-cell">200€/año</div>
+                    <div class="competitor-cell">120€/año</div>
+                    <div class="competitor-cell">180€/año</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">IA integrada</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">❌</div>
+                    <div class="competitor-cell">⚠️ Básica</div>
+                    <div class="competitor-cell">❌</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">PWA móvil</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">❌</div>
+                    <div class="competitor-cell">⚠️ Básica</div>
+                    <div class="competitor-cell">❌</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">OCR con IA</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">❌</div>
+                    <div class="competitor-cell">⚠️ Simple</div>
+                    <div class="competitor-cell">❌</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">VeriFactu</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-name">Contabilidad PGC</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                    <div class="competitor-cell">✅</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Guías Section -->
+    <section class="guias" id="guias">
+        <div class="container">
+            <h2 class="section-title">Guías formativas</h2>
+            <p class="section-subtitle">Aprende todo lo que necesitas saber sobre facturación y fiscalidad</p>
+            <div class="guias-grid">
+                <a href="guias/alta-facturas-emitidas.html" class="guia-card">
+                    <div class="guia-icon">📤</div>
+                    <h3>Alta de Facturas Emitidas</h3>
+                    <p>Cómo crear, numerar y gestionar facturas correctamente</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+                <a href="guias/alta-facturas-recibidas.html" class="guia-card">
+                    <div class="guia-icon">📥</div>
+                    <h3>Alta de Facturas Recibidas</h3>
+                    <p>Registra gastos, deduce IVA y lleva la contabilidad</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+                <a href="guias/verifactu-2025.html" class="guia-card">
+                    <div class="guia-icon">📋</div>
+                    <h3>VeriFactu 2025</h3>
+                    <p>Guía completa del nuevo sistema de facturación de la AEAT</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+                <a href="guias/modelo-303.html" class="guia-card">
+                    <div class="guia-icon">📊</div>
+                    <h3>Modelo 303</h3>
+                    <p>Cómo hacer la declaración trimestral de IVA paso a paso</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+                <a href="guias/contabilidad-basica.html" class="guia-card">
+                    <div class="guia-icon">📚</div>
+                    <h3>Contabilidad Básica</h3>
+                    <p>Fundamentos del Plan General Contable para autónomos</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+                <a href="guias/configuracion.html" class="guia-card">
+                    <div class="guia-icon">⚙️</div>
+                    <h3>Configuración</h3>
+                    <p>Configura tu cuenta, datos fiscales y preferencias</p>
+                    <span class="guia-read">Leer guía →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">¿Necesitas ayuda?</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte con cualquier duda sobre facturación o fiscalidad</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email de soporte</h3>
+                            <p>administrador@facticoapp.es</p>
+                            <a href="mailto:administrador@facticoapp.es" class="contact-link">Enviar email</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>Chat IA integrado</h3>
+                            <p>Pregunta directamente en la app</p>
+                            <a href="https://facticoapp.es" class="contact-link" target="_blank">Abrir chat</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📚</div>
+                        <div class="contact-details">
+                            <h3>Guías y tutoriales</h3>
+                            <p>Documentación completa disponible</p>
+                            <a href="#guias" class="contact-link">Ver guías</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para revolucionar tu facturación?</h2>
+                <p>Únete a los autónomos que ya facturan con IA. Sin costes, sin complicaciones.</p>
+                <a href="https://facticoapp.es" class="btn btn-primary btn-large" target="_blank">
+                    🚀 Empezar GRATIS ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre el Proyecto -->
+    <section id="sobre-proyecto" class="about-section" style="display: none;">
+        <div class="container">
+            <div class="about-header">
+                <h2>Sobre Fáctico</h2>
+                <button class="close-about" onclick="toggleAbout()" aria-label="Cerrar">×</button>
+            </div>
+            
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="proyecto">El Proyecto</button>
+                <button class="tab-btn" data-tab="beta">Estado Beta</button>
+                <button class="tab-btn" data-tab="filosofia">Filosofía</button>
+                <button class="tab-btn" data-tab="contacto">Contacto</button>
+            </div>
+            
+            <div class="about-content">
+                <div id="proyecto" class="tab-content active">
+                    <h3>¿Qué es Fáctico?</h3>
+                    <p><strong>Fáctico es un proyecto personal y open source</strong> para facilitar la vida a autónomos y PYMES en España: facturación electrónica, integración con VeriFactu, contabilidad completa con PGC, control de inmovilizado, amortizaciones, facturación masiva y gestión de presupuestos.</p>
+                    <p>La ambición no es "hacer negocio", sino aportar una herramienta clara, segura y útil.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>🎯 Objetivo</h4>
+                        <p>Facilitar la gestión fiscal y contable de autónomos y PYMES con una herramienta transparente y sin presión comercial.</p>
+                    </div>
+                </div>
+                
+                <div id="beta" class="tab-content">
+                    <h3>Estado del Proyecto: BETA PÚBLICA</h3>
+                    <p>La app está operativa y en evolución continua.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4>✅ Módulos Funcionando</h4>
+                            <ul>
+                                <li>Facturación completa (emitidas y recibidas)</li>
+                                <li>Rectificativas por sustitución</li>
+                                <li>Amortizaciones e inmovilizado</li>
+                                <li>Conciliación bancaria (Norma 43 + CAMT)</li>
+                                <li>OCR de gastos con IA (OpenAI Vision)</li>
+                                <li>Chat IA con base de conocimientos</li>
+                                <li>VeriFactu (envío a AEAT)</li>
+                                <li>Facturae (AAPP con firma digital)</li>
+                                <li>Contabilidad automática (PGC) y manual</li>
+                                <li>Modelos fiscales (303, 347, 111, 131)</li>
+                                <li>Facturación masiva y servicios recurrentes</li>
+                                <li>Presupuestos y albaranes</li>
+                                <li>Remesas SEPA</li>
+                                <li>Clasificación automática de gastos</li>
+                                <li>Backup y exportación de datos</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🔄 En Desarrollo</h4>
+                            <ul>
+                                <li>Multiusuario con permisos/roles</li>
+                                <li>Integración bancaria avanzada</li>
+                                <li>Voz a texto para descripciones (IA)</li>
+                                <li>Rectificativas por diferencia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Recomendación</h4>
+                        <p>Revisa siempre los datos antes de enviar a VeriFactu o a terceros. En entornos de prueba, desactiva envíos reales.</p>
+                    </div>
+                </div>
+                
+                <div id="filosofia" class="tab-content">
+                    <h3>Filosofía y Modelo</h3>
+                    
+                    <div class="philosophy-grid">
+                        <div class="philosophy-item">
+                            <h4>💰 Sin Presión Comercial</h4>
+                            <p>Prioriza utilidad y tranquilidad jurídica sobre monetización.</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <h4>🔓 Open Source</h4>
+                            <p>Código y documentación evolucionan en abierto.</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <h4>🔒 Privacidad</h4>
+                            <p>No se venden datos ni se usan con fines comerciales.</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <h4>💝 Costes Operativos</h4>
+                            <p>Contribuciones opcionales para cubrir servidor y base de datos. Sin ánimo de lucro.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="success-box">
+                        <h4>🎯 Qué Esperamos de los Usuarios Beta</h4>
+                        <ul>
+                            <li>Probar casos reales (si es posible, primero en PRE)</li>
+                            <li>Reportar errores, dudas y sugerencias con ejemplos</li>
+                            <li>Aceptar que la beta implica cambios frecuentes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="contacto" class="tab-content">
+                    <h3>Contacto y Enlaces</h3>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4>🌐 App</h4>
+                            <p><a href="https://facticoapp.es" target="_blank">facticoapp.es</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📧 Administrador</h4>
+                            <p><a href="mailto:administrador@facticoapp.es">administrador@facticoapp.es</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📋 Declaración Responsable</h4>
+                            <p><a href="https://facticoapp.es/Declaracion_Responsable.html" target="_blank">Ver declaración</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-author">
+                        <h4>👨‍💻 Sobre el Desarrollador</h4>
+                        <p><strong>Francisco Medina</strong>, programador veterano y jubilado. Retomo la programación por pasión y para ayudar a quien le sirva.</p>
+                        <p>Prefiero un proyecto útil y honesto antes que uno "grande" que me complique la vida. Me encantará tu feedback directo y sin rodeos.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Límites Importantes</h4>
+                        <p><strong>Fáctico no es asesoría fiscal.</strong> Ante dudas, consulta con tu gestor/a. La integración con VeriFactu sigue la normativa, pero cada actividad puede tener matices.</p>
+                    </div>
+                    
+                    <p class="last-update"><strong>Última actualización:</strong> 06/10/2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fáctico</h3>
+                    <p>Facturación con IA para autónomos</p>
+                    <div class="footer-contact">
+                        <p>📧 administrador@facticoapp.es</p>
+                        <p>🌐 facticoapp.es</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="https://facticoapp.es" target="_blank">Usar app</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="guias/">Guías</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+        <div class="footer-section">
+            <h4>Proyecto</h4>
+            <ul>
+                <li><a href="#sobre-proyecto" onclick="toggleAbout()">Sobre Fáctico</a></li>
+                <li><a href="#beta" onclick="toggleAbout('beta')">Estado Beta</a></li>
+                <li><a href="#filosofia" onclick="toggleAbout('filosofia')">Filosofía</a></li>
+                <li><a href="#contacto" onclick="toggleAbout('contacto')">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#privacy">Privacidad</a></li>
+                <li><a href="#terms">Términos</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+            </ul>
+        </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fáctico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

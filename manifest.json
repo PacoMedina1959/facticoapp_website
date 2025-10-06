@@ -1,0 +1,56 @@
+{
+  "name": "Fáctico - Facturación con IA",
+  "short_name": "Fáctico",
+  "description": "Facturación con IA que se instala en tu móvil. Escanea tickets, crea facturas y lleva la contabilidad en 15 segundos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#1976d2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "lang": "es",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Usar App",
+      "short_name": "App",
+      "description": "Acceder a la aplicación de facturación",
+      "url": "https://facticoapp.es",
+      "icons": [
+        {
+          "src": "assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Ver Precios",
+      "short_name": "Precios",
+      "description": "Ver planes y precios",
+      "url": "/precios.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

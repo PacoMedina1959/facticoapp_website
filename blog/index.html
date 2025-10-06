@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Blog de Fáctico"
+description: "Guías, tutoriales y noticias sobre facturación, contabilidad y fiscalidad para autónomos y PYMES"
+---
+
+<div class="blog-hero">
+    <h1>Blog de Fáctico</h1>
+    <p>Guías, tutoriales y noticias sobre facturación, contabilidad y fiscalidad para autónomos y PYMES</p>
+</div>
+
+<div class="blog-content">
+    <div class="blog-posts">
+        {% for post in site.posts %}
+        <article class="post-card">
+            <div class="post-card-header">
+                <h2 class="post-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <div class="post-card-meta">
+                    <span class="post-date">
+                        <i class="fas fa-calendar"></i>
+                        {{ post.date | date: "%d/%m/%Y" }}
+                    </span>
+                    {% if post.category %}
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        {{ post.category }}
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            {% if post.description %}
+            <p class="post-card-description">{{ post.description }}</p>
+            {% endif %}
+            
+            <div class="post-card-footer">
+                <a href="{{ post.url | relative_url }}" class="btn btn-outline">
+                    Leer más
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <aside class="blog-sidebar">
+        <div class="sidebar-widget">
+            <h3>¿Qué es Fáctico?</h3>
+            <p>Fáctico es una aplicación de facturación con IA que se instala en tu móvil. Completamente gratuita y open source.</p>
+            <a href="https://facticoapp.es" class="btn btn-primary" target="_blank">
+                <i class="fas fa-rocket"></i>
+                Usar GRATIS
+            </a>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>Categorías</h3>
+            <ul class="category-list">
+                <li><a href="{{ '/' | relative_url }}#guias">Tutoriales</a></li>
+                <li><a href="{{ '/' | relative_url }}#guias">Noticias Fiscales</a></li>
+                <li><a href="{{ '/' | relative_url }}#guias">Comparativas</a></li>
+                <li><a href="{{ '/' | relative_url }}#guias">Casos Prácticos</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>Contacto</h3>
+            <p>¿Tienes dudas? Contacta con nosotros:</p>
+            <a href="mailto:administrador@facticoapp.es" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                administrador@facticoapp.es
+            </a>
+        </div>
+    </aside>
+</div>
