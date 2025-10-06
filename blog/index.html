@@ -70,6 +70,10 @@ description: "Guías, tutoriales y noticias sobre facturación, contabilidad y f
             <p>¿Tienes una pregunta general? Inicia una nueva discusión:</p>
             <div id="disqus_thread"></div>
             <script>
+                var disqus_config = function () {
+                    this.page.url = '{{ page.url | absolute_url }}';
+                    this.page.identifier = 'blog-main';
+                };
                 (function() {
                     var d = document, s = d.createElement('script');
                     s.src = 'https://facticoapp-blog.disqus.com/embed.js';
