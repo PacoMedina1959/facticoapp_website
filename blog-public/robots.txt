@@ -1,1 +1,1 @@
-Sitemap: https://pacomedina1959.github.io/facticoapp_website/blog/sitemap.xml
+Sitemap: https://pacomedina1959.github.io/facticoapp_website/blog-public/sitemap.xml

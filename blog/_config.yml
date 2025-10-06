@@ -1,7 +1,7 @@
 # Jekyll Configuration for Fáctico Blog
 title: "Fáctico Blog"
 description: "Guías, tutoriales y noticias sobre facturación, contabilidad y fiscalidad para autónomos y PYMES"
-baseurl: "/facticoapp_website/blog"
+baseurl: "/facticoapp_website/blog-public"
 url: "https://pacomedina1959.github.io"
 
 # Build settings
