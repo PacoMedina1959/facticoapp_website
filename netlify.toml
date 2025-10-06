@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'Static site - no build needed'"
+  command = "cd blog && bundle install && bundle exec jekyll build --destination ../blog-public"
 
 [build.environment]
   NODE_VERSION = "18"
