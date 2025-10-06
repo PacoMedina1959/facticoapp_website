@@ -59,7 +59,9 @@ layout: default
         <p>¿Te ha resultado útil este artículo? ¡Deja tu comentario o pregunta y te responderé!</p>
         
         <!-- DISQUS Comments -->
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread">
+            <p>Cargando comentarios...</p>
+        </div>
         <script>
             var disqus_config = function () {
                 this.page.url = '{{ page.url | absolute_url }}';
@@ -69,6 +71,9 @@ layout: default
                 var d = document, s = d.createElement('script');
                 s.src = 'https://facticoapp-blog.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
+                s.onload = function() {
+                    document.getElementById('disqus_thread').innerHTML = '';
+                };
                 (d.head || d.body).appendChild(s);
             })();
         </script>
