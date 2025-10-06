@@ -52,36 +52,35 @@ layout: default
         </div>
     </footer>
     
-    <!-- Comments and Contact Section -->
+    <!-- Contact Section -->
     {% if page.comments %}
     <div class="comments-section">
-        <h3>💬 Preguntas y Comentarios</h3>
-        <p>¿Tienes dudas sobre este tema? ¡Deja tu pregunta y te responderé lo antes posible!</p>
+        <h3>💬 ¿Tienes Preguntas?</h3>
+        <p>¿Te ha resultado útil este artículo? ¿Tienes dudas o sugerencias? ¡Me encantaría saber tu opinión!</p>
         
-        <!-- DISQUS Comments -->
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = '{{ page.url | absolute_url }}';
-                this.page.identifier = '{{ page.id }}';
-            };
-            (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://facticoapp-blog.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <!-- Contact Options -->
+        <div class="contact-options">
+            <div class="contact-card">
+                <h4>📧 Consulta Directa</h4>
+                <p>Para preguntas específicas o consultas privadas</p>
+                <a href="mailto:administrador@facticoapp.es?subject=Consulta sobre: {{ page.title }}" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Enviar Email
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <h4>💬 Comentario Público</h4>
+                <p>Comparte tu experiencia con otros usuarios</p>
+                <a href="mailto:administrador@facticoapp.es?subject=Comentario sobre: {{ page.title }}&body=Mi comentario: " class="btn btn-outline">
+                    <i class="fas fa-comment"></i>
+                    Dejar Comentario
+                </a>
+            </div>
+        </div>
         
-        <!-- Direct Contact -->
-        <div class="direct-contact">
-            <h4>📧 ¿Prefieres contacto directo?</h4>
-            <p>Si tienes una consulta privada o específica, puedes contactarme directamente:</p>
-            <a href="mailto:administrador@facticoapp.es?subject=Consulta sobre: {{ page.title }}" class="btn btn-primary">
-                <i class="fas fa-envelope"></i>
-                Enviar Email
-            </a>
+        <div class="contact-note">
+            <p><strong>💡 Tip:</strong> Todos los emails se responden en menos de 24 horas. ¡No dudes en escribir!</p>
         </div>
     </div>
     {% endif %}
