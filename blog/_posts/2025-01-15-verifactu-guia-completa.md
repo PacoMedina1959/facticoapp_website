@@ -25,13 +25,18 @@ VeriFactu es el nuevo sistema de facturación electrónica obligatorio que imple
 ## ⚠️ Sanciones por Incumplimiento
 
 ### **Multas Fijas:**
-- **50.000€** - Por uso de software no homologado
-- **25.000€** - Por no registrar facturas en plazo
-- **10.000€** - Por errores en el registro
+- **6.000€** - Por uso de software no homologado
+- **3.000€** - Por no registrar facturas en plazo
+- **1.500€** - Por errores en el registro
 
 ### **Multas Variables:**
 - **0,5%** de la facturación no registrada (mínimo 1.500€)
 - **1%** si hay intencionalidad
+
+### **Sanciones Adicionales:**
+- **Suspensión** del derecho a deducir IVA
+- **Requisa** de facturas no registradas
+- **Inspección** fiscal preferente
 
 ## 🔧 Requisitos Técnicos
 
