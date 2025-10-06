@@ -1,1 +1,0 @@
-Sitemap: https://facticoapp-website.netlify.app/blog-public/sitemap.xml

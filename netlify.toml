@@ -1,14 +1,9 @@
 [build]
   publish = "."
-  command = "bundle install && cd blog && bundle exec jekyll build --destination ../blog-public && cp -r css ../blog-public/ && cp -r js ../blog-public/ && cp favicon.ico ../blog-public/"
+  command = "echo 'Static site - no build needed'"
 
 [build.environment]
   NODE_VERSION = "18"
-
-[[redirects]]
-  from = "/blog/*"
-  to = "/blog-public/:splat"
-  status = 200
 
 [[redirects]]
   from = "/guias/*"
