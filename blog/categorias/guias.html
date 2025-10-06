@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Guías"
+---
+
+<div class="blog-hero">
+    <h1>Guías y Tutoriales</h1>
+    <p>Aquí encontrarás todas las guías y tutoriales para dominar Fáctico y la gestión de tu negocio.</p>
+</div>
+
+<div class="blog-content">
+    <div class="blog-posts">
+        {% for post in site.categories['Tutorial'] %}
+        <article class="post-card">
+            <div class="post-card-header">
+                <h2 class="post-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <div class="post-card-meta">
+                    <span class="post-date">
+                        <i class="fas fa-calendar"></i>
+                        {{ post.date | date: "%d/%m/%Y" }}
+                    </span>
+                    {% if post.category %}
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        {{ post.category }}
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            {% if post.description %}
+            <p class="post-card-description">{{ post.description }}</p>
+            {% endif %}
+            
+            <div class="post-card-footer">
+                <a href="{{ post.url | relative_url }}" class="btn btn-outline">
+                    Leer más
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
