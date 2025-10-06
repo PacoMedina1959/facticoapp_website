@@ -52,19 +52,37 @@ layout: default
         </div>
     </footer>
     
-    <!-- GISCUS Comments -->
+    <!-- Comments and Contact Section -->
     {% if page.comments %}
     <div class="comments-section">
         <h3>💬 Preguntas y Comentarios</h3>
         <p>¿Tienes dudas sobre este tema? ¡Deja tu pregunta y te responderé lo antes posible!</p>
         
-        <script src="https://utteranc.es/client.js"
-                repo="PacoMedina1959/facticoapp_website"
-                issue-term="pathname"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
+        <!-- DISQUS Comments -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = '{{ page.url | absolute_url }}';
+                this.page.identifier = '{{ page.id }}';
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://facticoapp-blog.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
         </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+        <!-- Direct Contact -->
+        <div class="direct-contact">
+            <h4>📧 ¿Prefieres contacto directo?</h4>
+            <p>Si tienes una consulta privada o específica, puedes contactarme directamente:</p>
+            <a href="mailto:administrador@facticoapp.es?subject=Consulta sobre: {{ page.title }}" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Enviar Email
+            </a>
+        </div>
     </div>
     {% endif %}
 </article>

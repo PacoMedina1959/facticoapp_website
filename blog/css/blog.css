@@ -501,6 +501,26 @@ body {
     margin-top: 1rem;
 }
 
+.direct-contact {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.direct-contact h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.direct-contact p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 768px) {
     .comments-section {
         padding: 1rem;
