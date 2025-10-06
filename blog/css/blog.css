@@ -474,3 +474,40 @@ body {
         padding: 2rem 1rem;
     }
 }
+
+/* Comments Section */
+.comments-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.comments-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.comments-section p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+#disqus_thread {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .comments-section h3 {
+        font-size: 1.3rem;
+    }
+}
