@@ -64,15 +64,21 @@ layout: default
         </div>
         <script>
             var disqus_config = function () {
-                this.page.url = '{{ page.url | absolute_url }}';
+                this.page.url = 'https://pacomedina1959.github.io{{ page.url }}';
                 this.page.identifier = '{{ page.id }}';
+                console.log('DISQUS Config:', this.page.url, this.page.identifier);
             };
             (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://facticoapp-blog.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 s.onload = function() {
+                    console.log('DISQUS loaded');
                     document.getElementById('disqus_thread').innerHTML = '';
+                };
+                s.onerror = function() {
+                    console.log('DISQUS error loading');
+                    document.getElementById('disqus_thread').innerHTML = '<p>Error cargando comentarios. <a href="mailto:administrador@facticoapp.es">Contacta por email</a></p>';
                 };
                 (d.head || d.body).appendChild(s);
             })();
