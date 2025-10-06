@@ -6,6 +6,7 @@ author: "Francisco Medina"
 category: "Tutorial"
 tags: ["Facturación", "Errores", "Autónomos", "PYMES", "Consejos"]
 date: 2025-01-30
+comments: true
 ---
 
 ## ¿Por qué es Importante Evitar Errores?

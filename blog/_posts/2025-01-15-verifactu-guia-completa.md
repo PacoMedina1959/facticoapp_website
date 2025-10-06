@@ -6,6 +6,7 @@ author: "Francisco Medina"
 category: "Tutorial"
 tags: ["VeriFactu", "AEAT", "Facturación", "Fiscal", "2025"]
 date: 2025-01-15
+comments: true
 ---
 
 ## ¿Qué es VeriFactu?

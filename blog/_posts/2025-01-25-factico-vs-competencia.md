@@ -6,6 +6,7 @@ author: "Francisco Medina"
 category: "Comparativa"
 tags: ["Comparativa", "Holded", "Quipu", "Anfix", "Facturación", "Precios"]
 date: 2025-01-25
+comments: true
 ---
 
 ## ¿Por qué esta Comparativa?

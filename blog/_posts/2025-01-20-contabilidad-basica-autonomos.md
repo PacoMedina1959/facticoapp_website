@@ -6,6 +6,7 @@ author: "Francisco Medina"
 category: "Tutorial"
 tags: ["Contabilidad", "PGC", "Autónomos", "Libros", "Asientos"]
 date: 2025-01-20
+comments: true
 ---
 
 ## ¿Por qué es Importante la Contabilidad?
