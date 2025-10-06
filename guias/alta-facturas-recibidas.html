@@ -94,6 +94,62 @@
         .back-link:hover {
             text-decoration: underline;
         }
+        .videos-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+        }
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .video-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .video-placeholder {
+            background: #e9ecef;
+            border-radius: 6px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .video-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -151,47 +207,9 @@
                 <li><strong>Control:</strong> Sabes exactamente en qué gastas</li>
             </ul>
 
-            <h3>Obligaciones legales:</h3>
-            <ul>
-                <li>Conservar las facturas durante 4 años</li>
-                <li>Registrarlas en tu contabilidad</li>
-                <li>Incluirlas en el Modelo 303</li>
-                <li>Justificar los gastos en caso de inspección</li>
-            </ul>
-
             <div class="warning-box">
                 <strong>Recuerda:</strong> Sin factura recibida, no puedes deducir el gasto ni el IVA. Es fundamental guardar todos los documentos.
             </div>
-        </div>
-
-        <div class="guide-section">
-            <h2>Elementos de una factura recibida</h2>
-            
-            <h3>Datos del proveedor:</h3>
-            <ul>
-                <li>Nombre o razón social</li>
-                <li>NIF/CIF</li>
-                <li>Dirección</li>
-                <li>Teléfono y email</li>
-            </ul>
-
-            <h3>Datos de la factura:</h3>
-            <ul>
-                <li>Número de factura</li>
-                <li>Fecha de emisión</li>
-                <li>Fecha de operación (si es diferente)</li>
-                <li>Descripción de servicios/productos</li>
-                <li>Base imponible</li>
-                <li>IVA soportado</li>
-                <li>Total pagado</li>
-            </ul>
-
-            <h3>Datos adicionales:</h3>
-            <ul>
-                <li>Forma de pago</li>
-                <li>Fecha de pago</li>
-                <li>Observaciones</li>
-            </ul>
         </div>
 
         <div class="guide-section">
@@ -223,56 +241,6 @@
         </div>
 
         <div class="guide-section">
-            <h2>Clasificación de gastos</h2>
-            
-            <h3>Gastos deducibles al 100%:</h3>
-            <ul>
-                <li>Suministros (luz, agua, gas, teléfono)</li>
-                <li>Alquiler de local</li>
-                <li>Material de oficina</li>
-                <li>Formación relacionada con tu actividad</li>
-                <li>Seguros profesionales</li>
-                <li>Gastos de vehículo (si es necesario para la actividad)</li>
-            </ul>
-
-            <h3>Gastos deducibles parcialmente:</h3>
-            <ul>
-                <li>Vehículo personal (50% si se usa para trabajo)</li>
-                <li>Vivienda (30% si tienes despacho en casa)</li>
-                <li>Teléfono móvil (50% si es personal y profesional)</li>
-            </ul>
-
-            <h3>Gastos no deducibles:</h3>
-            <ul>
-                <li>Gastos personales no relacionados con la actividad</li>
-                <li>Multas y sanciones</li>
-                <li>Gastos de representación excesivos</li>
-                <li>Donaciones (salvo excepciones)</li>
-            </ul>
-
-            <div class="highlight-box">
-                <strong>Consejo:</strong> Fáctico incluye reglas de clasificación automática que te ayudan a categorizar correctamente tus gastos.
-            </div>
-        </div>
-
-        <div class="guide-section">
-            <h2>IVA soportado vs IVA repercutido</h2>
-            
-            <h3>IVA soportado (lo que pagas):</h3>
-            <p>Es el IVA que pagas a tus proveedores cuando compras algo. Este IVA lo puedes deducir en tu declaración trimestral.</p>
-
-            <h3>IVA repercutido (lo que cobras):</h3>
-            <p>Es el IVA que cobras a tus clientes cuando les facturas. Este IVA debes ingresarlo a Hacienda.</p>
-
-            <h3>Liquidación trimestral:</h3>
-            <p>Al final de cada trimestre, calculas: <strong>IVA repercutido - IVA soportado = IVA a ingresar</strong></p>
-
-            <div class="warning-box">
-                <strong>Importante:</strong> Solo puedes deducir el IVA soportado si tienes la factura recibida correspondiente.
-            </div>
-        </div>
-
-        <div class="guide-section">
             <h2>Casos especiales</h2>
             
             <h3>Facturas sin IVA:</h3>
@@ -288,27 +256,55 @@
             <p>Cuando tú pagas el IVA directamente a Hacienda en lugar del proveedor.</p>
         </div>
 
-        <div class="guide-section">
-            <h2>Consejos prácticos</h2>
+        <!-- Sección de Vídeos de Formación -->
+        <div class="videos-section">
+            <h2>📹 Vídeos de Formación</h2>
+            <p>Aprende paso a paso cómo dar de alta diferentes tipos de facturas recibidas con estos tutoriales en vídeo.</p>
             
-            <h3>Para organizar mejor tus gastos:</h3>
-            <ul>
-                <li>Registra las facturas inmediatamente después de recibirlas</li>
-                <li>Usa carpetas digitales para organizar los PDFs</li>
-                <li>Marca las facturas pagadas vs pendientes</li>
-                <li>Revisa mensualmente que no falte ninguna factura</li>
-            </ul>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        🎥 Vídeo tutorial
+                    </div>
+                    <h3 class="video-title">Altas Facturas Básicas</h3>
+                    <p class="video-description">Aprende a registrar facturas recibidas normales paso a paso, desde el escaneo hasta la contabilización automática.</p>
+                    <a href="#" class="video-link">
+                        ▶ Ver vídeo
+                    </a>
+                </div>
 
-            <h3>Para optimizar las deducciones:</h3>
-            <ul>
-                <li>Pide siempre factura, aunque sea por importes pequeños</li>
-                <li>Verifica que la factura tenga todos los datos obligatorios</li>
-                <li>Conserva los justificantes de pago</li>
-                <li>Revisa que el IVA esté correctamente calculado</li>
-            </ul>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        🎥 Vídeo tutorial
+                    </div>
+                    <h3 class="video-title">Altas Facturas (Inmovilizado)</h3>
+                    <p class="video-description">Cómo registrar facturas de inmovilizado, configurar amortizaciones y gestionar activos fijos correctamente.</p>
+                    <a href="#" class="video-link">
+                        ▶ Ver vídeo
+                    </a>
+                </div>
 
-            <div class="success-box">
-                <strong>Con Fáctico:</strong> Todo esto está automatizado. Solo necesitas escanear la factura y el sistema se encarga de clasificarla, calcular el IVA y preparar los datos para el Modelo 303.
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        🎥 Vídeo tutorial
+                    </div>
+                    <h3 class="video-title">Altas Facturas (Intracomunitarias)</h3>
+                    <p class="video-description">Gestión de facturas de proveedores de la UE, autoliquidación de IVA y cumplimiento normativo.</p>
+                    <a href="#" class="video-link">
+                        ▶ Ver vídeo
+                    </a>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        🎥 Vídeo tutorial
+                    </div>
+                    <h3 class="video-title">Altas Facturas (Sujeto Pasivo)</h3>
+                    <p class="video-description">Cómo manejar la inversión del sujeto pasivo, cuándo aplicarla y cómo contabilizarla correctamente.</p>
+                    <a href="#" class="video-link">
+                        ▶ Ver vídeo
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -328,17 +324,6 @@
             </div>
         </div>
 
-        <div class="guide-section">
-            <h2>Recursos adicionales</h2>
-            
-            <ul>
-                <li><a href="alta-facturas-emitidas.html">Guía: Alta de Facturas Emitidas</a></li>
-                <li><a href="modelo-303.html">Guía: Modelo 303</a></li>
-                <li><a href="conciliacion-bancaria.html">Guía: Conciliación Bancaria</a></li>
-                <li><a href="../blog/">Blog de Fáctico</a></li>
-                <li><a href="https://facticoapp.es" target="_blank">Probar Fáctico GRATIS</a></li>
-            </ul>
-        </div>
     </main>
 
     <!-- Footer -->
