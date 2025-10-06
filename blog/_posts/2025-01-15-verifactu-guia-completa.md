@@ -112,13 +112,11 @@ VeriFactu es el nuevo sistema de facturación electrónica obligatorio que imple
 ## 🆘 ¿Necesitas Ayuda?
 
 ### **Recursos Fáctico:**
-- **Guía paso a paso:** [Configuración VeriFactu](/guias/configuracion.html)
-- **Vídeos tutoriales:** [Canal YouTube](https://youtube.com/facticoapp)
+- **Guía paso a paso:** [Ver vídeos de configuración en](https://pacomedina1959.github.io/facticoapp_website/#guias)
 - **Soporte técnico:** administrador@facticoapp.es
 
 ### **Recursos Oficiales:**
-- **Web AEAT:** [www.aeat.es/verifactu](https://www.aeat.es/verifactu)
-- **Documentación técnica:** [API VeriFactu](https://api.aeat.es/verifactu)
+- **Web AEAT:** [www.aeat.es/verifactu](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html)
 - **Teléfono AEAT:** 901 200 345
 
 ## 🎯 Conclusión
