@@ -58,32 +58,26 @@ layout: default
         <h3>💬 Preguntas y Comentarios</h3>
         <p>¿Te ha resultado útil este artículo? ¡Deja tu comentario o pregunta y te responderé!</p>
         
-        <!-- DISQUS Comments -->
-        <div id="disqus_thread">
-            <p>Cargando comentarios...</p>
+        <!-- Comments Section -->
+        <div class="comments-widget">
+            <h4>💬 Comentarios y Preguntas</h4>
+            <p>¿Te ha resultado útil este artículo? ¡Comparte tu experiencia!</p>
+            
+            <div class="comment-options">
+                <a href="mailto:administrador@facticoapp.es?subject=Comentario sobre: {{ page.title }}&body=Mi comentario sobre este artículo: " class="btn btn-primary">
+                    <i class="fas fa-comment"></i>
+                    Dejar Comentario
+                </a>
+                <a href="mailto:administrador@facticoapp.es?subject=Pregunta sobre: {{ page.title }}&body=Mi pregunta: " class="btn btn-outline">
+                    <i class="fas fa-question"></i>
+                    Hacer Pregunta
+                </a>
+            </div>
+            
+            <div class="comment-note">
+                <p><strong>💡 Nota:</strong> Los comentarios se publican en el blog y las preguntas se responden por email en menos de 24 horas.</p>
+            </div>
         </div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = 'https://pacomedina1959.github.io{{ page.url }}';
-                this.page.identifier = '{{ page.id }}';
-                console.log('DISQUS Config:', this.page.url, this.page.identifier);
-            };
-            (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://facticoapp-blog.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                s.onload = function() {
-                    console.log('DISQUS loaded');
-                    document.getElementById('disqus_thread').innerHTML = '';
-                };
-                s.onerror = function() {
-                    console.log('DISQUS error loading');
-                    document.getElementById('disqus_thread').innerHTML = '<p>Error cargando comentarios. <a href="mailto:administrador@facticoapp.es">Contacta por email</a></p>';
-                };
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         
         <!-- Private Contact -->
         <div class="private-contact">
