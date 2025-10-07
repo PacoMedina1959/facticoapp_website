@@ -683,7 +683,7 @@ body {
 /* Floating Video Player */
 .floating-video-player {
     position: fixed !important;
-    bottom: 20px !important;
+    bottom: 80px !important;
     right: 20px !important;
     width: 400px;
     height: 250px;
@@ -695,10 +695,13 @@ body {
     flex-direction: column;
     overflow: hidden;
     transition: var(--transition);
+    pointer-events: auto !important;
 }
 
 .floating-video-player.active {
     display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .floating-video-header {

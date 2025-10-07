@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        z-index: 1000;
+        z-index: 9000;
     `;
     
     document.body.appendChild(scrollToTopBtn);
