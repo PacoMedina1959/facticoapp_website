@@ -1,3 +1,51 @@
+// Floating Video Player Functions - Global scope for onclick
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+function openFloatingVideo(videoId, title) {
+    const player = document.getElementById('floatingVideoPlayer');
+    const iframe = document.getElementById('floatingVideoFrame');
+    const titleElement = document.getElementById('floatingVideoTitle');
+    
+    // Set video source with autoplay
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    titleElement.textContent = title;
+    
+    // Show player
+    player.classList.add('active');
+    
+    // Track event
+    if (typeof trackEvent === 'function') {
+        trackEvent('floating_video_opened', { videoId: videoId, title: title });
+    }
+}
+
+function closeFloatingVideo() {
+    const player = document.getElementById('floatingVideoPlayer');
+    const iframe = document.getElementById('floatingVideoFrame');
+    
+    // Hide player
+    player.classList.remove('active');
+    
+    // Stop video by removing src
+    iframe.src = '';
+    
+    // Reset position
+    player.style.transform = 'translate(0px, 0px)';
+    xOffset = 0;
+    yOffset = 0;
+    
+    // Track event
+    if (typeof trackEvent === 'function') {
+        trackEvent('floating_video_closed');
+    }
+}
+
 // Main JavaScript for Fáctico website
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -326,54 +374,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Floating Video Player Functions
-let isDragging = false;
-let currentX;
-let currentY;
-let initialX;
-let initialY;
-let xOffset = 0;
-let yOffset = 0;
-
-function openFloatingVideo(videoId, title) {
-    const player = document.getElementById('floatingVideoPlayer');
-    const iframe = document.getElementById('floatingVideoFrame');
-    const titleElement = document.getElementById('floatingVideoTitle');
-    
-    // Set video source with autoplay
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    titleElement.textContent = title;
-    
-    // Show player
-    player.classList.add('active');
-    
-    // Track event
-    trackEvent('floating_video_opened', { videoId: videoId, title: title });
-}
-
-function closeFloatingVideo() {
-    const player = document.getElementById('floatingVideoPlayer');
-    const iframe = document.getElementById('floatingVideoFrame');
-    
-    // Hide player
-    player.classList.remove('active');
-    
-    // Stop video by removing src
-    iframe.src = '';
-    
-    // Reset position
-    player.style.transform = 'translate(0px, 0px)';
-    xOffset = 0;
-    yOffset = 0;
-    
-    // Track event
-    trackEvent('floating_video_closed');
-}
-
 // Make floating player draggable
 document.addEventListener('DOMContentLoaded', function() {
     const player = document.getElementById('floatingVideoPlayer');
     const header = player.querySelector('.floating-video-header');
+    
+    if (!player || !header) return;
     
     header.addEventListener('mousedown', dragStart);
     header.addEventListener('touchstart', dragStart);
