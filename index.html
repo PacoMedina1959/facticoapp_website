@@ -201,7 +201,7 @@
             <p class="section-subtitle">Aprende a usar Fáctico paso a paso con nuestros vídeos formativos</p>
             <div class="videos-grid">
                 <!-- Video 1 -->
-                <a href="https://youtu.be/eKW3Me2aOb4" target="_blank" class="video-card">
+                <div class="video-card" data-video-id="eKW3Me2aOb4" onclick="openFloatingVideo('eKW3Me2aOb4', 'Alta de Facturas Recibidas')">
                     <div class="video-card-thumbnail">
                         <img src="https://i.ytimg.com/vi/eKW3Me2aOb4/hqdefault.jpg" alt="Alta de Facturas Recibidas">
                         <div class="video-card-overlay">
@@ -213,7 +213,7 @@
                         <h3>Alta de Facturas Recibidas</h3>
                         <p>Aprende a registrar gastos y deducciones de IVA</p>
                     </div>
-                </a>
+                </div>
 
                 <!-- Video 2 - Placeholder -->
                 <div class="video-card video-coming-soon-card">
@@ -600,6 +600,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Video Player -->
+    <div id="floatingVideoPlayer" class="floating-video-player">
+        <div class="floating-video-header">
+            <span id="floatingVideoTitle" class="floating-video-title">Vídeo Tutorial</span>
+            <button class="floating-video-close" onclick="closeFloatingVideo()">✕</button>
+        </div>
+        <div class="floating-video-container">
+            <iframe id="floatingVideoFrame" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

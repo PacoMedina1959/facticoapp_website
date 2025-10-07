@@ -325,3 +325,105 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Floating Video Player Functions
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+function openFloatingVideo(videoId, title) {
+    const player = document.getElementById('floatingVideoPlayer');
+    const iframe = document.getElementById('floatingVideoFrame');
+    const titleElement = document.getElementById('floatingVideoTitle');
+    
+    // Set video source with autoplay
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    titleElement.textContent = title;
+    
+    // Show player
+    player.classList.add('active');
+    
+    // Track event
+    trackEvent('floating_video_opened', { videoId: videoId, title: title });
+}
+
+function closeFloatingVideo() {
+    const player = document.getElementById('floatingVideoPlayer');
+    const iframe = document.getElementById('floatingVideoFrame');
+    
+    // Hide player
+    player.classList.remove('active');
+    
+    // Stop video by removing src
+    iframe.src = '';
+    
+    // Reset position
+    player.style.transform = 'translate(0px, 0px)';
+    xOffset = 0;
+    yOffset = 0;
+    
+    // Track event
+    trackEvent('floating_video_closed');
+}
+
+// Make floating player draggable
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('floatingVideoPlayer');
+    const header = player.querySelector('.floating-video-header');
+    
+    header.addEventListener('mousedown', dragStart);
+    header.addEventListener('touchstart', dragStart);
+    
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('touchmove', drag);
+    
+    document.addEventListener('mouseup', dragEnd);
+    document.addEventListener('touchend', dragEnd);
+    
+    function dragStart(e) {
+        if (e.type === "touchstart") {
+            initialX = e.touches[0].clientX - xOffset;
+            initialY = e.touches[0].clientY - yOffset;
+        } else {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+        }
+        
+        if (e.target === header || header.contains(e.target)) {
+            isDragging = true;
+        }
+    }
+    
+    function drag(e) {
+        if (isDragging) {
+            e.preventDefault();
+            
+            if (e.type === "touchmove") {
+                currentX = e.touches[0].clientX - initialX;
+                currentY = e.touches[0].clientY - initialY;
+            } else {
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+            }
+            
+            xOffset = currentX;
+            yOffset = currentY;
+            
+            setTranslate(currentX, currentY, player);
+        }
+    }
+    
+    function dragEnd(e) {
+        initialX = currentX;
+        initialY = currentY;
+        isDragging = false;
+    }
+    
+    function setTranslate(xPos, yPos, el) {
+        el.style.transform = `translate(${xPos}px, ${yPos}px)`;
+    }
+});
