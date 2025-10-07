@@ -649,9 +649,18 @@
         // Show player
         player.classList.add('active');
         
+        // Force styles inline to override any CSS conflicts
+        player.style.position = 'fixed';
+        player.style.bottom = '20px';
+        player.style.right = '20px';
+        player.style.zIndex = '99999';
+        player.style.display = 'flex';
+        
         console.log('Clase active añadida');
         console.log('Display del player:', window.getComputedStyle(player).display);
         console.log('Position del player:', window.getComputedStyle(player).position);
+        console.log('Bottom del player:', window.getComputedStyle(player).bottom);
+        console.log('Right del player:', window.getComputedStyle(player).right);
         console.log('Z-index del player:', window.getComputedStyle(player).zIndex);
         console.log('Video abierto:', title);
     }
@@ -667,6 +676,7 @@
         
         // Hide player
         player.classList.remove('active');
+        player.style.display = 'none';
         
         // Stop video by removing src
         iframe.src = '';

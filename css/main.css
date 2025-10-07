@@ -696,6 +696,8 @@ body {
     overflow: hidden;
     transition: var(--transition);
     pointer-events: auto !important;
+    transform: translateZ(0) !important;
+    will-change: transform;
 }
 
 .floating-video-player.active {
