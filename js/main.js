@@ -1,3 +1,53 @@
+// Global Functions - Available for onclick handlers
+// About section functionality
+function toggleAbout(tab = 'proyecto') {
+    console.log('toggleAbout called with tab:', tab);
+    const aboutSection = document.getElementById('sobre-proyecto');
+    
+    if (!aboutSection) {
+        console.error('About section not found!');
+        return;
+    }
+    
+    console.log('Current display:', aboutSection.style.display);
+    
+    if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
+        // Show section
+        aboutSection.style.display = 'block';
+        console.log('Showing about section');
+        
+        // Set active tab
+        const aboutTabs = document.querySelectorAll('.tab-btn');
+        const aboutContents = document.querySelectorAll('.about-content .tab-content');
+        
+        aboutTabs.forEach(t => t.classList.remove('active'));
+        aboutContents.forEach(c => c.classList.remove('active'));
+        
+        const activeTab = document.querySelector(`[data-tab="${tab}"]`);
+        const activeContent = document.getElementById(tab);
+        
+        if (activeTab) activeTab.classList.add('active');
+        if (activeContent) activeContent.classList.add('active');
+        
+        // Smooth scroll to section
+        setTimeout(() => {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        
+        // Track event
+        if (typeof trackEvent === 'function') {
+            trackEvent('about_section_opened', { tab: tab });
+        }
+    } else {
+        // Hide section
+        aboutSection.style.display = 'none';
+        console.log('Hiding about section');
+        if (typeof trackEvent === 'function') {
+            trackEvent('about_section_closed');
+        }
+    }
+}
+
 // Floating Video Player Functions - Global scope for onclick
 let isDragging = false;
 let currentX;
@@ -297,55 +347,6 @@ document.addEventListener('click', function(e) {
         });
     }
 });
-
-// About section functionality
-function toggleAbout(tab = 'proyecto') {
-    console.log('toggleAbout called with tab:', tab);
-    const aboutSection = document.getElementById('sobre-proyecto');
-    
-    if (!aboutSection) {
-        console.error('About section not found!');
-        return;
-    }
-    
-    console.log('Current display:', aboutSection.style.display);
-    
-    if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
-        // Show section
-        aboutSection.style.display = 'block';
-        console.log('Showing about section');
-        
-        // Set active tab
-        const aboutTabs = document.querySelectorAll('.tab-btn');
-        const aboutContents = document.querySelectorAll('.about-content .tab-content');
-        
-        aboutTabs.forEach(t => t.classList.remove('active'));
-        aboutContents.forEach(c => c.classList.remove('active'));
-        
-        const activeTab = document.querySelector(`[data-tab="${tab}"]`);
-        const activeContent = document.getElementById(tab);
-        
-        if (activeTab) activeTab.classList.add('active');
-        if (activeContent) activeContent.classList.add('active');
-        
-        // Smooth scroll to section
-        setTimeout(() => {
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-        
-        // Track event
-        if (typeof trackEvent === 'function') {
-            trackEvent('about_section_opened', { tab: tab });
-        }
-    } else {
-        // Hide section
-        aboutSection.style.display = 'none';
-        console.log('Hiding about section');
-        if (typeof trackEvent === 'function') {
-            trackEvent('about_section_closed');
-        }
-    }
-}
 
 // About section tabs functionality
 document.addEventListener('DOMContentLoaded', function() {
