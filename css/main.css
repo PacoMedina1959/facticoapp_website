@@ -489,6 +489,27 @@ body {
     margin-bottom: 10px;
 }
 
+.video-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: var(--transition);
+}
+
+.video-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.video-link:hover .video-placeholder {
+    background: #e0e0e0;
+}
+
+.video-link:hover .play-button {
+    transform: scale(1.1);
+    color: #1565c0;
+}
+
 /* Comparison Section */
 .comparison {
     padding: 80px 0;
