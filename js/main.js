@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToTopBtn.style.cssText = `
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         width: 50px;
         height: 50px;
         border-radius: 50%;

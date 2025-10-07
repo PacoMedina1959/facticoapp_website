@@ -683,7 +683,7 @@ body {
 /* Floating Video Player */
 .floating-video-player {
     position: fixed !important;
-    bottom: 80px !important;
+    bottom: 20px !important;
     right: 20px !important;
     width: 400px;
     height: 250px;
