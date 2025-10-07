@@ -682,23 +682,23 @@ body {
 
 /* Floating Video Player */
 .floating-video-player {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
     width: 400px;
     height: 250px;
     background: #000;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    z-index: 9999;
-    display: none;
+    z-index: 99999 !important;
+    display: none !important;
     flex-direction: column;
     overflow: hidden;
     transition: var(--transition);
 }
 
 .floating-video-player.active {
-    display: flex;
+    display: flex !important;
 }
 
 .floating-video-header {

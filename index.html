@@ -633,6 +633,10 @@
         const iframe = document.getElementById('floatingVideoFrame');
         const titleElement = document.getElementById('floatingVideoTitle');
         
+        console.log('openFloatingVideo llamado');
+        console.log('Player encontrado:', player);
+        console.log('Iframe encontrado:', iframe);
+        
         if (!player || !iframe || !titleElement) {
             console.error('Elementos del reproductor no encontrados');
             return;
@@ -645,6 +649,10 @@
         // Show player
         player.classList.add('active');
         
+        console.log('Clase active añadida');
+        console.log('Display del player:', window.getComputedStyle(player).display);
+        console.log('Position del player:', window.getComputedStyle(player).position);
+        console.log('Z-index del player:', window.getComputedStyle(player).zIndex);
         console.log('Video abierto:', title);
     }
 
