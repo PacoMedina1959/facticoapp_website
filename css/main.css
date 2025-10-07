@@ -510,6 +510,13 @@ body {
     color: #1565c0;
 }
 
+.video-placeholder small {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
 /* Comparison Section */
 .comparison {
     padding: 80px 0;
