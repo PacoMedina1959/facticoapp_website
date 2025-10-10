@@ -86,9 +86,26 @@ window.openFloatingVideo = function(videoId, title) {
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
     titleElement.textContent = title;
     
+    // Reset position to ensure visibility
+    try {
+        player.style.transform = 'translate(0px, 0px)';
+        xOffset = 0;
+        yOffset = 0;
+    } catch (e) {}
+
     // Show player
     player.classList.add('active');
     
+    // Ensure it is visible in viewport (Firefox/edge cases)
+    try {
+        player.focus({ preventScroll: true });
+        setTimeout(() => {
+            if (typeof player.scrollIntoView === 'function') {
+                player.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
+            }
+        }, 0);
+    } catch (e) {}
+
     // Track event
     if (typeof trackEvent === 'function') {
         trackEvent('floating_video_opened', { videoId: videoId, title: title });
