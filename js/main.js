@@ -96,6 +96,55 @@ function closeFloatingVideo() {
     }
 }
 
+// Ensure scroll-to-top button is created regardless of other code errors
+document.addEventListener('DOMContentLoaded', function() {
+    // Avoid duplicate creation
+    if (document.getElementById('scrollToTopBtn')) return;
+
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.id = 'scrollToTopBtn';
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.setAttribute('aria-label', 'Subir arriba');
+    scrollToTopBtn.title = 'Subir arriba';
+    scrollToTopBtn.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 99999;
+    `;
+
+    document.body.appendChild(scrollToTopBtn);
+
+    function updateVisibility() {
+        if (window.pageYOffset > 200) {
+            scrollToTopBtn.style.opacity = '1';
+            scrollToTopBtn.style.visibility = 'visible';
+        } else {
+            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.style.visibility = 'hidden';
+        }
+    }
+
+    // Initial state and listeners
+    updateVisibility();
+    window.addEventListener('scroll', updateVisibility);
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
 // Main JavaScript for Fáctico website
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -212,48 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll-to-top functionality
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 9000;
-    `;
-    
-    document.body.appendChild(scrollToTopBtn);
-    
-    // Show/hide scroll to top button
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.style.opacity = '1';
-            scrollToTopBtn.style.visibility = 'visible';
-        } else {
-            scrollToTopBtn.style.opacity = '0';
-            scrollToTopBtn.style.visibility = 'hidden';
-        }
-    });
-    
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    // Scroll-to-top is now created in an early listener (see above)
 
     // Add CSS for animations
     const style = document.createElement('style');
