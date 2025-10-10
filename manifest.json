@@ -29,18 +29,6 @@
   "related_applications": [],
   "shortcuts": [
     {
-      "name": "Usar App",
-      "short_name": "App",
-      "description": "Acceder a la aplicación de facturación",
-      "url": "https://facticoapp.es",
-      "icons": [
-        {
-          "src": "assets/images/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
       "name": "Ver Precios",
       "short_name": "Precios",
       "description": "Ver planes y precios",

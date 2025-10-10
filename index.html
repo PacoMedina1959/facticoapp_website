@@ -178,9 +178,9 @@
                     </div>
                 </div>
                 <div class="demo-video">
-                    <a href="https://youtu.be/eKW3Me2aOb4" target="_blank" class="video-link">
+                    <a href="https://youtu.be/LDJL4KUlvxo" target="_blank" class="video-link">
                         <div class="video-thumbnail">
-                            <img src="https://i.ytimg.com/vi/eKW3Me2aOb4/hqdefault.jpg" 
+                            <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
                                  alt="Vídeo demo de Fáctico" 
                                  class="video-image">
                             <div class="play-overlay">
@@ -201,9 +201,9 @@
             <p class="section-subtitle">Aprende a usar Fáctico paso a paso con nuestros vídeos formativos</p>
             <div class="videos-grid">
                 <!-- Video 1 -->
-                <div class="video-card" data-video-id="eKW3Me2aOb4" onclick="openFloatingVideo('eKW3Me2aOb4', 'Alta de Facturas Recibidas')">
+                <div class="video-card" data-video-id="LDJL4KUlvxo" onclick="openFloatingVideo('LDJL4KUlvxo', 'Alta de Facturas Recibidas')">
                     <div class="video-card-thumbnail">
-                        <img src="https://i.ytimg.com/vi/eKW3Me2aOb4/hqdefault.jpg" alt="Alta de Facturas Recibidas">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Alta de Facturas Recibidas">
                         <div class="video-card-overlay">
                             <div class="video-play-icon">▶</div>
                         </div>
@@ -618,140 +618,7 @@
         </div>
     </div>
 
-    <script>
-    // Floating Video Player Functions - Inline for immediate availability
-    let isDragging = false;
-    let currentX = 0;
-    let currentY = 0;
-    let initialX = 0;
-    let initialY = 0;
-    let xOffset = 0;
-    let yOffset = 0;
-
-    function openFloatingVideo(videoId, title) {
-        const player = document.getElementById('floatingVideoPlayer');
-        const iframe = document.getElementById('floatingVideoFrame');
-        const titleElement = document.getElementById('floatingVideoTitle');
-        
-        console.log('openFloatingVideo llamado');
-        console.log('Player encontrado:', player);
-        console.log('Iframe encontrado:', iframe);
-        
-        if (!player || !iframe || !titleElement) {
-            console.error('Elementos del reproductor no encontrados');
-            return;
-        }
-        
-        // Set video source with autoplay
-        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
-        titleElement.textContent = title;
-        
-        // Show player
-        player.classList.add('active');
-        
-        // Force styles inline to override any CSS conflicts
-        player.style.position = 'fixed';
-        player.style.bottom = '20px';
-        player.style.right = '20px';
-        player.style.zIndex = '99999';
-        player.style.display = 'flex';
-        
-        console.log('Clase active añadida');
-        console.log('Display del player:', window.getComputedStyle(player).display);
-        console.log('Position del player:', window.getComputedStyle(player).position);
-        console.log('Bottom del player:', window.getComputedStyle(player).bottom);
-        console.log('Right del player:', window.getComputedStyle(player).right);
-        console.log('Z-index del player:', window.getComputedStyle(player).zIndex);
-        console.log('Video abierto:', title);
-    }
-
-    function closeFloatingVideo() {
-        const player = document.getElementById('floatingVideoPlayer');
-        const iframe = document.getElementById('floatingVideoFrame');
-        
-        if (!player || !iframe) {
-            console.error('Elementos del reproductor no encontrados');
-            return;
-        }
-        
-        // Hide player
-        player.classList.remove('active');
-        player.style.display = 'none';
-        
-        // Stop video by removing src
-        iframe.src = '';
-        
-        // Reset position
-        player.style.transform = 'translate(0px, 0px)';
-        xOffset = 0;
-        yOffset = 0;
-        
-        console.log('Video cerrado');
-    }
-
-    // Make floating player draggable
-    document.addEventListener('DOMContentLoaded', function() {
-        const player = document.getElementById('floatingVideoPlayer');
-        const header = player ? player.querySelector('.floating-video-header') : null;
-        
-        if (!player || !header) {
-            console.log('Reproductor no encontrado para drag');
-            return;
-        }
-        
-        header.addEventListener('mousedown', dragStart);
-        header.addEventListener('touchstart', dragStart);
-        
-        document.addEventListener('mousemove', drag);
-        document.addEventListener('touchmove', drag);
-        
-        document.addEventListener('mouseup', dragEnd);
-        document.addEventListener('touchend', dragEnd);
-        
-        function dragStart(e) {
-            if (e.type === "touchstart") {
-                initialX = e.touches[0].clientX - xOffset;
-                initialY = e.touches[0].clientY - yOffset;
-            } else {
-                initialX = e.clientX - xOffset;
-                initialY = e.clientY - yOffset;
-            }
-            
-            if (e.target === header || header.contains(e.target)) {
-                isDragging = true;
-            }
-        }
-        
-        function drag(e) {
-            if (isDragging) {
-                e.preventDefault();
-                
-                if (e.type === "touchmove") {
-                    currentX = e.touches[0].clientX - initialX;
-                    currentY = e.touches[0].clientY - initialY;
-                } else {
-                    currentX = e.clientX - initialX;
-                    currentY = e.clientY - initialY;
-                }
-                
-                xOffset = currentX;
-                yOffset = currentY;
-                
-                setTranslate(currentX, currentY, player);
-            }
-        }
-        
-        function dragEnd(e) {
-            initialX = currentX;
-            initialY = currentY;
-            isDragging = false;
-        }
-        
-        function setTranslate(xPos, yPos, el) {
-            el.style.transform = 'translate(' + xPos + 'px, ' + yPos + 'px)';
-        }
-    });
-    </script>
+    
 
     <script src="js/main.js"></script>
 </body>
