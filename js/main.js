@@ -1,6 +1,6 @@
 // Global Functions - Available for onclick handlers
 // About section functionality
-function toggleAbout(tab = 'proyecto') {
+window.toggleAbout = function(tab = 'proyecto') {
     console.log('toggleAbout called with tab:', tab);
     const aboutSection = document.getElementById('sobre-proyecto');
     
@@ -46,7 +46,7 @@ function toggleAbout(tab = 'proyecto') {
             trackEvent('about_section_closed');
         }
     }
-}
+};
 
 // Floating Video Player Functions - Global scope for onclick
 let isDragging = false;
@@ -57,7 +57,7 @@ let initialY;
 let xOffset = 0;
 let yOffset = 0;
 
-function openFloatingVideo(videoId, title) {
+window.openFloatingVideo = function(videoId, title) {
     const player = document.getElementById('floatingVideoPlayer');
     const iframe = document.getElementById('floatingVideoFrame');
     const titleElement = document.getElementById('floatingVideoTitle');
@@ -73,9 +73,9 @@ function openFloatingVideo(videoId, title) {
     if (typeof trackEvent === 'function') {
         trackEvent('floating_video_opened', { videoId: videoId, title: title });
     }
-}
+};
 
-function closeFloatingVideo() {
+window.closeFloatingVideo = function() {
     const player = document.getElementById('floatingVideoPlayer');
     const iframe = document.getElementById('floatingVideoFrame');
     
@@ -94,7 +94,7 @@ function closeFloatingVideo() {
     if (typeof trackEvent === 'function') {
         trackEvent('floating_video_closed');
     }
-}
+};
 
 // Ensure scroll-to-top button is created regardless of other code errors
 document.addEventListener('DOMContentLoaded', function() {
