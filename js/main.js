@@ -1,3 +1,23 @@
+// One-time cache bust for legacy Service Workers and caches (Firefox normal mode)
+(function() {
+    try {
+        var CACHE_BUSTER_KEY = 'cache_cleared_v20251010a';
+        if (!localStorage.getItem(CACHE_BUSTER_KEY)) {
+            if ('serviceWorker' in navigator && navigator.serviceWorker.getRegistrations) {
+                navigator.serviceWorker.getRegistrations()
+                    .then(function(regs) { regs.forEach(function(r) { r.unregister(); }); })
+                    .catch(function() {});
+            }
+            if (window.caches && caches.keys) {
+                caches.keys()
+                    .then(function(keys) { return Promise.all(keys.map(function(k) { return caches.delete(k); })); })
+                    .catch(function() {});
+            }
+            localStorage.setItem(CACHE_BUSTER_KEY, '1');
+        }
+    } catch (e) {}
+})();
+
 // Global Functions - Available for onclick handlers
 // About section functionality
 window.toggleAbout = function(tab = 'proyecto') {
