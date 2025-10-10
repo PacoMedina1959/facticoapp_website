@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Make floating player draggable
 document.addEventListener('DOMContentLoaded', function() {
     const player = document.getElementById('floatingVideoPlayer');
-    const header = player.querySelector('.floating-video-header');
+    const header = player ? player.querySelector('.floating-video-header') : null;
     
     if (!player || !header) return;
     
