@@ -96,15 +96,7 @@ window.openFloatingVideo = function(videoId, title) {
     // Show player
     player.classList.add('active');
     
-    // Ensure it is visible in viewport (Firefox/edge cases)
-    try {
-        player.focus({ preventScroll: true });
-        setTimeout(() => {
-            if (typeof player.scrollIntoView === 'function') {
-                player.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
-            }
-        }, 0);
-    } catch (e) {}
+    // No hacer scroll: el player es position:fixed y debe mostrarse sin mover la página
 
     // Track event
     if (typeof trackEvent === 'function') {
