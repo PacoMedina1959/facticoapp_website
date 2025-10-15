@@ -223,10 +223,10 @@
             <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 40px; text-align: center;">Aprende a usar Fáctico con vídeos paso a paso</p>
             
             <div class="videos-grid">
-                <div class="video-card">
-                    <div class="video-thumbnail">
+                <div class="video-card" data-video-id="nmBXaVeUn8I" onclick="openFloatingVideo('nmBXaVeUn8I', 'Alta de Facturas Emitidas - Factura Normal')">
+                    <div class="video-thumbnail" style="background: url('https://i.ytimg.com/vi/nmBXaVeUn8I/hqdefault.jpg') center/cover;">
                         <div class="play-button">▶</div>
-                        <div class="video-duration">5:30</div>
+                        <div class="video-duration">16:07</div>
                     </div>
                     <div class="video-info">
                         <h3>Factura Normal</h3>
@@ -404,6 +404,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Video Player -->
+    <div id="floatingVideoPlayer" class="floating-video-player">
+        <div class="floating-video-header">
+            <span id="floatingVideoTitle" class="floating-video-title">Vídeo Tutorial</span>
+            <button class="floating-video-close" onclick="closeFloatingVideo()">✕</button>
+        </div>
+        <div class="floating-video-container">
+            <iframe id="floatingVideoFrame" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 
     <script src="../js/main.js"></script>
 </body>
