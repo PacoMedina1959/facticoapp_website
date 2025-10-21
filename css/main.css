@@ -476,6 +476,96 @@ body {
     color: #d84315;
 }
 
+/* Perfil Fiscal Section */
+.perfil-fiscal {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.perfil-feature {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.perfil-step {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), #42a5f5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.perfil-feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.perfil-feature p {
+    color: var(--text-light);
+}
+
+.perfil-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.perfil-detail-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.perfil-detail-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.perfil-detail-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil-detail-card li {
+    padding: 8px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.perfil-note {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 20px;
+    background: #fff3e0;
+    border-radius: var(--border-radius);
+    border-left: 4px solid #ff9800;
+    margin-top: 40px;
+}
+
+.perfil-note strong {
+    color: #d84315;
+}
+
 /* Demo Section */
 .demo {
     padding: 80px 0;
