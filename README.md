@@ -7,7 +7,6 @@ Sitio web estático para promoción y formación de Fáctico, la aplicación de 
 - **Landing page** optimizada para conversión
 - **Página de precios** con comparativa de competencia
 - **Guías formativas** sobre VeriFactu, fiscalidad y contabilidad
-- **Blog** con artículos SEO optimizados
 - **PWA** instalable en móviles
 - **Responsive** diseño móvil-first
 - **SEO optimizado** para búsquedas orgánicas
@@ -24,11 +23,6 @@ facticoapp-website/
 │   ├── modelo-303.html
 │   ├── conciliacion-bancaria.html
 │   └── contabilidad-basica.html
-├── blog/                   # Blog con artículos
-│   ├── index.html
-│   ├── como-elegir-software-facturacion.html
-│   ├── iva-autonomos-guia-completa.html
-│   └── verifactu-explicado-simple.html
 ├── css/                    # Estilos
 │   ├── main.css
 │   └── responsive.css
@@ -95,7 +89,6 @@ La web es una Progressive Web App (PWA) que se puede instalar en móviles:
 - **Guías completas** sobre fiscalidad
 - **Vídeos** de YouTube integrados
 - **PDFs** descargables
-- **Blog** con artículos SEO
 
 ## 📊 Métricas
 
@@ -103,7 +96,6 @@ La web es una Progressive Web App (PWA) que se puede instalar en móviles:
 - **100 visitas/día** orgánicas
 - **50 registros** en la app
 - **10 vídeos** publicados
-- **20 artículos** blog
 
 ### KPIs
 - **Tiempo en página:** >2 minutos
@@ -115,7 +107,6 @@ La web es una Progressive Web App (PWA) que se puede instalar en móviles:
 
 ### Contenido
 - **Actualizar guías** según normativa fiscal
-- **Publicar artículos** semanalmente
 - **Subir vídeos** a YouTube
 - **Responder comentarios** y emails
 

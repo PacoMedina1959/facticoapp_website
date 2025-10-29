@@ -1,5 +1,4 @@
 # Redirects for Netlify
-/blog/* /blog-public/:splat 200
 /guias/* /guias/:splat 200
 
 # SPA fallback (if needed)
