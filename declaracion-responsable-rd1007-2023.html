@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración Responsable RD 1007/2023 - Fáctico</title>
+    <meta name="description" content="Declaración Responsable de Fáctico como sistema informático de facturación conforme al Real Decreto 1007/2023 (VERI*FACTU).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+            color: #1976d2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #1976d2;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box strong {
+            color: #1976d2;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffa000;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .signature-section {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .signature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .signature-field {
+            text-align: center;
+            padding-top: 60px;
+            border-top: 2px solid #333;
+        }
+        
+        .signature-field strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        
+        .date {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .signature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Fáctico</div>
+            <h1>DECLARACIÓN RESPONSABLE</h1>
+            <p class="subtitle">Real Decreto 1007/2023 - Sistema VERI*FACTU</p>
+        </div>
+
+        <h2>1. IDENTIFICACIÓN DEL RESPONSABLE</h2>
+        
+        <div class="info-box">
+            <p><strong>Desarrollador y Responsable:</strong> Francisco Medina Jara</p>
+            <p><strong>NIF:</strong> 36559528Q</p>
+            <p><strong>Domicilio:</strong> Barcelona, España</p>
+            <p><strong>Email de contacto:</strong> administrador@facticoapp.es</p>
+            <p><strong>Sitio web:</strong> https://facticoapp.es</p>
+            <p><strong>Nombre del Sistema:</strong> Fáctico - Sistema de Facturación Electrónica con IA</p>
+        </div>
+
+        <h2>2. OBJETO DE LA DECLARACIÓN</h2>
+        
+        <p>Por medio de la presente, <strong>Francisco Medina Jara</strong>, en calidad de desarrollador y responsable del sistema informático de facturación denominado <strong>"Fáctico"</strong>, declara bajo su responsabilidad que dicho sistema cumple con los requisitos técnicos y funcionales establecidos en el <strong>Real Decreto 1007/2023, de 5 de diciembre</strong>, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales (Sistema VERI*FACTU).</p>
+
+        <h2>3. DESCRIPCIÓN DEL SISTEMA FÁCTICO</h2>
+        
+        <h3>3.1. Características Generales</h3>
+        
+        <p><strong>Fáctico</strong> es una aplicación web (SaaS - Software as a Service) de facturación electrónica y contabilidad básica, diseñada específicamente para autónomos y pequeñas empresas en España. El sistema integra:</p>
+        
+        <ul>
+            <li>Generación de facturas emitidas y registro de facturas recibidas</li>
+            <li>Facturación electrónica (PDF, FacturaE/UBL, FACe para Administraciones Públicas)</li>
+            <li>Contabilidad automática conforme al Plan General Contable (PGC)</li>
+            <li>Gestión de cobros y pagos, remesas SEPA, conciliación bancaria</li>
+            <li>Generación de modelos tributarios (303, 347, 111, 131, 349)</li>
+            <li>Integración con Inteligencia Artificial para automatización de procesos</li>
+            <li>Sistema multiusuario con control de roles y permisos</li>
+            <li><strong>Cumplimiento total con el Real Decreto 1007/2023 (VERI*FACTU)</strong></li>
+        </ul>
+
+        <h3>3.2. Arquitectura Técnica</h3>
+        
+        <ul>
+            <li><strong>Frontend:</strong> Progressive Web App (PWA) desarrollada en React</li>
+            <li><strong>Backend:</strong> API RESTful desarrollada en Python (FastAPI)</li>
+            <li><strong>Base de datos:</strong> PostgreSQL con cifrado de datos sensibles</li>
+            <li><strong>Infraestructura:</strong> Servicios cloud con alta disponibilidad</li>
+            <li><strong>Comunicaciones:</strong> HTTPS (TLS 1.2+) y mTLS para Verifactu</li>
+        </ul>
+
+        <h2>4. CUMPLIMIENTO DEL REAL DECRETO 1007/2023</h2>
+        
+        <div class="success-box">
+            <p><strong>Fáctico cumple con TODOS los requisitos establecidos en el RD 1007/2023:</strong></p>
+        </div>
+
+        <h3>4.1. Integridad de Registros de Facturación (Art. 6)</h3>
+        
+        <ul>
+            <li>✅ Cada registro de facturación contiene todos los campos obligatorios establecidos en el Anexo I</li>
+            <li>✅ Los registros son <strong>inmutables</strong> una vez generados (no se pueden modificar sin dejar trazabilidad)</li>
+            <li>✅ Se generan registros de alta, anulación y rectificación según corresponda</li>
+            <li>✅ Los datos fiscales del emisor y destinatario se conservan tal como estaban en el momento de emisión</li>
+        </ul>
+
+        <h3>4.2. Conservación y Trazabilidad (Art. 7)</h3>
+        
+        <ul>
+            <li>✅ Todos los registros de facturación se conservan durante el plazo legal mínimo de <strong>6 años</strong></li>
+            <li>✅ Los registros se almacenan en formato electrónico, ordenados cronológicamente</li>
+            <li>✅ Se garantiza la <strong>trazabilidad completa</strong> de todas las operaciones mediante auditoría contable</li>
+            <li>✅ Los registros pueden ser exportados en formato legible (XML, CSV, PDF) en cualquier momento</li>
+        </ul>
+
+        <h3>4.3. Encadenamiento de Registros (Art. 8)</h3>
+        
+        <p>Fáctico implementa un sistema de <strong>encadenamiento criptográfico</strong> de registros de facturación:</p>
+        
+        <ul>
+            <li>✅ Cada registro contiene la <strong>huella digital (hash SHA-256)</strong> del registro anterior</li>
+            <li>✅ Se utiliza el algoritmo <strong>HMAC-SHA-256</strong> con clave secreta única por empresa</li>
+            <li>✅ El primer registro de cada serie contiene un hash de inicialización (genesis)</li>
+            <li>✅ Cualquier intento de modificación o eliminación de un registro intermedio rompe la cadena, lo que permite detectar manipulaciones</li>
+            <li>✅ La integridad de la cadena se verifica automáticamente antes de cada envío a Verifactu</li>
+        </ul>
+
+        <div class="info-box">
+            <p><strong>Fórmula de encadenamiento implementada:</strong></p>
+            <p style="font-family: monospace; margin-top: 10px;">
+                Hash<sub>N</sub> = HMAC-SHA256(Clave, Datos<sub>N</sub> + Hash<sub>N-1</sub>)
+            </p>
+        </div>
+
+        <h3>4.4. Remisión a la AEAT (Art. 9 y 10)</h3>
+        
+        <ul>
+            <li>✅ Fáctico envía automáticamente los registros de facturación a la AEAT mediante el <strong>sistema Verifactu</strong></li>
+            <li>✅ Comunicación segura mediante <strong>mTLS (Mutual TLS)</strong> con certificado digital</li>
+            <li>✅ Generación de códigos QR con <strong>código seguro de verificación (CSV)</strong> para validación pública</li>
+            <li>✅ Se registran los estados de envío (pendiente, enviado, aceptado, error) con fecha y hora exactas</li>
+            <li>✅ Reintento automático en caso de fallo temporal de comunicación</li>
+        </ul>
+
+        <h3>4.5. Prohibición de Funcionalidades No Conformes (Art. 11)</h3>
+        
+        <ul>
+            <li>✅ <strong>NO se permite</strong> la eliminación de registros de facturación (solo anulación mediante registro de anulación)</li>
+            <li>✅ <strong>NO se permite</strong> la modificación de registros de facturación ya generados (solo rectificación mediante registro de rectificación)</li>
+            <li>✅ <strong>NO existe</strong> ninguna funcionalidad de "modo fantasma", "doble facturación" o similar</li>
+            <li>✅ <strong>NO se permite</strong> alterar el orden cronológico de los registros</li>
+            <li>✅ <strong>NO se permite</strong> la manipulación del encadenamiento de huellas digitales</li>
+        </ul>
+
+        <div class="warning-box">
+            <p><strong>⚠️ IMPORTANTE:</strong> Fáctico está diseñado específicamente para cumplir con la normativa fiscal española. Cualquier intento de uso fraudulento por parte del usuario es responsabilidad exclusiva del mismo, no del sistema.</p>
+        </div>
+
+        <h3>4.6. Accesibilidad y Auditoría</h3>
+        
+        <ul>
+            <li>✅ La AEAT puede acceder en cualquier momento a los registros de facturación</li>
+            <li>✅ Fáctico genera informes de auditoría con todas las operaciones realizadas</li>
+            <li>✅ Los usuarios pueden exportar su contabilidad completa en cualquier momento</li>
+            <li>✅ Se conservan logs de acceso y modificaciones para fines de auditoría</li>
+        </ul>
+
+        <h2>5. SEGURIDAD Y PROTECCIÓN DE DATOS</h2>
+        
+        <ul>
+            <li>✅ Cifrado de contraseñas mediante algoritmos robustos (bcrypt)</li>
+            <li>✅ Comunicaciones seguras mediante HTTPS (TLS 1.2+)</li>
+            <li>✅ Autenticación mTLS para comunicación con Verifactu (AEAT)</li>
+            <li>✅ Control de acceso mediante sistema de roles y permisos</li>
+            <li>✅ Copias de seguridad automáticas cifradas</li>
+            <li>✅ Cumplimiento del RGPD (Reglamento General de Protección de Datos)</li>
+        </ul>
+
+        <h2>6. COMPROMISOS DEL DESARROLLADOR</h2>
+        
+        <p>Como responsable del sistema <strong>Fáctico</strong>, me comprometo a:</p>
+        
+        <ul>
+            <li>Mantener el sistema actualizado conforme a las modificaciones normativas que puedan producirse</li>
+            <li>Notificar a los usuarios cualquier cambio relevante que afecte al cumplimiento normativo</li>
+            <li>Proporcionar soporte técnico para resolver incidencias relacionadas con Verifactu</li>
+            <li>Colaborar con las autoridades fiscales en caso de requerimientos legales</li>
+            <li>Garantizar la conservación de los registros durante el plazo legal mínimo</li>
+            <li>Facilitar la exportación de datos a los usuarios que lo soliciten</li>
+        </ul>
+
+        <h2>7. RESPONSABILIDAD DEL USUARIO</h2>
+        
+        <p>El sistema <strong>Fáctico</strong> proporciona las herramientas técnicas necesarias para el cumplimiento del RD 1007/2023, pero la <strong>responsabilidad final del correcto uso y cumplimiento fiscal</strong> recae en el usuario (empresario o profesional).</p>
+        
+        <p>El usuario es responsable de:</p>
+        
+        <ul>
+            <li>Introducir datos fiscales y de facturación correctos y veraces</li>
+            <li>Verificar que los registros generados reflejen correctamente sus operaciones</li>
+            <li>Presentar las declaraciones tributarias correspondientes en plazo</li>
+            <li>Conservar documentación de respaldo (contratos, albaranes, etc.)</li>
+            <li>Consultar con un asesor fiscal ante cualquier duda normativa</li>
+        </ul>
+
+        <div class="info-box">
+            <p><strong>Recomendación:</strong> Fáctico proporciona herramientas de ayuda automática, pero <strong>NO sustituye</strong> el asesoramiento de un profesional contable o fiscal. Se recomienda consultar con un gestor antes de presentar declaraciones tributarias.</p>
+        </div>
+
+        <h2>8. ACTUALIZACIÓN Y VIGENCIA</h2>
+        
+        <p>Esta declaración responsable tiene vigencia desde la fecha de su firma y se mantendrá actualizada ante cualquier modificación significativa del sistema <strong>Fáctico</strong> o de la normativa aplicable (RD 1007/2023 o posteriores modificaciones).</p>
+        
+        <p>En caso de actualizaciones relevantes, se publicará una nueva versión de este documento en:</p>
+        <p style="text-align: center; font-weight: 600; color: #1976d2; margin-top: 10px;">
+            https://facticoapp.es/declaracion-responsable-rd1007-2023.html
+        </p>
+
+        <h2>9. CONTACTO Y SOPORTE</h2>
+        
+        <div class="info-box">
+            <p>Para cualquier consulta técnica, duda sobre el cumplimiento normativo o solicitud de información adicional:</p>
+            <p style="margin-top: 10px;"><strong>📧 Email:</strong> administrador@facticoapp.es</p>
+            <p><strong>🌐 Web:</strong> https://facticoapp.es</p>
+            <p><strong>Tiempo de respuesta:</strong> Máximo 5 días laborables</p>
+        </div>
+
+        <h2>10. DECLARACIÓN FINAL</h2>
+        
+        <p style="text-align: justify; font-weight: 500; line-height: 1.8;">
+            Por todo lo expuesto, <strong>DECLARO BAJO MI RESPONSABILIDAD</strong> que el sistema informático de facturación <strong>"Fáctico"</strong> cumple con todos los requisitos técnicos y funcionales establecidos en el <strong>Real Decreto 1007/2023, de 5 de diciembre</strong>, y que está preparado para su uso en entornos de producción por parte de empresarios y profesionales obligados al cumplimiento de la normativa <strong>VERI*FACTU</strong>.
+        </p>
+        
+        <div class="success-box" style="margin-top: 30px;">
+            <p style="text-align: center; font-size: 1.1em; font-weight: 600;">
+                ✅ Sistema VERI*FACTU plenamente operativo y conforme con el RD 1007/2023
+            </p>
+        </div>
+
+        <div class="signature-section">
+            <div class="date">
+                <strong>Barcelona, 29 de octubre de 2025</strong>
+            </div>
+            
+            <div class="signature-grid">
+                <div class="signature-field">
+                    <strong>Francisco Medina Jara</strong>
+                    <p>NIF: 36559528Q</p>
+                    <p>Desarrollador y Responsable de Fáctico</p>
+                </div>
+                <div class="signature-field">
+                    <strong>Firma Digital</strong>
+                    <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                        (En versión impresa, firma manuscrita)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Versión:</strong> 1.0 | <strong>Fecha de emisión:</strong> 29 de octubre de 2025</p>
+            <p><strong>Última actualización:</strong> 29 de octubre de 2025</p>
+            <p style="margin-top: 15px;">© 2025 Francisco Medina Jara - Fáctico. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
+
