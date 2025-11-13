@@ -354,3 +354,195 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ===== GESTIÓN DE CONSENTIMIENTO DE COOKIES (Google Analytics) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieReject = document.getElementById('cookie-reject');
+    
+    if (!cookieBanner || !cookieAccept || !cookieReject) {
+        console.error('Cookie banner elements not found');
+        return;
+    }
+    
+    // Verificar si el usuario ya ha dado su consentimiento
+    const cookieConsent = localStorage.getItem('factico_cookie_consent');
+    
+    if (!cookieConsent) {
+        // Mostrar banner si no hay respuesta previa
+        cookieBanner.style.display = 'block';
+    }
+    
+    // Botón Aceptar
+    cookieAccept.addEventListener('click', function() {
+        // Guardar consentimiento
+        localStorage.setItem('factico_cookie_consent', 'accepted');
+        
+        // Actualizar consentimiento de GA4
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+            
+            // Enviar evento personalizado
+            gtag('event', 'cookie_consent_granted', {
+                'event_category': 'engagement',
+                'event_label': 'User accepted cookies'
+            });
+        }
+        
+        // Ocultar banner
+        cookieBanner.style.display = 'none';
+        
+        console.log('Cookies aceptadas - GA4 activado');
+    });
+    
+    // Botón Rechazar
+    cookieReject.addEventListener('click', function() {
+        // Guardar rechazo
+        localStorage.setItem('factico_cookie_consent', 'rejected');
+        
+        // Mantener denegado el almacenamiento
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        
+        // Ocultar banner
+        cookieBanner.style.display = 'none';
+        
+        console.log('Cookies rechazadas - GA4 desactivado');
+    });
+});
+
+// ===== EVENTOS PERSONALIZADOS GOOGLE ANALYTICS 4 =====
+
+// Función auxiliar para enviar eventos a GA4
+function sendGA4Event(eventName, eventParams = {}) {
+    if (typeof gtag === 'function') {
+        const consent = localStorage.getItem('factico_cookie_consent');
+        if (consent === 'accepted') {
+            gtag('event', eventName, eventParams);
+            console.log('GA4 Event:', eventName, eventParams);
+        }
+    }
+}
+
+// Tracking de clics en botones CTA (mejorado)
+document.addEventListener('DOMContentLoaded', function() {
+    // CTA principales (Empezar ahora)
+    document.querySelectorAll('.btn-primary, .nav-cta').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            sendGA4Event('cta_click', {
+                'event_category': 'engagement',
+                'event_label': this.textContent.trim(),
+                'value': 1
+            });
+        });
+    });
+    
+    // Ver demo
+    document.querySelectorAll('a[href="#demo"]').forEach(link => {
+        link.addEventListener('click', function() {
+            sendGA4Event('view_demo', {
+                'event_category': 'engagement',
+                'event_label': 'Demo section'
+            });
+        });
+    });
+    
+    // Reproducir vídeos
+    document.querySelectorAll('.video-link, .playlist-card').forEach(videoLink => {
+        videoLink.addEventListener('click', function() {
+            const videoTitle = this.querySelector('h3')?.textContent || 'Video tutorial';
+            sendGA4Event('video_play', {
+                'event_category': 'engagement',
+                'event_label': videoTitle,
+                'video_url': this.href
+            });
+        });
+    });
+    
+    // Enlaces externos (usar ahora, registrarse)
+    document.querySelectorAll('a[href^="https://facticoapp.es"]').forEach(link => {
+        link.addEventListener('click', function() {
+            sendGA4Event('register_intent', {
+                'event_category': 'conversion',
+                'event_label': 'Link to app',
+                'link_text': this.textContent.trim()
+            });
+        });
+    });
+    
+    // Clicks en secciones de funcionalidades
+    document.querySelectorAll('.feature-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const featureTitle = this.querySelector('h3')?.textContent || 'Feature';
+            sendGA4Event('feature_click', {
+                'event_category': 'engagement',
+                'event_label': featureTitle
+            });
+        });
+    });
+    
+    // Clicks en guías
+    document.querySelectorAll('a[href^="guias/"]').forEach(link => {
+        link.addEventListener('click', function() {
+            const guideTitle = this.textContent.trim();
+            sendGA4Event('guide_click', {
+                'event_category': 'engagement',
+                'event_label': guideTitle,
+                'guide_url': this.href
+            });
+        });
+    });
+    
+    // Navegación en tabs "Sobre el Proyecto"
+    document.querySelectorAll('.tab-btn').forEach(tabBtn => {
+        tabBtn.addEventListener('click', function() {
+            const tabName = this.getAttribute('data-tab');
+            sendGA4Event('about_tab_view', {
+                'event_category': 'engagement',
+                'event_label': tabName
+            });
+        });
+    });
+    
+    // Tiempo en página (después de 30 segundos)
+    setTimeout(function() {
+        sendGA4Event('time_on_page_30s', {
+            'event_category': 'engagement',
+            'event_label': 'User stayed 30+ seconds'
+        });
+    }, 30000);
+    
+    // Scroll profundo (80% de la página)
+    let deepScrollSent = false;
+    window.addEventListener('scroll', function() {
+        if (deepScrollSent) return;
+        
+        const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+        if (scrollPercent > 80) {
+            sendGA4Event('scroll_depth_80', {
+                'event_category': 'engagement',
+                'event_label': 'Deep scroll'
+            });
+            deepScrollSent = true;
+        }
+    });
+});
+
+// Actualizar la función trackEvent existente para usar GA4
+function trackEvent(eventName, eventData = {}) {
+    // Consola para debug
+    console.log('Event tracked:', eventName, eventData);
+    
+    // Enviar a GA4
+    sendGA4Event(eventName, {
+        'event_category': eventData.category || 'engagement',
+        'event_label': eventData.label || eventName,
+        ...eventData
+    });
+}
