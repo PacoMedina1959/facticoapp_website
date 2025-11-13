@@ -376,6 +376,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar banner si no hay respuesta previa
         cookieBanner.style.display = 'block';
         console.log('🍪 Showing cookie banner');
+        
+        // Debug: verificar que el banner sea visible
+        setTimeout(function() {
+            const rect = cookieBanner.getBoundingClientRect();
+            console.log('📐 Banner position:', {
+                bottom: rect.bottom,
+                height: rect.height,
+                display: window.getComputedStyle(cookieBanner).display,
+                zIndex: window.getComputedStyle(cookieBanner).zIndex,
+                visible: rect.height > 0 && window.getComputedStyle(cookieBanner).display !== 'none'
+            });
+        }, 500);
     } else {
         console.log('✅ User already responded to cookie consent:', cookieConsent);
     }

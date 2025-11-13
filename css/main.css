@@ -1638,7 +1638,7 @@ body {
     right: 0;
     background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
     color: white;
-    z-index: 10000;
+    z-index: 100000;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
     animation: slideUp 0.4s ease-out;
 }
