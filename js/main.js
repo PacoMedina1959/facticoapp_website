@@ -362,16 +362,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieReject = document.getElementById('cookie-reject');
     
     if (!cookieBanner || !cookieAccept || !cookieReject) {
-        console.error('Cookie banner elements not found');
+        console.error('❌ Cookie banner elements not found');
         return;
     }
     
+    console.log('✅ Cookie banner elements found');
+    
     // Verificar si el usuario ya ha dado su consentimiento
     const cookieConsent = localStorage.getItem('factico_cookie_consent');
+    console.log('📊 Cookie consent status:', cookieConsent || 'not set');
     
     if (!cookieConsent) {
         // Mostrar banner si no hay respuesta previa
         cookieBanner.style.display = 'block';
+        console.log('🍪 Showing cookie banner');
+    } else {
+        console.log('✅ User already responded to cookie consent:', cookieConsent);
     }
     
     // Botón Aceptar
