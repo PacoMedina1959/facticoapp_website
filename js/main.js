@@ -374,19 +374,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!cookieConsent) {
         // Mostrar banner si no hay respuesta previa
-        cookieBanner.style.display = 'block';
+        cookieBanner.classList.add('show');
         console.log('🍪 Showing cookie banner');
         
         // Debug: verificar que el banner sea visible
         setTimeout(function() {
             const rect = cookieBanner.getBoundingClientRect();
+            const computedStyle = window.getComputedStyle(cookieBanner);
             console.log('📐 Banner position:', {
                 bottom: rect.bottom,
                 height: rect.height,
-                display: window.getComputedStyle(cookieBanner).display,
-                zIndex: window.getComputedStyle(cookieBanner).zIndex,
-                visible: rect.height > 0 && window.getComputedStyle(cookieBanner).display !== 'none'
+                display: computedStyle.display,
+                zIndex: computedStyle.zIndex,
+                hasShowClass: cookieBanner.classList.contains('show'),
+                visible: rect.height > 0 && computedStyle.display !== 'none'
             });
+            
+            if (rect.height === 0 || computedStyle.display === 'none') {
+                console.error('❌ Banner NO es visible. Forzando display...');
+                cookieBanner.style.display = 'block';
+            }
         }, 500);
     } else {
         console.log('✅ User already responded to cookie consent:', cookieConsent);
@@ -411,9 +418,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Ocultar banner
-        cookieBanner.style.display = 'none';
+        cookieBanner.classList.remove('show');
         
-        console.log('Cookies aceptadas - GA4 activado');
+        console.log('✅ Cookies aceptadas - GA4 activado');
     });
     
     // Botón Rechazar
@@ -429,9 +436,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Ocultar banner
-        cookieBanner.style.display = 'none';
+        cookieBanner.classList.remove('show');
         
-        console.log('Cookies rechazadas - GA4 desactivado');
+        console.log('❌ Cookies rechazadas - GA4 desactivado');
     });
 });
 

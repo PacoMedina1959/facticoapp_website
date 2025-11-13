@@ -1641,6 +1641,11 @@ body {
     z-index: 100000;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
     animation: slideUp 0.4s ease-out;
+    display: none; /* Oculto por defecto, JS lo mostrará si es necesario */
+}
+
+.cookie-banner.show {
+    display: block;
 }
 
 @keyframes slideUp {
