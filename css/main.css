@@ -64,7 +64,7 @@ body {
 }
 
 .logo-img {
-    height: 50px;
+    height: 40px;
     width: auto;
     transition: var(--transition);
 }
@@ -141,12 +141,12 @@ body {
 }
 
 .hero-logo {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .hero-logo-img {
-    max-width: 450px;
+    max-width: 280px;
     width: 100%;
     height: auto;
     animation: fadeInUp 0.8s ease-out;
@@ -164,10 +164,10 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Hero Video */
@@ -1596,15 +1596,15 @@ body {
     }
     
     .logo-img {
-        height: 40px;
+        height: 35px;
     }
     
     .hero-logo-img {
-        max-width: 320px;
+        max-width: 200px;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .hero-video {
