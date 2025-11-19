@@ -167,7 +167,33 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Hero Video */
+.hero-video {
+    margin: 30px 0;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
 }
 
 .highlight {
@@ -1579,6 +1605,14 @@ body {
     
     .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .hero-video {
+        margin: 20px 0;
+    }
+    
+    .video-wrapper {
+        border-radius: 8px;
     }
     
     .hero-cta {

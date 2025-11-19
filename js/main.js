@@ -478,6 +478,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Vídeo promocional del Hero
+    const heroVideoIframe = document.querySelector('.hero-video iframe');
+    if (heroVideoIframe) {
+        // Detectar cuando el iframe se vuelve visible (scroll)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sendGA4Event('promo_video_view', {
+                        'event_category': 'engagement',
+                        'event_label': 'Hero promotional video',
+                        'video_url': 'https://youtu.be/XlSVXVvq7a4'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(heroVideoIframe);
+    }
+    
     // Reproducir vídeos
     document.querySelectorAll('.video-link, .playlist-card').forEach(videoLink => {
         videoLink.addEventListener('click', function() {
