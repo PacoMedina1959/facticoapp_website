@@ -25,7 +25,7 @@ Reemplazar la sección de vídeos tutoriales individuales por playlists de YouTu
 
 | Playlist | URL | Thumbnail |
 |----------|-----|-----------|
-| 📄 Facturas Emitidas | `PLaFha7Jlz2AQYsrl1yeetZSsI0FLiC8nf` | `-gVu_R_Xt-g` |
+| 📄 Facturas Emitidas | `PLaFha7Jlz2AQYsrl1yeetZSsI0FLiC8nf` | `LDJL4KUlvxo` (Changed from broken `-gVu_R_Xt-g`) |
 | ⚙️ Configuración | `PLaFha7Jlz2ARQ7Tqkv5LRxX_rfnlhyIy9` | `LDJL4KUlvxo` |
 | 📊 Contabilidad | `PLaFha7Jlz2ARqCZcO4AbOkQhs0A4Wlo8R` | `LDJL4KUlvxo` |
 
