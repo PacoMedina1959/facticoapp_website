@@ -140,6 +140,43 @@ body {
     align-items: center;
 }
 
+/* VeriFactu Notice */
+.verifactu-notice {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+    animation: fadeInUp 0.8s ease-out;
+    border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.notice-icon {
+    font-size: 1.2rem;
+}
+
+.notice-text {
+    font-size: 0.9rem;
+    color: #1565c0;
+    line-height: 1.4;
+}
+
+.notice-text strong {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .verifactu-notice {
+        display: flex;
+        text-align: left;
+        margin: 0 auto 20px;
+        width: fit-content;
+    }
+}
+
 .hero-logo {
     margin-bottom: 20px;
     text-align: center;

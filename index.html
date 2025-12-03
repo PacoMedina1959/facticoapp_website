@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fáctico - Facturación con IA que se instala en tu móvil</title>
-    <meta name="description" content="Escanea tickets, crea facturas con tu logo y firma en 15 segundos. IA integrada, VeriFactu completo, personalización total. Sin suscripción.">
-    <meta name="keywords" content="facturación, autónomos, VeriFactu, IA, móvil, contabilidad, PWA, logo personalizado, firma digital">
+    <meta name="description"
+        content="Escanea tickets, crea facturas con tu logo y firma en 15 segundos. IA integrada, VeriFactu completo, personalización total. Sin suscripción.">
+    <meta name="keywords"
+        content="facturación, autónomos, VeriFactu, IA, móvil, contabilidad, PWA, logo personalizado, firma digital">
     <link rel="canonical" href="https://web.facticoapp.es">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css?v=20251119playlist_inicio">
-    
+
     <!-- Favicon y iconos de app -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo_0.png">
     <link rel="apple-touch-icon" href="assets/images/logo_0.png">
@@ -22,8 +25,8 @@
     <script>
         // Inicializar objeto de consentimiento GA4
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        
+        function gtag() { dataLayer.push(arguments); }
+
         // Por defecto, denegar todo hasta que el usuario acepte
         gtag('consent', 'default', {
             'analytics_storage': 'denied',
@@ -32,7 +35,7 @@
             'ad_personalization': 'denied',
             'wait_for_update': 500
         });
-        
+
         // Cargar GA4 si hay consentimiento previo
         const cookieConsent = localStorage.getItem('factico_cookie_consent');
         if (cookieConsent === 'accepted') {
@@ -41,7 +44,7 @@
             });
         }
     </script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ7PZ1WMTX"></script>
     <script>
@@ -52,6 +55,7 @@
         });
     </script>
 </head>
+
 <body>
     <!-- Banner de Cookies RGPD -->
     <div id="cookie-banner" class="cookie-banner">
@@ -59,8 +63,8 @@
             <div class="cookie-banner-text">
                 <h3>🍪 Cookies y Privacidad</h3>
                 <p>
-                    Usamos Google Analytics para entender cómo mejora tu experiencia. 
-                    Estos datos son anónimos y nos ayudan a optimizar la web. 
+                    Usamos Google Analytics para entender cómo mejora tu experiencia.
+                    Estos datos son anónimos y nos ayudan a optimizar la web.
                     <a href="politica-cookies.html" target="_blank">Más info</a>
                 </p>
             </div>
@@ -76,20 +80,21 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="#" class="logo-link">
-                        <img src="assets/images/logo_transparent.png" alt="Fáctico - Facturación con IA" class="logo-img">
+                        <img src="assets/images/logo_transparent.png" alt="Fáctico - Facturación con IA"
+                            class="logo-img">
                     </a>
                 </div>
-                        <div class="nav-menu">
-                            <a href="#demo" class="nav-link">Demo</a>
-                            <a href="#face" class="nav-link">FACe</a>
-                            <a href="#perfil-fiscal" class="nav-link">Perfil Fiscal</a>
-                            <a href="#equipo" class="nav-link">Equipo</a>
-                            <a href="#precios" class="nav-link">Precios</a>
-                            <a href="#videos" class="nav-link">Guías</a>
-                            <a href="#contact" class="nav-link">Contacto</a>
-                            <a href="#sobre-proyecto" class="nav-link" onclick="toggleAbout()">Sobre el Proyecto</a>
-                            <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Usar ahora</a>
-                        </div>
+                <div class="nav-menu">
+                    <a href="#demo" class="nav-link">Demo</a>
+                    <a href="#face" class="nav-link">FACe</a>
+                    <a href="#perfil-fiscal" class="nav-link">Perfil Fiscal</a>
+                    <a href="#equipo" class="nav-link">Equipo</a>
+                    <a href="#precios" class="nav-link">Precios</a>
+                    <a href="#videos" class="nav-link">Guías</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                    <a href="#sobre-proyecto" class="nav-link" onclick="toggleAbout()">Sobre el Proyecto</a>
+                    <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Usar ahora</a>
+                </div>
                 <button class="nav-toggle" aria-label="Menú">
                     <span></span>
                     <span></span>
@@ -103,28 +108,31 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <div class="verifactu-notice">
+                    <span class="notice-icon">📢</span>
+                    <span class="notice-text"><strong>Novedad VeriFactu:</strong> Aplazamiento oficial. Pymes: 1 Ene
+                        2027 | Autónomos: 1 Jul 2027</span>
+                </div>
                 <div class="hero-logo">
                     <img src="assets/images/logo_transparent.png" alt="Fáctico" class="hero-logo-img">
                 </div>
                 <h1 class="hero-title">
                     Facturación con <span class="highlight">IA</span> que se instala en tu móvil
                 </h1>
-                
+
                 <!-- Vídeo Promocional -->
                 <div class="hero-video">
                     <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/XlSVXVvq7a4?rel=0&modestbranding=1" 
-                            title="Fáctico - Facturación con IA para Autónomos" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        <iframe src="https://www.youtube.com/embed/XlSVXVvq7a4?rel=0&modestbranding=1"
+                            title="Fáctico - Facturación con IA para Autónomos" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
                         </iframe>
                     </div>
                 </div>
-                
+
                 <p class="hero-subtitle">
-                    Escanea tickets, crea facturas y lleva la contabilidad en 15 segundos. 
+                    Escanea tickets, crea facturas y lleva la contabilidad en 15 segundos.
                     Sin apps nativas, sin complicaciones. <strong>Sin suscripción mensual.</strong>
                 </p>
                 <div class="hero-cta">
@@ -187,7 +195,8 @@
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
                     <h3>IA Integrada</h3>
-                    <p>Chat inteligente que te ayuda con fiscalidad y contabilidad. OCR automático para escanear tickets.</p>
+                    <p>Chat inteligente que te ayuda con fiscalidad y contabilidad. OCR automático para escanear
+                        tickets.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
@@ -212,17 +221,20 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>Perfil Fiscal Inteligente</h3>
-                    <p>Wizard que configura automáticamente tus modelos AEAT, plantillas contables y cuentas según tu régimen fiscal.</p>
+                    <p>Wizard que configura automáticamente tus modelos AEAT, plantillas contables y cuentas según tu
+                        régimen fiscal.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👥</div>
                     <h3>Gestión de Equipo</h3>
-                    <p>Multiusuario con 5 roles: Propietario, Super Empleado, Gestor, Empleado y Consultor. Control total de permisos.</p>
+                    <p>Multiusuario con 5 roles: Propietario, Super Empleado, Gestor, Empleado y Consultor. Control
+                        total de permisos.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h3>Uso Gratuito</h3>
-                    <p>Sin suscripción mensual, sin tarjetas de crédito obligatorias. Todas las funcionalidades disponibles.</p>
+                    <p>Sin suscripción mensual, sin tarjetas de crédito obligatorias. Todas las funcionalidades
+                        disponibles.</p>
                 </div>
             </div>
         </div>
@@ -239,12 +251,14 @@
                 <div class="feature-card">
                     <div class="feature-icon">🖼️</div>
                     <h3>Logo Empresarial</h3>
-                    <p>Añade tu logo en 3 posiciones (superior izquierda, centro o derecha). Procesamiento automático y optimizado.</p>
+                    <p>Añade tu logo en 3 posiciones (superior izquierda, centro o derecha). Procesamiento automático y
+                        optimizado.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">✍️</div>
                     <h3>Firma Digital</h3>
-                    <p>Firma visible en pie de factura (inferior izquierda, centro o derecha). Separación clara logo/firma.</p>
+                    <p>Firma visible en pie de factura (inferior izquierda, centro o derecha). Separación clara
+                        logo/firma.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
@@ -271,7 +285,8 @@
                     <div class="face-feature">✅ Seguimiento de pagos</div>
                     <div class="face-feature">✅ FacturaE 3.2.2 validado</div>
                 </div>
-                <p class="face-note">💡 En la mayoría de soluciones del mercado, FACe es una funcionalidad de pago adicional. <strong>Fáctico lo incluye sin coste extra</strong></p>
+                <p class="face-note">💡 En la mayoría de soluciones del mercado, FACe es una funcionalidad de pago
+                    adicional. <strong>Fáctico lo incluye sin coste extra</strong></p>
                 <a href="guias/verifactu-2025.html#face" class="btn btn-secondary">Ver guía FACe →</a>
             </div>
         </div>
@@ -301,7 +316,7 @@
                     <p>Ya sabes qué modelos presentar y cómo contabilizar cada operación</p>
                 </div>
             </div>
-            
+
             <div class="perfil-details">
                 <div class="perfil-detail-card">
                     <h4>📋 Detecta automáticamente</h4>
@@ -334,9 +349,10 @@
                     </ul>
                 </div>
             </div>
-            
+
             <p class="perfil-note">
-                💡 En la mayoría de soluciones del mercado, la configuración inicial requiere completar múltiples formularios. 
+                💡 En la mayoría de soluciones del mercado, la configuración inicial requiere completar múltiples
+                formularios.
                 Con Fáctico, respondes <strong>8 preguntas guiadas</strong> y ya está todo listo.
             </p>
         </div>
@@ -349,7 +365,7 @@
             <p class="section-subtitle">
                 Trabaja en equipo con permisos granulares. Gestores, empleados y consultores en una sola plataforma.
             </p>
-            
+
             <div class="team-roles-grid">
                 <div class="team-role-card">
                     <div class="team-role-icon">👑</div>
@@ -361,7 +377,7 @@
                         <li>✅ Configuración avanzada</li>
                     </ul>
                 </div>
-                
+
                 <div class="team-role-card">
                     <div class="team-role-icon">⚡</div>
                     <h3>Super Empleado</h3>
@@ -372,7 +388,7 @@
                         <li>❌ Sin acceso a configuración</li>
                     </ul>
                 </div>
-                
+
                 <div class="team-role-card">
                     <div class="team-role-icon">📊</div>
                     <h3>Gestor (Contable)</h3>
@@ -383,7 +399,7 @@
                         <li>👁️ Ver facturas (sin editar)</li>
                     </ul>
                 </div>
-                
+
                 <div class="team-role-card">
                     <div class="team-role-icon">👤</div>
                     <h3>Empleado</h3>
@@ -394,7 +410,7 @@
                         <li>👁️ Ver contabilidad</li>
                     </ul>
                 </div>
-                
+
                 <div class="team-role-card">
                     <div class="team-role-icon">🔍</div>
                     <h3>Consultor</h3>
@@ -406,13 +422,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="team-features-box">
                 <h3>🎯 Casos de Uso Reales</h3>
                 <div class="team-cases">
                     <div class="team-case">
                         <strong>Autónomo con gestoría</strong>
-                        <p>Invita a tu asesor como "Gestor". Puede ver todo y hacer modelos fiscales, pero no modificar facturas.</p>
+                        <p>Invita a tu asesor como "Gestor". Puede ver todo y hacer modelos fiscales, pero no modificar
+                            facturas.</p>
                     </div>
                     <div class="team-case">
                         <strong>Empresa familiar</strong>
@@ -424,9 +441,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <p class="team-note">
-                💰 En muchas soluciones del mercado, la gestión de equipos es una funcionalidad de pago adicional o tiene limitaciones significativas. 
+                💰 En muchas soluciones del mercado, la gestión de equipos es una funcionalidad de pago adicional o
+                tiene limitaciones significativas.
                 Fáctico incluye <strong>5 roles completos sin coste adicional</strong>.
             </p>
         </div>
@@ -470,9 +488,8 @@
                 <div class="demo-video">
                     <a href="https://youtu.be/LDJL4KUlvxo" target="_blank" class="video-link">
                         <div class="video-thumbnail">
-                            <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                                 alt="Vídeo demo de Fáctico" 
-                                 class="video-image">
+                            <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Vídeo demo de Fáctico"
+                                class="video-image">
                             <div class="play-overlay">
                                 <div class="play-button">▶</div>
                                 <p>Ver vídeo demo</p>
@@ -489,17 +506,14 @@
         <div class="container">
             <h2 class="section-title">📺 Vídeos Tutoriales</h2>
             <p class="section-subtitle">Aprende a usar Fáctico con nuestras playlists organizadas por temática</p>
-            
+
             <div class="playlists-grid">
                 <!-- Playlist 0: Inicio -->
-                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AQm8VQ3pDWEWhk6-znfo9vb" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="playlist-card playlist-featured">
+                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AQm8VQ3pDWEWhk6-znfo9vb" target="_blank"
+                    rel="noopener noreferrer" class="playlist-card playlist-featured">
                     <div class="playlist-thumbnail">
-                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                             alt="Playlist Inicio"
-                             loading="lazy">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Playlist Inicio"
+                            loading="lazy">
                         <div class="playlist-overlay">
                             <div class="playlist-icon">🚀</div>
                             <div class="playlist-count">Ver todos los vídeos →</div>
@@ -517,14 +531,11 @@
                 </a>
 
                 <!-- Playlist 1: Facturas Emitidas -->
-                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AQYsrl1yeetZSsI0FLiC8nf" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AQYsrl1yeetZSsI0FLiC8nf" target="_blank"
+                    rel="noopener noreferrer" class="playlist-card">
                     <div class="playlist-thumbnail">
-                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                             alt="Playlist Facturas Emitidas"
-                             loading="lazy">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Playlist Facturas Emitidas"
+                            loading="lazy">
                         <div class="playlist-overlay">
                             <div class="playlist-icon">📄</div>
                             <div class="playlist-count">Ver todos los vídeos →</div>
@@ -541,14 +552,11 @@
                 </a>
 
                 <!-- Playlist 2: Configuración -->
-                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2ARQ7Tqkv5LRxX_rfnlhyIy9" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2ARQ7Tqkv5LRxX_rfnlhyIy9" target="_blank"
+                    rel="noopener noreferrer" class="playlist-card">
                     <div class="playlist-thumbnail">
-                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                             alt="Playlist Configuración"
-                             loading="lazy">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Playlist Configuración"
+                            loading="lazy">
                         <div class="playlist-overlay">
                             <div class="playlist-icon">⚙️</div>
                             <div class="playlist-count">Ver todos los vídeos →</div>
@@ -565,14 +573,11 @@
                 </a>
 
                 <!-- Playlist 3: Facturas Recibidas -->
-                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AR0qYcnqHfO_4i9mKh_7rME" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2AR0qYcnqHfO_4i9mKh_7rME" target="_blank"
+                    rel="noopener noreferrer" class="playlist-card">
                     <div class="playlist-thumbnail">
-                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                             alt="Playlist Facturas Recibidas"
-                             loading="lazy">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Playlist Facturas Recibidas"
+                            loading="lazy">
                         <div class="playlist-overlay">
                             <div class="playlist-icon">📥</div>
                             <div class="playlist-count">Ver todos los vídeos →</div>
@@ -589,14 +594,11 @@
                 </a>
 
                 <!-- Playlist 4: Contabilidad -->
-                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2ARqCZcO4AbOkQhs0A4Wlo8R" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLaFha7Jlz2ARqCZcO4AbOkQhs0A4Wlo8R" target="_blank"
+                    rel="noopener noreferrer" class="playlist-card">
                     <div class="playlist-thumbnail">
-                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" 
-                             alt="Playlist Contabilidad"
-                             loading="lazy">
+                        <img src="https://i.ytimg.com/vi/LDJL4KUlvxo/hqdefault.jpg" alt="Playlist Contabilidad"
+                            loading="lazy">
                         <div class="playlist-overlay">
                             <div class="playlist-icon">📊</div>
                             <div class="playlist-count">Ver todos los vídeos →</div>
@@ -614,7 +616,7 @@
             </div>
 
             <div class="playlist-note">
-                💡 <strong>Tip:</strong> Cada playlist se actualiza regularmente con nuevos vídeos. 
+                💡 <strong>Tip:</strong> Cada playlist se actualiza regularmente con nuevos vídeos.
                 Suscríbete en YouTube para no perderte las novedades.
             </div>
         </div>
@@ -731,8 +733,10 @@
                     <div class="competitor-cell">⚠️ 1 posición</div>
                 </div>
             </div>
-            <p class="comparison-disclaimer" style="text-align: center; font-size: 0.9em; color: #666; margin-top: 20px; font-style: italic;">
-                * Datos verificados a octubre 2025. Las funcionalidades de terceros pueden cambiar. Consulte las webs oficiales para información actualizada.
+            <p class="comparison-disclaimer"
+                style="text-align: center; font-size: 0.9em; color: #666; margin-top: 20px; font-style: italic;">
+                * Datos verificados a octubre 2025. Las funcionalidades de terceros pueden cambiar. Consulte las webs
+                oficiales para información actualizada.
             </p>
         </div>
     </section>
@@ -794,39 +798,47 @@
                 <h2>Sobre Fáctico</h2>
                 <button class="close-about" onclick="toggleAbout()" aria-label="Cerrar">×</button>
             </div>
-            
+
             <div class="about-tabs">
                 <button class="tab-btn active" data-tab="proyecto">El Proyecto</button>
                 <button class="tab-btn" data-tab="beta">Estado Beta</button>
                 <button class="tab-btn" data-tab="filosofia">Filosofía</button>
                 <button class="tab-btn" data-tab="contacto">Contacto</button>
             </div>
-            
+
             <div class="about-content">
                 <div id="proyecto" class="tab-content active">
                     <h3>¿Qué es Fáctico?</h3>
-                    <p><strong>Fáctico es un proyecto personal y open source</strong> para facilitar la vida a autónomos y PYMES en España: facturación electrónica, integración con VeriFactu, contabilidad completa con PGC, control de inmovilizado, amortizaciones, facturación masiva y gestión de presupuestos.</p>
+                    <p><strong>Fáctico es un proyecto personal y open source</strong> para facilitar la vida a autónomos
+                        y PYMES en España: facturación electrónica, integración con VeriFactu, contabilidad completa con
+                        PGC, control de inmovilizado, amortizaciones, facturación masiva y gestión de presupuestos.</p>
                     <p>La ambición no es "hacer negocio", sino aportar una herramienta clara, segura y útil.</p>
-                    
+
                     <div class="highlight-box">
                         <h4>🎯 Objetivo</h4>
-                        <p>Facilitar la gestión fiscal y contable de autónomos y PYMES con una herramienta transparente y sin presión comercial.</p>
+                        <p>Facilitar la gestión fiscal y contable de autónomos y PYMES con una herramienta transparente
+                            y sin presión comercial.</p>
                     </div>
                 </div>
-                
+
                 <div id="beta" class="tab-content">
                     <h3>Estado del Proyecto: PRODUCCIÓN</h3>
-                    <p>Sistema completo, estable y en producción. Evolución continua según necesidades reales de usuarios.</p>
-                    
+                    <p>Sistema completo, estable y en producción. Evolución continua según necesidades reales de
+                        usuarios.</p>
+
                     <div class="features-grid">
                         <div class="feature-item">
                             <h4>✅ Sistema Completo Operativo</h4>
                             <ul>
-                                <li><strong>Facturación avanzada:</strong> Emitidas, Recibidas, Rectificativas (completas y por diferencias), Masiva</li>
-                                <li><strong>Multiusuario:</strong> 5 roles (Propietario, Super Empleado, Gestor, Empleado, Consultor)</li>
+                                <li><strong>Facturación avanzada:</strong> Emitidas, Recibidas, Rectificativas
+                                    (completas y por diferencias), Masiva</li>
+                                <li><strong>Multiusuario:</strong> 5 roles (Propietario, Super Empleado, Gestor,
+                                    Empleado, Consultor)</li>
                                 <li><strong>Multiempresa:</strong> Gestiona hasta 10 empresas desde una cuenta</li>
-                                <li><strong>Perfil Fiscal Inteligente:</strong> Wizard automático que configura PGC y modelos AEAT</li>
-                                <li><strong>FACe:</strong> Facturación a administraciones públicas con firma digital</li>
+                                <li><strong>Perfil Fiscal Inteligente:</strong> Wizard automático que configura PGC y
+                                    modelos AEAT</li>
+                                <li><strong>FACe:</strong> Facturación a administraciones públicas con firma digital
+                                </li>
                                 <li><strong>VeriFactu:</strong> Envío automático a AEAT (obligatorio 2025)</li>
                                 <li><strong>FacturaE 3.2.2:</strong> Validado con firma digital</li>
                                 <li><strong>Contabilidad PGC:</strong> Automática y manual, Libro Diario, Mayor</li>
@@ -850,12 +862,15 @@
                                 <li>Paginación en listados largos (>100 registros)</li>
                                 <li>Más integraciones de terceros</li>
                             </ul>
-                            
+
                             <h4 style="margin-top: 20px;">🎯 Últimas Novedades (Oct-Nov 2025)</h4>
                             <ul>
-                                <li>🎨 <strong>Logo empresarial personalizable:</strong> 3 posiciones (superior izq/centro/der), procesamiento automático 550x275px</li>
-                                <li>✍️ <strong>Firma digital en facturas:</strong> 3 posiciones (inferior izq/centro/der), separación clara logo/firma</li>
-                                <li>🎨 <strong>Diseño de facturas mejorado:</strong> Preview en tiempo real, colores y fuentes personalizables</li>
+                                <li>🎨 <strong>Logo empresarial personalizable:</strong> 3 posiciones (superior
+                                    izq/centro/der), procesamiento automático 550x275px</li>
+                                <li>✍️ <strong>Firma digital en facturas:</strong> 3 posiciones (inferior
+                                    izq/centro/der), separación clara logo/firma</li>
+                                <li>🎨 <strong>Diseño de facturas mejorado:</strong> Preview en tiempo real, colores y
+                                    fuentes personalizables</li>
                                 <li>✨ Optimización de rendimiento (latencia reducida 70-85%)</li>
                                 <li>✨ Dashboard fiscal mejorado con caché inteligente</li>
                                 <li>✨ Sistema de búsqueda y filtrado en Workspace</li>
@@ -864,37 +879,42 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="warning-box">
                         <h4>⚠️ Importante</h4>
-                        <p><strong>Fáctico es una herramienta de ayuda, no un asesor fiscal.</strong> Revisa siempre tus datos antes de enviar declaraciones o comunicaciones a la AEAT. Ante dudas normativas, consulta con tu gestor o asesor fiscal profesional.</p>
+                        <p><strong>Fáctico es una herramienta de ayuda, no un asesor fiscal.</strong> Revisa siempre tus
+                            datos antes de enviar declaraciones o comunicaciones a la AEAT. Ante dudas normativas,
+                            consulta con tu gestor o asesor fiscal profesional.</p>
                     </div>
                 </div>
-                
+
                 <div id="filosofia" class="tab-content">
                     <h3>Filosofía y Modelo</h3>
-                    
-                    <div class="highlight-box" style="background: #f0f4ff; border: 3px solid #1976d2; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+
+                    <div class="highlight-box"
+                        style="background: #f0f4ff; border: 3px solid #1976d2; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
                         <h4 style="color: #1976d2; margin-bottom: 15px;">👨‍💻 Proyecto Personal de un Jubilado</h4>
                         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px; color: #333;">
-                            Soy Francisco Medina, programador veterano jubilado. Retomo la programación por pasión 
+                            Soy Francisco Medina, programador veterano jubilado. Retomo la programación por pasión
                             y para ayudar a la comunidad de autónomos española.
                         </p>
                         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px; color: #333;">
-                            <strong>Este proyecto ofrece uso gratuito sin suscripción mensual ni funciones bloqueadas.</strong>
+                            <strong>Este proyecto ofrece uso gratuito sin suscripción mensual ni funciones
+                                bloqueadas.</strong>
                         </p>
                         <p style="font-size: 14px; line-height: 1.6; color: #555;">
-                            Los costes de servidor (~50€/mes) los asumo de mi pensión. 
-                            Si el proyecto te resulta útil y quieres contribuir con un café ocasional para ayudar 
-                            con los gastos, lo agradeceré mucho, pero es totalmente opcional y 
+                            Los costes de servidor (~50€/mes) los asumo de mi pensión.
+                            Si el proyecto te resulta útil y quieres contribuir con un café ocasional para ayudar
+                            con los gastos, lo agradeceré mucho, pero es totalmente opcional y
                             <strong>NO da ninguna ventaja extra</strong>.
                         </p>
                     </div>
-                    
+
                     <div class="philosophy-grid">
                         <div class="philosophy-item">
                             <h4>💰 Sin Presión Comercial</h4>
-                            <p>Prioriza utilidad y tranquilidad jurídica sobre monetización. Sin planes premium ocultos.</p>
+                            <p>Prioriza utilidad y tranquilidad jurídica sobre monetización. Sin planes premium ocultos.
+                            </p>
                         </div>
                         <div class="philosophy-item">
                             <h4>🔒 Privacidad Total</h4>
@@ -906,24 +926,26 @@
                         </div>
                         <div class="philosophy-item">
                             <h4>🛡️ Independiente</h4>
-                            <p>Sin inversores ni presiones externas. Desarrollo guiado por necesidades reales de usuarios.</p>
+                            <p>Sin inversores ni presiones externas. Desarrollo guiado por necesidades reales de
+                                usuarios.</p>
                         </div>
                     </div>
-                    
+
                     <div class="success-box">
                         <h4>🤝 Qué Esperamos de los Usuarios</h4>
                         <ul>
                             <li><strong>Probar casos reales:</strong> Si es posible, primero en entorno PRE</li>
                             <li><strong>Reportar errores:</strong> Con ejemplos concretos y pasos para reproducir</li>
                             <li><strong>Sugerir mejoras:</strong> Tu feedback directo y sin rodeos es bienvenido</li>
-                            <li><strong>Revisar antes de enviar:</strong> Especialmente datos a VeriFactu o administraciones</li>
+                            <li><strong>Revisar antes de enviar:</strong> Especialmente datos a VeriFactu o
+                                administraciones</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div id="contacto" class="tab-content">
                     <h3>Contacto y Enlaces</h3>
-                    
+
                     <div class="contact-info">
                         <div class="contact-item">
                             <h4>🌐 App</h4>
@@ -935,21 +957,25 @@
                         </div>
                         <div class="contact-item">
                             <h4>📋 Declaración Responsable RD 1007/2023</h4>
-                            <p><a href="declaracion-responsable-rd1007-2023.html" target="_blank">Ver declaración VERI*FACTU</a></p>
+                            <p><a href="declaracion-responsable-rd1007-2023.html" target="_blank">Ver declaración
+                                    VERI*FACTU</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="about-author">
                         <h4>👨‍💻 Sobre el Desarrollador</h4>
-                        <p><strong>Francisco Medina</strong>, programador veterano y jubilado. Retomo la programación por pasión y para ayudar a quien le sirva.</p>
-                        <p>Prefiero un proyecto útil y honesto antes que uno "grande" que me complique la vida. Me encantará tu feedback directo y sin rodeos.</p>
+                        <p><strong>Francisco Medina</strong>, programador veterano y jubilado. Retomo la programación
+                            por pasión y para ayudar a quien le sirva.</p>
+                        <p>Prefiero un proyecto útil y honesto antes que uno "grande" que me complique la vida. Me
+                            encantará tu feedback directo y sin rodeos.</p>
                     </div>
-                    
+
                     <div class="warning-box">
                         <h4>⚠️ Límites Importantes</h4>
-                        <p><strong>Fáctico no es asesoría fiscal.</strong> Ante dudas, consulta con tu gestor/a. La integración con VeriFactu sigue la normativa, pero cada actividad puede tener matices.</p>
+                        <p><strong>Fáctico no es asesoría fiscal.</strong> Ante dudas, consulta con tu gestor/a. La
+                            integración con VeriFactu sigue la normativa, pero cada actividad puede tener matices.</p>
                     </div>
-                    
+
                     <p class="last-update"><strong>Última actualización:</strong> 31/10/2025</p>
                 </div>
             </div>
@@ -983,25 +1009,25 @@
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
-        <div class="footer-section">
-            <h4>Proyecto</h4>
-            <ul>
-                <li><a href="#sobre-proyecto" onclick="toggleAbout('proyecto')">Sobre Fáctico</a></li>
-                <li><a href="#sobre-proyecto" onclick="toggleAbout('beta')">Estado del Proyecto</a></li>
-                <li><a href="#sobre-proyecto" onclick="toggleAbout('filosofia')">Filosofía</a></li>
-                <li><a href="#sobre-proyecto" onclick="toggleAbout('contacto')">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h4>Legal</h4>
-            <ul>
-                <li><a href="politica-privacidad.html">Privacidad</a></li>
-                <li><a href="aviso-legal.html">Aviso Legal</a></li>
-                <li><a href="terminos-condiciones.html">Términos</a></li>
-                <li><a href="politica-cookies.html">Cookies</a></li>
-                <li><a href="declaracion-responsable-rd1007-2023.html">Declaración RD 1007/2023</a></li>
-            </ul>
-        </div>
+                <div class="footer-section">
+                    <h4>Proyecto</h4>
+                    <ul>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('proyecto')">Sobre Fáctico</a></li>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('beta')">Estado del Proyecto</a></li>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('filosofia')">Filosofía</a></li>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('contacto')">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="politica-privacidad.html">Privacidad</a></li>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                        <li><a href="terminos-condiciones.html">Términos</a></li>
+                        <li><a href="politica-cookies.html">Cookies</a></li>
+                        <li><a href="declaracion-responsable-rd1007-2023.html">Declaración RD 1007/2023</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Fáctico™. Todos los derechos reservados.</p>
@@ -1009,8 +1035,9 @@
         </div>
     </footer>
 
-    
+
 
     <script src="js/main.js?v=20251113ga4"></script>
 </body>
+
 </html>
