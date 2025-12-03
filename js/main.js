@@ -18,36 +18,17 @@
     } catch (e) {}
 })();
 
-// Fix para imágenes que desaparecen al cambiar de pestaña o volver del bfcache
+// Fix: Refrescar página al volver a la pestaña (evita imágenes perdidas)
 (function() {
-    function reloadPlaylistImages() {
-        document.querySelectorAll('.playlist-thumbnail img').forEach(function(img) {
-            // Solo recargar si la imagen no está cargada
-            if (!img.complete || img.naturalHeight === 0) {
-                var src = img.src;
-                img.src = '';
-                img.src = src;
-            }
-        });
-    }
-
-    // Al volver del bfcache (botón atrás)
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            reloadPlaylistImages();
-        }
-    });
-
-    // Al volver a la pestaña desde otra pestaña
+    var wasHidden = false;
+    
     document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState === 'visible') {
-            reloadPlaylistImages();
+        if (document.visibilityState === 'hidden') {
+            wasHidden = true;
+        } else if (document.visibilityState === 'visible' && wasHidden) {
+            // La pestaña vuelve a ser visible después de estar oculta
+            location.reload();
         }
-    });
-
-    // Al hacer focus en la ventana
-    window.addEventListener('focus', function() {
-        reloadPlaylistImages();
     });
 })();
 
