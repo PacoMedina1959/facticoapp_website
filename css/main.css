@@ -140,40 +140,73 @@ body {
     align-items: center;
 }
 
-/* VeriFactu Notice */
-.verifactu-notice {
-    display: inline-flex;
+/* VeriFactu Banner - Noticia destacada arriba de todo */
+.verifactu-banner {
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 50%, #66bb6a 100%);
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.verifactu-banner-content {
+    display: flex;
     align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    padding: 8px 16px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
-    animation: fadeInUp 0.8s ease-out;
-    border: 1px solid rgba(25, 118, 210, 0.1);
+    justify-content: center;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.notice-icon {
-    font-size: 1.2rem;
+.banner-icon {
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
 }
 
-.notice-text {
-    font-size: 0.9rem;
-    color: #1565c0;
-    line-height: 1.4;
+.banner-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
-.notice-text strong {
+.banner-text strong {
     font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 @media (max-width: 768px) {
-    .verifactu-notice {
-        display: flex;
-        text-align: left;
-        margin: 0 auto 20px;
-        width: fit-content;
+    .verifactu-banner {
+        padding: 10px 15px;
+    }
+    
+    .verifactu-banner-content {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .banner-text {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    
+    .banner-icon {
+        font-size: 1.3rem;
     }
 }
 
