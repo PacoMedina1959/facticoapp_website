@@ -18,6 +18,18 @@
     } catch (e) {}
 })();
 
+// Fix para imágenes que no se recargan al volver con botón atrás (bfcache)
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        // La página viene del bfcache, forzar recarga de imágenes
+        document.querySelectorAll('.playlist-thumbnail img').forEach(function(img) {
+            var src = img.src;
+            img.src = '';
+            img.src = src;
+        });
+    }
+});
+
 // Global Functions - Available for onclick handlers
 // About section functionality
 window.toggleAbout = function(tab = 'proyecto') {
