@@ -18,17 +18,38 @@
     } catch (e) {}
 })();
 
-// Fix para imágenes que no se recargan al volver con botón atrás (bfcache)
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        // La página viene del bfcache, forzar recarga de imágenes
+// Fix para imágenes que desaparecen al cambiar de pestaña o volver del bfcache
+(function() {
+    function reloadPlaylistImages() {
         document.querySelectorAll('.playlist-thumbnail img').forEach(function(img) {
-            var src = img.src;
-            img.src = '';
-            img.src = src;
+            // Solo recargar si la imagen no está cargada
+            if (!img.complete || img.naturalHeight === 0) {
+                var src = img.src;
+                img.src = '';
+                img.src = src;
+            }
         });
     }
-});
+
+    // Al volver del bfcache (botón atrás)
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            reloadPlaylistImages();
+        }
+    });
+
+    // Al volver a la pestaña desde otra pestaña
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            reloadPlaylistImages();
+        }
+    });
+
+    // Al hacer focus en la ventana
+    window.addEventListener('focus', function() {
+        reloadPlaylistImages();
+    });
+})();
 
 // Global Functions - Available for onclick handlers
 // About section functionality
