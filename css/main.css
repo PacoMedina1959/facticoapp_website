@@ -26,6 +26,41 @@ body {
     background-color: var(--background-color);
 }
 
+/* Banner VeriFactu - Parte superior */
+.verifactu-banner {
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.verifactu-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.verifactu-banner .banner-icon {
+    font-size: 1.2em;
+}
+
+.verifactu-banner .banner-text {
+    font-size: 0.95em;
+}
+
+.verifactu-banner .banner-text strong {
+    font-weight: 700;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +72,7 @@ body {
     background: white;
     box-shadow: var(--shadow);
     position: fixed;
-    top: 40px; /* Debajo del banner VeriFactu */
+    top: 42px; /* Espacio para el banner VeriFactu */
     left: 0;
     right: 0;
     z-index: 1000;
@@ -123,7 +158,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 160px 0 80px; /* 120px + 40px del banner VeriFactu */
+    padding: 160px 0 80px; /* Extra padding para banner VeriFactu */
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
     display: flex;
@@ -140,84 +175,40 @@ body {
     align-items: center;
 }
 
-/* VeriFactu Banner - Noticia destacada arriba de todo */
-.verifactu-banner {
-    background: linear-gradient(135deg, #2e7d32 0%, #43a047 50%, #66bb6a 100%);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.verifactu-banner-content {
-    display: flex;
+/* VeriFactu Notice */
+.verifactu-notice {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+    animation: fadeInUp 0.8s ease-out;
+    border: 1px solid rgba(25, 118, 210, 0.1);
 }
 
-.banner-icon {
-    font-size: 1.5rem;
-    animation: pulse 2s ease-in-out infinite;
+.notice-icon {
+    font-size: 1.2rem;
 }
 
-.banner-text {
-    font-size: 1.05rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+.notice-text {
+    font-size: 0.9rem;
+    color: #1565c0;
+    line-height: 1.4;
 }
 
-.banner-text strong {
+.notice-text strong {
     font-weight: 700;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 6px;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
 }
 
 @media (max-width: 768px) {
-    .verifactu-banner {
-        padding: 8px 15px;
-    }
-    
-    .verifactu-banner-content {
-        flex-direction: row;
-        gap: 8px;
-    }
-    
-    .banner-text {
-        font-size: 0.85rem;
-        line-height: 1.3;
-    }
-    
-    .banner-icon {
-        font-size: 1.1rem;
-    }
-    
-    .header {
-        top: 36px; /* Ajuste para móvil */
-    }
-    
-    .hero {
-        padding-top: 150px; /* Ajuste para móvil */
+    .verifactu-notice {
+        display: flex;
+        text-align: left;
+        margin: 0 auto 20px;
+        width: fit-content;
     }
 }
 
