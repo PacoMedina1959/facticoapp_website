@@ -18,20 +18,6 @@
     } catch (e) {}
 })();
 
-// Fix: Refrescar página al volver a la pestaña (evita imágenes perdidas)
-(function() {
-    var wasHidden = false;
-    
-    document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState === 'hidden') {
-            wasHidden = true;
-        } else if (document.visibilityState === 'visible' && wasHidden) {
-            // La pestaña vuelve a ser visible después de estar oculta
-            location.reload();
-        }
-    });
-})();
-
 // Global Functions - Available for onclick handlers
 // About section functionality
 window.toggleAbout = function(tab = 'proyecto') {

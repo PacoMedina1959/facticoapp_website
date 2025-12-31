@@ -4,16 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fáctico - Facturación con IA que se instala en tu móvil</title>
+    
+    <!-- SEO Básico -->
+    <title>Fáctico | Software VeriFactu Adaptado a la Ley Antifraude 2025</title>
     <meta name="description"
-        content="Escanea tickets, crea facturas con tu logo y firma en 15 segundos. IA integrada, VeriFactu completo, personalización total. Sin suscripción.">
+        content="Fáctico es el sistema de facturación conforme a VeriFactu y la Orden HAC/1177/2024. Garantiza la integridad, conservación y trazabilidad de tus facturas. IA integrada, sin suscripción mensual.">
     <meta name="keywords"
-        content="facturación, autónomos, VeriFactu, IA, móvil, contabilidad, PWA, logo personalizado, firma digital">
+        content="VeriFactu, Fáctico, Ley Antifraude, software de facturación, AEAT, Reglamento facturación 2025, RD 1007/2023, HAC/1177/2024, facturación autónomos, factura electrónica, FACe">
+    <meta name="author" content="Francisco Medina - Fáctico">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://web.facticoapp.es">
+    
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://web.facticoapp.es">
+    <meta property="og:title" content="Fáctico | Software VeriFactu para Autónomos y Pymes">
+    <meta property="og:description" content="Facturación con IA adaptada a VeriFactu y Ley Antifraude 2025. FACe incluido, sin suscripción mensual. Cumple con RD 1007/2023.">
+    <meta property="og:image" content="https://web.facticoapp.es/assets/images/logo_transparent.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Fáctico">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fáctico | Software VeriFactu para Autónomos">
+    <meta name="twitter:description" content="Facturación con IA adaptada a VeriFactu. Sin suscripción mensual.">
+    <meta name="twitter:image" content="https://web.facticoapp.es/assets/images/logo_transparent.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Fáctico",
+        "operatingSystem": "Web/Cloud",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Facturación Electrónica",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "EUR",
+            "description": "Uso gratuito sin suscripción mensual"
+        },
+        "description": "Software de facturación adaptado al sistema VeriFactu de la AEAT según el Real Decreto 1007/2023 y Orden HAC/1177/2024. Incluye IA para OCR, FACe para administraciones públicas y contabilidad PGC.",
+        "softwareVersion": "2025.1",
+        "creator": {
+            "@type": "Person",
+            "name": "Francisco Medina"
+        },
+        "featureList": [
+            "VeriFactu completo (RD 1007/2023)",
+            "IA integrada con OCR",
+            "Contabilidad PGC automatizada",
+            "FACe para administraciones públicas",
+            "PWA instalable en móvil",
+            "Firma digital incluida",
+            "Multiempresa y multiusuario"
+        ],
+        "screenshot": "https://web.facticoapp.es/assets/images/logo_transparent.png",
+        "url": "https://facticoapp.es",
+        "sameAs": [
+            "https://web.facticoapp.es"
+        ]
+    }
+    </script>
+    
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=20251119playlist_inicio">
+    <link rel="stylesheet" href="css/main.css?v=20251231seo">
 
     <!-- Favicon y iconos de app -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo_0.png">
@@ -57,16 +118,6 @@
 </head>
 
 <body>
-    <!-- Banner Noticia VeriFactu - Arriba de todo -->
-    <div class="verifactu-banner">
-        <div class="verifactu-banner-content">
-            <span class="banner-icon">📢</span>
-            <span class="banner-text">
-                <strong>NOVEDAD VERIFACTU:</strong> Aplazamiento oficial. Pymes: 1 Ene 2027 | Autónomos: 1 Jul 2027
-            </span>
-        </div>
-    </div>
-
     <!-- Banner de Cookies RGPD -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-banner-content">
@@ -118,6 +169,11 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <div class="verifactu-notice">
+                    <span class="notice-icon">📢</span>
+                    <span class="notice-text"><strong>Novedad VeriFactu:</strong> Aplazamiento oficial. Pymes: 1 Ene
+                        2027 | Autónomos: 1 Jul 2027</span>
+                </div>
                 <div class="hero-logo">
                     <img src="assets/images/logo_transparent.png" alt="Fáctico" class="hero-logo-img">
                 </div>
@@ -682,13 +738,6 @@
                     <div class="competitor-cell">✅</div>
                 </div>
                 <div class="comparison-row">
-                    <div class="feature-name">Factura electrónica (Facturae B2B)</div>
-                    <div class="factico-cell">✅</div>
-                    <div class="competitor-cell">❌</div>
-                    <div class="competitor-cell">❌</div>
-                    <div class="competitor-cell">❌</div>
-                </div>
-                <div class="comparison-row">
                     <div class="feature-name">FACe (Administraciones)</div>
                     <div class="factico-cell">✅</div>
                     <div class="competitor-cell">❌</div>
@@ -718,13 +767,6 @@
                 </div>
                 <div class="comparison-row">
                     <div class="feature-name">Suplidos</div>
-                    <div class="factico-cell">✅</div>
-                    <div class="competitor-cell">❌</div>
-                    <div class="competitor-cell">❌</div>
-                    <div class="competitor-cell">❌</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="feature-name">Facturación masiva (1 clic)</div>
                     <div class="factico-cell">✅</div>
                     <div class="competitor-cell">❌</div>
                     <div class="competitor-cell">❌</div>
@@ -820,7 +862,7 @@
 
             <div class="about-tabs">
                 <button class="tab-btn active" data-tab="proyecto">El Proyecto</button>
-                <button class="tab-btn" data-tab="beta">Funcionalidades</button>
+                <button class="tab-btn" data-tab="beta">Estado Beta</button>
                 <button class="tab-btn" data-tab="filosofia">Filosofía</button>
                 <button class="tab-btn" data-tab="contacto">Contacto</button>
             </div>
@@ -1032,7 +1074,7 @@
                     <h4>Proyecto</h4>
                     <ul>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('proyecto')">Sobre Fáctico</a></li>
-                        <li><a href="#sobre-proyecto" onclick="toggleAbout('beta')">Funcionalidades</a></li>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('beta')">Estado del Proyecto</a></li>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('filosofia')">Filosofía</a></li>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('contacto')">Contacto</a></li>
                     </ul>
@@ -1056,7 +1098,7 @@
 
 
 
-    <script src="js/main.js?v=20251205fix"></script>
+    <script src="js/main.js?v=20251113ga4"></script>
 </body>
 
 </html>
