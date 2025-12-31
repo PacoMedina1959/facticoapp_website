@@ -1060,6 +1060,21 @@ body {
     font-weight: 600;
 }
 
+.playlist-badge-new {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: white;
+}
+
+/* Playlist nueva destacada */
+.playlist-card.playlist-new {
+    border: 2px solid #4caf50;
+    position: relative;
+}
+
+.playlist-card.playlist-new:hover {
+    box-shadow: 0 12px 40px rgba(76, 175, 80, 0.3);
+}
+
 .playlist-note {
     text-align: center;
     margin-top: 40px;
