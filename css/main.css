@@ -2312,6 +2312,17 @@ body {
     font-weight: 800;
 }
 
+.pricing-competitor .pricing-extra {
+    display: block;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.pricing-competitor-wide {
+    padding: 20px 40px;
+}
+
 .pricing-amount.red {
     color: #dc2626;
 }
