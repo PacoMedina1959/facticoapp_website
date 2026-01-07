@@ -583,115 +583,84 @@
                 </p>
             </div>
 
-            <div class="almacen-grid">
-                <!-- Columna izquierda: Funcionalidades actuales -->
-                <div class="almacen-card almacen-current">
-                    <h3>✅ Operativo ahora</h3>
-                    <ul class="almacen-features">
-                        <li>
-                            <span class="feature-icon">📸</span>
-                            <div>
-                                <strong>Catálogo visual</strong>
-                                <p>Productos con imágenes, precios de coste y venta</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">📊</span>
-                            <div>
-                                <strong>Stock en tiempo real</strong>
-                                <p>Actualización automática al facturar ventas y compras</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">🔔</span>
-                            <div>
-                                <strong>Alertas de stock bajo</strong>
-                                <p>Configura mínimos por producto y recibe avisos</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">📜</span>
-                            <div>
-                                <strong>Historial Kardex</strong>
-                                <p>Trazabilidad completa: quién, cuándo, qué factura</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">💰</span>
-                            <div>
-                                <strong>Mejor precio por proveedor</strong>
-                                <p>Informe de qué proveedor te ofrece mejor precio</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">➕</span>
-                            <div>
-                                <strong>Alta desde compras</strong>
-                                <p>Crea productos directamente desde facturas recibidas</p>
-                            </div>
-                        </li>
-                    </ul>
+            <!-- Grid de funcionalidades actuales -->
+            <div class="almacen-features-grid">
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">📸</div>
+                    <h4>Catálogo visual</h4>
+                    <p>Productos con imágenes, precios de coste y venta</p>
                 </div>
-
-                <!-- Columna derecha: Roadmap -->
-                <div class="almacen-card almacen-roadmap">
-                    <h3>🚀 Próximamente (2026)</h3>
-                    <ul class="almacen-features roadmap">
-                        <li>
-                            <span class="feature-icon">🏥</span>
-                            <div>
-                                <strong>Trazabilidad sanitaria</strong>
-                                <p>Lotes y fechas de caducidad (alimentación, farmacia)</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">📦</span>
-                            <div>
-                                <strong>Factor de conversión</strong>
-                                <p>Compra cajas, vende unidades (1 caja = 100 uds)</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">🚚</span>
-                            <div>
-                                <strong>CMR (Carta de Porte)</strong>
-                                <p>Documento obligatorio para transporte de mercancías</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">📍</span>
-                            <div>
-                                <strong>Ubicaciones</strong>
-                                <p>Saber dónde está cada producto (Estantería A-3)</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-icon">⚠️</span>
-                            <div>
-                                <strong>Gestión de mermas</strong>
-                                <p>Productos caducados/dañados con certificado de destrucción</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <p class="roadmap-note">
-                        💡 El roadmap evoluciona según feedback de usuarios reales
-                    </p>
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">📊</div>
+                    <h4>Stock en tiempo real</h4>
+                    <p>Actualización automática al facturar ventas y compras</p>
+                </div>
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">🔔</div>
+                    <h4>Alertas de stock bajo</h4>
+                    <p>Configura mínimos por producto y recibe avisos</p>
+                </div>
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">📜</div>
+                    <h4>Historial Kardex</h4>
+                    <p>Trazabilidad completa: quién, cuándo, qué factura</p>
+                </div>
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">💰</div>
+                    <h4>Mejor precio por proveedor</h4>
+                    <p>Informe de qué proveedor te ofrece mejor precio</p>
+                </div>
+                <div class="almacen-feature-card">
+                    <div class="almacen-feature-icon">➕</div>
+                    <h4>Alta desde compras</h4>
+                    <p>Crea productos directamente desde facturas recibidas</p>
                 </div>
             </div>
 
-            <!-- Comparativa de precio -->
-            <div class="almacen-comparison">
-                <div class="comparison-item">
-                    <span class="competitor-name">Holded</span>
-                    <span class="competitor-price">+49€/mes</span>
+            <!-- Roadmap horizontal -->
+            <div class="almacen-roadmap-section">
+                <h3 class="roadmap-title">🚀 Próximamente en 2026</h3>
+                <div class="roadmap-timeline">
+                    <div class="roadmap-item">
+                        <span class="roadmap-icon">🏥</span>
+                        <span class="roadmap-text">Lotes y caducidad</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="roadmap-icon">📦</span>
+                        <span class="roadmap-text">Conversión cajas/unidades</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="roadmap-icon">🚚</span>
+                        <span class="roadmap-text">CMR (Carta de Porte)</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="roadmap-icon">📍</span>
+                        <span class="roadmap-text">Ubicaciones físicas</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <span class="roadmap-icon">⚠️</span>
+                        <span class="roadmap-text">Gestión de mermas</span>
+                    </div>
                 </div>
-                <div class="comparison-item">
-                    <span class="competitor-name">Quipu</span>
-                    <span class="competitor-price">+25€/mes</span>
-                </div>
-                <div class="comparison-item factico">
-                    <span class="competitor-name">Fáctico</span>
-                    <span class="competitor-price">Incluido</span>
+            </div>
+
+            <!-- Comparativa de precio destacada -->
+            <div class="almacen-pricing-banner">
+                <div class="pricing-comparison">
+                    <div class="pricing-competitor">
+                        <span class="pricing-name">Holded</span>
+                        <span class="pricing-amount red">+49€/mes</span>
+                    </div>
+                    <div class="pricing-competitor">
+                        <span class="pricing-name">Quipu</span>
+                        <span class="pricing-amount red">+25€/mes</span>
+                    </div>
+                    <div class="pricing-vs">VS</div>
+                    <div class="pricing-factico">
+                        <span class="pricing-name">Fáctico</span>
+                        <span class="pricing-amount green">INCLUIDO</span>
+                        <span class="pricing-tag">Sin coste extra</span>
+                    </div>
                 </div>
             </div>
 
