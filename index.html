@@ -188,7 +188,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=20260107v4">
+    <link rel="stylesheet" href="css/main.css?v=20260107v5">
 
     <!-- Favicon y iconos de app -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo_0.png">
@@ -269,7 +269,7 @@
                     <a href="#precios" class="nav-link">Precios</a>
                     <a href="#videos" class="nav-link">Guías</a>
                     <a href="#contact" class="nav-link">Contacto</a>
-                    <a href="#sobre-proyecto" class="nav-link" onclick="toggleAbout()">Sobre el Proyecto</a>
+                    <a href="#sobre-proyecto" class="nav-link" onclick="toggleAbout()">Info y Migración</a>
                     <a href="https://facticoapp.es" class="nav-link nav-cta" target="_blank">Probar gratis</a>
                 </div>
                 <button class="nav-toggle" aria-label="Menú">
@@ -1285,6 +1285,7 @@
                 <button class="tab-btn active" data-tab="proyecto">El Proyecto</button>
                 <button class="tab-btn" data-tab="beta">Estado Beta</button>
                 <button class="tab-btn" data-tab="filosofia">Filosofía</button>
+                <button class="tab-btn" data-tab="migracion">Migración</button>
                 <button class="tab-btn" data-tab="contacto">Contacto</button>
             </div>
 
@@ -1425,6 +1426,54 @@
                     </div>
                 </div>
 
+                <div id="migracion" class="tab-content">
+                    <h3>🚀 Empieza sin complicaciones</h3>
+                    <p style="font-size: 16px; color: #666; margin-bottom: 25px;">
+                        ¿Tienes 50, 500 o 5000 registros? No dejes que el vértigo de la migración te frene.
+                        <strong>Te ayudamos a empezar.</strong>
+                    </p>
+
+                    <div class="migration-options">
+                        <div class="migration-option">
+                            <div class="migration-icon">📥</div>
+                            <h4>Opción Rápida: Hazlo tú mismo</h4>
+                            <p>Descarga nuestras plantillas CSV, rellena tus datos y súbelos directamente desde la app.</p>
+                            <ul class="migration-list">
+                                <li>Plantilla de Clientes</li>
+                                <li>Plantilla de Proveedores</li>
+                                <li>Plantilla de Productos</li>
+                            </ul>
+                            <p class="migration-note">Ideal para usuarios técnicos o pocos registros.</p>
+                            <a href="https://facticoapp.es" class="btn btn-secondary" target="_blank">
+                                Acceder a la app
+                            </a>
+                        </div>
+
+                        <div class="migration-option migration-featured">
+                            <div class="migration-badge">⭐ Recomendado</div>
+                            <div class="migration-icon">🤝</div>
+                            <h4>Opción Asistida: Lo hacemos por ti</h4>
+                            <p>Envíanos tu Excel de cualquier formato. Nosotros lo adaptamos e importamos en 24-48h.</p>
+                            <ul class="migration-list">
+                                <li>✅ Datos fiscales configurados</li>
+                                <li>✅ Correo electrónico listo</li>
+                                <li>✅ Catálogo de productos importado</li>
+                                <li>✅ Clientes y proveedores cargados</li>
+                            </ul>
+                            <p class="migration-note">Ideal para empresas con +100 registros o sin tiempo.</p>
+                            <a href="mailto:administrador@facticoapp.es?subject=Solicitud%20de%20Migración%20Asistida" class="btn btn-primary">
+                                ✉️ Solicitar migración
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box" style="margin-top: 30px; background: #e8f5e9; border-left: 4px solid #3d9970;">
+                        <h4 style="color: #3d9970;">💡 Actualmente gratuito</h4>
+                        <p>El servicio de migración asistida es <strong>gratuito</strong> durante la fase actual del proyecto.
+                        Solo envíanos tus datos por email y nos encargamos del resto.</p>
+                    </div>
+                </div>
+
                 <div id="contacto" class="tab-content">
                     <h3>Contacto y Enlaces</h3>
 
@@ -1497,6 +1546,7 @@
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('proyecto')">Sobre Fáctico</a></li>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('beta')">Estado del Proyecto</a></li>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('filosofia')">Filosofía</a></li>
+                        <li><a href="#sobre-proyecto" onclick="toggleAbout('migracion')">Migración</a></li>
                         <li><a href="#sobre-proyecto" onclick="toggleAbout('contacto')">Contacto</a></li>
                     </ul>
                 </div>
