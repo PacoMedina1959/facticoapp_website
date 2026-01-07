@@ -216,10 +216,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add loading animation for external links
-    const externalLinks = document.querySelectorAll('a[target="_blank"]');
+    // Add loading animation for external links (excluding playlist cards)
+    const externalLinks = document.querySelectorAll('a[target="_blank"]:not(.playlist-card)');
     externalLinks.forEach(link => {
         link.addEventListener('click', function() {
+            // Skip if link contains complex HTML (images, etc.)
+            if (this.querySelector('img, .playlist-thumbnail')) return;
+            
             // Add loading state
             const originalText = this.textContent;
             this.textContent = 'Cargando...';
