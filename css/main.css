@@ -960,6 +960,24 @@ body {
     box-shadow: 0 12px 40px rgba(25, 118, 210, 0.2);
 }
 
+/* Estados de interacción - evitar estilos residuales después del clic */
+.playlist-card:focus {
+    outline: none;
+}
+
+.playlist-card:active {
+    transform: translateY(-4px);
+}
+
+.playlist-card:visited {
+    color: inherit;
+}
+
+.playlist-card:visited .playlist-info h3,
+.playlist-card:visited .playlist-info p {
+    color: inherit;
+}
+
 /* Playlist destacada (Inicio) */
 .playlist-featured {
     border: 2px solid var(--primary-color);
