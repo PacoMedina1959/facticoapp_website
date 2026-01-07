@@ -1644,6 +1644,16 @@ body {
     margin-top: 15px !important;
 }
 
+.migration-privacy {
+    font-size: 0.8rem !important;
+    color: #3d9970 !important;
+    background: rgba(61, 153, 112, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+}
+
 .migration-option .btn {
     margin-top: 15px;
     display: inline-block;
