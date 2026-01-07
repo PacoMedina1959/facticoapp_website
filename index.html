@@ -32,45 +32,138 @@
     <meta name="twitter:description" content="Facturación con IA adaptada a VeriFactu. Sin suscripción mensual.">
     <meta name="twitter:image" content="https://web.facticoapp.es/assets/images/logo_transparent.png">
     
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Fáctico",
-        "operatingSystem": "Web/Cloud",
+        "alternateName": "Factico App",
+        "operatingSystem": "Web, Android, iOS (PWA)",
         "applicationCategory": "BusinessApplication",
         "applicationSubCategory": "Facturación Electrónica",
         "offers": {
             "@type": "Offer",
             "price": "0.00",
             "priceCurrency": "EUR",
-            "description": "Uso gratuito sin suscripción mensual"
+            "description": "Uso gratuito - La potencia de un ERP por el precio de dos cafés",
+            "availability": "https://schema.org/InStock"
         },
-        "description": "Software de facturación adaptado al sistema VeriFactu de la AEAT según el Real Decreto 1007/2023 y Orden HAC/1177/2024. Incluye IA para OCR, FACe para administraciones públicas y contabilidad PGC.",
-        "softwareVersion": "2025.1",
+        "description": "Software de facturación con IA adaptado a VeriFactu (RD 1007/2023). ERP completo con Stock, Lotes, Impuestos, FACe y contabilidad PGC. Sin suscripción mensual.",
+        "softwareVersion": "2026.1",
+        "datePublished": "2024-01-01",
         "creator": {
             "@type": "Person",
-            "name": "Francisco Medina"
+            "name": "Francisco Medina",
+            "url": "https://web.facticoapp.es"
         },
         "featureList": [
             "VeriFactu completo (RD 1007/2023)",
-            "IA integrada con OCR",
+            "IA integrada con OCR para escaneo de tickets",
             "Contabilidad PGC automatizada",
             "FACe para administraciones públicas",
             "PWA instalable en móvil",
             "Firma digital incluida",
             "Multiempresa y multiusuario",
             "Gestión de Almacén con control de stock",
+            "Trazabilidad de lotes y caducidad",
             "Modelos Fiscales (303, 130, 131, 111, 115, 390)",
             "Balance y Cuenta de Resultados",
             "Agenda de Facturación recurrente",
-            "Asientos Rápidos preconfigurados"
+            "Asientos Rápidos preconfigurados",
+            "Historial Kardex por producto"
         ],
         "screenshot": "https://web.facticoapp.es/assets/images/logo_transparent.png",
         "url": "https://facticoapp.es",
         "sameAs": [
-            "https://web.facticoapp.es"
+            "https://web.facticoapp.es",
+            "https://www.youtube.com/@facticoapp"
+        ],
+        "inLanguage": "es"
+    }
+    </script>
+    
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fáctico",
+        "alternateName": "Factico App",
+        "url": "https://web.facticoapp.es",
+        "logo": "https://web.facticoapp.es/assets/images/logo_transparent.png",
+        "description": "Software de facturación con IA para autónomos y pymes en España. Adaptado a VeriFactu y Ley Antifraude.",
+        "email": "administrador@facticoapp.es",
+        "foundingDate": "2024",
+        "founder": {
+            "@type": "Person",
+            "name": "Francisco Medina"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "España"
+        },
+        "sameAs": [
+            "https://www.youtube.com/@facticoapp"
+        ]
+    }
+    </script>
+    
+    <!-- JSON-LD: WebSite con SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Fáctico - Software de Facturación",
+        "alternateName": "Factico App",
+        "url": "https://web.facticoapp.es",
+        "description": "La potencia de un ERP. La sencillez de una app. El precio de dos cafés.",
+        "inLanguage": "es",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Fáctico"
+        }
+    }
+    </script>
+    
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es VeriFactu y cuándo entra en vigor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VeriFactu es el sistema de la AEAT para verificar facturas según el RD 1007/2023. Entra en vigor el 1 de enero de 2027 para pymes y el 1 de julio de 2027 para autónomos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánto cuesta Fáctico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Actualmente Fáctico es gratuito. La potencia de un ERP por el precio de dos cafés."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Fáctico incluye gestión de almacén?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, Fáctico incluye gestión de almacén completa sin coste extra: catálogo visual, stock en tiempo real, alertas de stock bajo, historial Kardex y mejor precio por proveedor."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo facturar a administraciones públicas con Fáctico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, Fáctico incluye FACe (Factura Electrónica a la Administración) sin coste adicional para facturar a ayuntamientos y organismos públicos."
+                }
+            }
         ]
     }
     </script>
@@ -79,7 +172,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=20260107v3">
+    <link rel="stylesheet" href="css/main.css?v=20260107v4">
 
     <!-- Favicon y iconos de app -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo_0.png">
