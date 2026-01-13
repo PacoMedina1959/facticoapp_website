@@ -603,6 +603,42 @@ body {
     margin-right: auto;
 }
 
+/* ¿Por qué Fáctico? Section */
+.porque-factico-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.porque-factico-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.porque-factico-img {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.porque-factico-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 768px) {
+    .porque-factico-section {
+        padding: 40px 0;
+    }
+    
+    .porque-factico-img {
+        border-radius: 8px;
+    }
+}
+
 /* Perfil Fiscal Section */
 .perfil-fiscal {
     padding: 80px 0;
