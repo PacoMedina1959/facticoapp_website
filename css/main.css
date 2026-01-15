@@ -207,11 +207,13 @@ body {
     margin-bottom: 25px;
 }
 
-/* Nuevo estilo para el precio destacado en Hero */
-.hero-price {
+/* Estilo para destacar la fase beta en Hero */
+.hero-beta {
     font-size: 0.85em;
-    color: #3d9970;
+    color: #ff9500;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive: en móvil, el título más compacto */
