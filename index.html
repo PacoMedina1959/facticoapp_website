@@ -8,9 +8,9 @@
     <!-- SEO Básico -->
     <title>Fáctico | Software VeriFactu Adaptado a la Ley Antifraude 2025</title>
     <meta name="description"
-        content="Fáctico es el sistema de facturación conforme a VeriFactu y la Orden HAC/1177/2024. Garantiza la integridad, conservación y trazabilidad de tus facturas. IA integrada, sin suscripción mensual.">
+        content="Fáctico: ERP con facturación VeriFactu, TPV integrado, gestión de almacén, contabilidad PGC e IA. Punto de venta para tiendas. Ley Antifraude 2025. Beta gratuita.">
     <meta name="keywords"
-        content="VeriFactu, Fáctico, Ley Antifraude, software de facturación, AEAT, Reglamento facturación 2025, RD 1007/2023, HAC/1177/2024, facturación autónomos, factura electrónica, FACe">
+        content="VeriFactu, Fáctico, TPV, punto de venta, software TPV, ERP autónomos, Ley Antifraude, software de facturación, AEAT, facturación autónomos, factura electrónica, FACe, gestión almacén, ticket térmico, tienda">
     <meta name="author" content="Francisco Medina - Fáctico">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://web.facticoapp.es/">
@@ -28,8 +28,8 @@
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fáctico | Software VeriFactu para Autónomos">
-    <meta name="twitter:description" content="Facturación con IA adaptada a VeriFactu. Sin suscripción mensual.">
+    <meta name="twitter:title" content="Fáctico | ERP con TPV y VeriFactu para Autónomos">
+    <meta name="twitter:description" content="ERP con TPV integrado, VeriFactu, almacén y contabilidad. Punto de venta para tiendas. Beta gratuita.">
     <meta name="twitter:image" content="https://web.facticoapp.es/assets/images/logo_transparent.png">
     
     <!-- JSON-LD Structured Data: SoftwareApplication -->
@@ -49,7 +49,7 @@
             "description": "Fase Beta gratuita - La potencia de un ERP con la sencillez de una app",
             "availability": "https://schema.org/InStock"
         },
-        "description": "Software de facturación con IA adaptado a VeriFactu (RD 1007/2023). ERP completo con Stock, Lotes, Impuestos, FACe y contabilidad PGC. Sin suscripción mensual.",
+        "description": "ERP con TPV integrado, facturación VeriFactu (RD 1007/2023), gestión de almacén, contabilidad PGC e IA. Punto de venta para tiendas con ticket térmico 80mm. Beta gratuita.",
         "softwareVersion": "2026.1",
         "datePublished": "2024-01-01",
         "creator": {
@@ -58,6 +58,7 @@
             "url": "https://web.facticoapp.es"
         },
         "featureList": [
+            "TPV (Punto de Venta) integrado con ticket térmico 80mm",
             "VeriFactu completo (RD 1007/2023)",
             "IA integrada con OCR para escaneo de tickets",
             "Contabilidad PGC automatizada",
@@ -75,7 +76,9 @@
             "Balance y Cuenta de Resultados",
             "Agenda de Facturación recurrente",
             "Asientos Rápidos preconfigurados",
-            "Historial Kardex por producto"
+            "Historial Kardex por producto",
+            "Cobro efectivo y tarjeta en TPV",
+            "Devoluciones y resumen del día en TPV"
         ],
         "screenshot": "https://web.facticoapp.es/assets/images/logo_transparent.png",
         "url": "https://facticoapp.es",
@@ -96,7 +99,7 @@
         "alternateName": "Factico App",
         "url": "https://web.facticoapp.es",
         "logo": "https://web.facticoapp.es/assets/images/logo_transparent.png",
-        "description": "Software de facturación con IA para autónomos y pymes en España. Adaptado a VeriFactu y Ley Antifraude.",
+        "description": "ERP con TPV integrado para autónomos y pymes en España. Facturación VeriFactu, punto de venta, almacén y contabilidad. Adaptado a Ley Antifraude.",
         "email": "administrador@facticoapp.es",
         "foundingDate": "2024",
         "founder": {
@@ -182,6 +185,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Sí, Fáctico incluye gestión de almacén completa durante la Fase Beta: catálogo visual con imágenes, control de stock en tiempo real, alertas de stock bajo, historial Kardex, mejor precio por proveedor, OCR para entrada desde facturas recibidas, control de fechas de caducidad, zonas de almacén (descatalogados/caducados) y CMR (Carta de Porte)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Fáctico tiene TPV o punto de venta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, Fáctico incluye un TPV (Punto de Venta) integrado: ventas en mostrador, búsqueda por código de barras, cobro en efectivo o tarjeta, ticket térmico PDF 80mm, devoluciones, resumen del día e integración con stock y VeriFactu. Incluido en la Fase Beta."
                 }
             }
         ]
@@ -487,6 +498,30 @@
                             <li>✅ Control de fecha de caducidad</li>
                             <li>✅ Zonas: descatalogados y caducados</li>
                             <li>✅ CMR (Carta de Porte para transporte)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TPV (Punto de Venta) -->
+                <div class="modulo-card modulo-nuevo">
+                    <div class="modulo-header">
+                        <div class="modulo-icon">🛒</div>
+                        <span class="modulo-badge modulo-badge-nuevo">NUEVO</span>
+                    </div>
+                    <h3>TPV (Punto de Venta)</h3>
+                    <p class="modulo-desc">Ventas en mostrador con ticket y factura simplificada</p>
+                    <div class="modulo-features">
+                        <h4>✅ Operativo ahora:</h4>
+                        <ul>
+                            <li>✅ Búsqueda por nombre, SKU o código de barras</li>
+                            <li>✅ Cobro en efectivo (con calculadora de cambio)</li>
+                            <li>✅ Cobro con tarjeta (registro manual)</li>
+                            <li>✅ Ticket térmico PDF 80mm</li>
+                            <li>✅ VeriFactu (serie S- simplificada)</li>
+                            <li>✅ Descuento de stock automático al cobrar</li>
+                            <li>✅ Devoluciones y reembolsos</li>
+                            <li>✅ Resumen del día</li>
+                            <li>✅ Favoritos (hasta 12 productos rápidos)</li>
                         </ul>
                     </div>
                 </div>
@@ -1202,6 +1237,13 @@
                     <div class="competitor-cell">❌</div>
                 </div>
                 <div class="comparison-row">
+                    <div class="feature-name">TPV / Punto de venta integrado</div>
+                    <div class="factico-cell">✅</div>
+                    <div class="competitor-cell">❌</div>
+                    <div class="competitor-cell">❌</div>
+                    <div class="competitor-cell">❌</div>
+                </div>
+                <div class="comparison-row">
                     <div class="feature-name">Modelos Fiscales (303, 130, 111...)</div>
                     <div class="factico-cell">✅</div>
                     <div class="competitor-cell">✅</div>
@@ -1347,6 +1389,7 @@
                                 </li>
                                 <li><strong>VeriFactu:</strong> Envío automático a AEAT (obligatorio 2025)</li>
                                 <li><strong>FacturaE 3.2.2:</strong> Validado con firma digital</li>
+                                <li><strong>TPV:</strong> Punto de venta integrado. Tickets simplificados (serie S-), cobro efectivo/tarjeta, ticket PDF 80mm, VeriFactu y stock automático</li>
                                 <li><strong>Contabilidad PGC:</strong> Automática y manual, Libro Diario, Mayor</li>
                                 <li><strong>Conciliación bancaria:</strong> Norma 43 + CAMT.053</li>
                                 <li><strong>Modelos fiscales:</strong> 303, 347, 111, 131, 349 (intracomunitarias)</li>
@@ -1368,6 +1411,7 @@
 
                             <h4 style="margin-top: 20px;">🎯 Novedades Recientes (Dic 2025 - Ene 2026)</h4>
                             <ul>
+                                <li>🛒 <strong>TPV (Punto de Venta):</strong> Ventas en mostrador, ticket térmico 80mm, cobro efectivo/tarjeta, integrado con stock y VeriFactu</li>
                                 <li>📦 <strong>Gestión de Almacén completa:</strong> Stock, lotes, caducidad, Kardex, CMR, zonas, mermas</li>
                                 <li>🤖 <strong>Gemini 2.0 Flash:</strong> IA más rápida con historial de conversación</li>
                                 <li>🎤 <strong>Voz a texto:</strong> Dicta al chat IA con el micrófono (Chrome/Edge)</li>

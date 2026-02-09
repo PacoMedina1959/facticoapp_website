@@ -2162,6 +2162,11 @@ body {
     letter-spacing: 0.5px;
 }
 
+.modulo-badge-nuevo {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
 .modulo-card h3 {
     font-size: 1.4rem;
     font-weight: 700;
