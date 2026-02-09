@@ -2631,3 +2631,28 @@ body {
         justify-content: center;
     }
 }
+
+/* Módulo Destacado (TPV) */
+.modulo-destacado {
+    border: 2px solid #ff9800; /* Color llamativo (Naranja/Dorado) */
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.25);
+    transform: scale(1.02);
+    position: relative;
+    z-index: 1;
+}
+
+.modulo-destacado:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 152, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+    .modulo-destacado {
+        transform: none;
+        margin: 20px 0;
+    }
+    
+    .modulo-destacado:hover {
+        transform: translateY(-5px);
+    }
+}
