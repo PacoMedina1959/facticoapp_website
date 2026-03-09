@@ -52,7 +52,7 @@
             "availability": "https://schema.org/InStock"
         },
         "description": "ERP con TPV integrado, facturación VeriFactu (RD 1007/2023), gestión de almacén, contabilidad PGC e IA. Punto de venta para tiendas con ticket térmico 80mm. Beta gratuita.",
-        "softwareVersion": "2026.1",
+        "softwareVersion": "2026.3",
         "datePublished": "2024-01-01",
         "creator": {
             "@type": "Person",
@@ -74,13 +74,16 @@
             "Zonas de almacén (descatalogados/caducados)",
             "CMR - Carta de Porte para transporte",
             "OCR para entrada desde facturas recibidas",
-            "Modelos Fiscales (303, 130, 131, 111, 115, 390)",
+            "Modelos Fiscales (303, 130, 131, 111, 115, 390, 190, 180)",
             "Balance y Cuenta de Resultados",
             "Agenda de Facturación recurrente",
             "Asientos Rápidos preconfigurados",
             "Historial Kardex por producto",
             "Cobro efectivo y tarjeta en TPV",
-            "Devoluciones y resumen del día en TPV"
+            "Devoluciones y resumen del día en TPV",
+            "Calendario fiscal con alertas de presentación",
+            "Asiento de apertura guiado (wizard 5 pasos)",
+            "Maquetas HTML profesionales de modelos fiscales"
         ],
         "screenshot": "https://web.facticoapp.es/assets/images/logo_transparent.png",
         "url": "https://facticoapp.es",
@@ -513,7 +516,7 @@
                 <div id="tpv" class="modulo-card modulo-nuevo modulo-destacado">
                     <div class="modulo-header">
                         <div class="modulo-icon">🛒</div>
-                        <span class="modulo-badge modulo-badge-nuevo">NUEVO</span>
+                        <span class="modulo-badge modulo-badge-nuevo">ESTABLE</span>
                     </div>
                     <h3>TPV (Punto de Venta)</h3>
                     <p class="modulo-desc">Ventas en mostrador con ticket y factura simplificada</p>
@@ -586,7 +589,10 @@
                             <li>✅ Modelo 111 (Retenciones trabajadores)</li>
                             <li>✅ Modelo 115 (Retenciones alquileres)</li>
                             <li>✅ Modelo 390 (Resumen anual IVA)</li>
+                            <li>✅ Modelo 190 (Resumen anual retenciones)</li>
+                            <li>✅ Modelo 180 (Resumen anual alquileres)</li>
                             <li>✅ Simulación previa al cierre</li>
+                            <li>✅ Maquetas HTML profesionales</li>
                             <li>✅ PDF con borrador para presentar</li>
                         </ul>
                     </div>
@@ -688,9 +694,10 @@
                     <ul>
                         <li>✅ Modelo 303 (IVA trimestral)</li>
                         <li>✅ Modelo 130 o 131 (IRPF fraccionado)</li>
-                        <li>✅ Modelo 111 (Retenciones)</li>
+                        <li>✅ Modelo 111 + 190 (Retenciones)</li>
+                        <li>✅ Modelo 115 + 180 (Alquileres)</li>
                         <li>✅ Modelo 349 (Intracomunitarias)</li>
-                        <li>✅ Modelo 115 (Alquileres con retención)</li>
+                        <li>✅ Modelo 390 (Resumen anual IVA)</li>
                     </ul>
                 </div>
                 <div class="perfil-detail-card">
@@ -1275,7 +1282,7 @@
                     <div class="competitor-cell">❌</div>
                 </div>
                 <div class="comparison-row">
-                    <div class="feature-name">Modelos Fiscales (303, 130, 111...)</div>
+                    <div class="feature-name">Modelos Fiscales (303, 130, 111, 190, 180...)</div>
                     <div class="factico-cell">✅</div>
                     <div class="competitor-cell">✅</div>
                     <div class="competitor-cell">✅</div>
@@ -1305,7 +1312,7 @@
             </div>
             <p class="comparison-disclaimer"
                 style="text-align: center; font-size: 0.9em; color: #666; margin-top: 20px; font-style: italic;">
-                * Datos verificados a octubre 2025. Las funcionalidades de terceros pueden cambiar. Consulte las webs
+                * Datos verificados a marzo 2026. Las funcionalidades de terceros pueden cambiar. Consulte las webs
                 oficiales para información actualizada.
             </p>
         </div>
@@ -1426,7 +1433,9 @@
                                     cobro efectivo/tarjeta, ticket PDF 80mm, VeriFactu y stock automático</li>
                                 <li><strong>Contabilidad PGC:</strong> Automática y manual, Libro Diario, Mayor</li>
                                 <li><strong>Conciliación bancaria:</strong> Norma 43 + CAMT.053</li>
-                                <li><strong>Modelos fiscales:</strong> 303, 347, 111, 131, 349 (intracomunitarias)</li>
+                                <li><strong>Modelos fiscales:</strong> 303, 130, 131, 111, 115, 390, 190, 180, 347, 349</li>
+                                <li><strong>Calendario fiscal:</strong> Alertas de presentación con fechas límite y colores de urgencia</li>
+                                <li><strong>Asiento de apertura:</strong> Wizard guiado para saldos iniciales (clientes, proveedores, cuentas)</li>
                                 <li><strong>Remesas SEPA:</strong> Cobros domiciliados (Core y B2B)</li>
                                 <li><strong>Gestión de suplidos:</strong> Para consultores</li>
                                 <li><strong>OCR con IA:</strong> OpenAI Vision para escanear tickets</li>
@@ -1440,29 +1449,35 @@
                         <div class="feature-item">
                             <h4>🔄 Próximas Mejoras</h4>
                             <ul>
-                                <li>Integración bancaria avanzada (PSD2)</li>
+                                <li>Facturas rectificativas negativas: marcar como compensadas</li>
+                                <li>Control de consumo y tokens de IA</li>
+                                <li>Integración datáfono TPV</li>
+                                <li>Banner de avisos del sistema</li>
                             </ul>
 
-                            <h4 style="margin-top: 20px;">🎯 Novedades Recientes (Dic 2025 - Ene 2026)</h4>
+                            <h4 style="margin-top: 20px;">🎯 Novedades Recientes (Feb-Mar 2026)</h4>
+                            <ul>
+                                <li>📋 <strong>Modelos 190 y 180:</strong> Resúmenes anuales de retenciones y alquileres con listado de perceptores/arrendadores</li>
+                                <li>🎨 <strong>Maquetas HTML profesionales:</strong> Rediseño visual de todos los modelos fiscales (303, 130, 131, 111, 115, 390) con casillas AEAT, resultado con color y formato para imprimir</li>
+                                <li>📅 <strong>Calendario fiscal con alertas:</strong> Fechas de presentación y domiciliación, colores de urgencia, iconos por tipo de modelo</li>
+                                <li>📝 <strong>Asiento de apertura:</strong> Wizard de 5 pasos para introducir saldos iniciales (clientes, proveedores, cuentas generales)</li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">✨ Anteriormente (Dic 2025 - Ene 2026)</h4>
                             <ul>
                                 <li>🛒 <strong>TPV (Punto de Venta):</strong> Ventas en mostrador, ticket térmico 80mm,
                                     cobro efectivo/tarjeta, integrado con stock y VeriFactu</li>
                                 <li>📦 <strong>Gestión de Almacén completa:</strong> Stock, lotes, caducidad, Kardex,
                                     CMR, zonas, mermas</li>
-                                <li>🤖 <strong>Gemini 2.0 Flash:</strong> IA más rápida con historial de conversación
-                                </li>
-                                <li>🎤 <strong>Voz a texto:</strong> Dicta al chat IA con el micrófono (Chrome/Edge)
-                                </li>
-                                <li>📊 <strong>Dashboard mejorado:</strong> KPIs IVA, facturas vencidas, alertas
-                                    caducidad</li>
-                                <li>🔍 <strong>OCR para líneas:</strong> Extrae líneas individuales de facturas con IA
-                                </li>
+                                <li>🤖 <strong>Gemini 2.0 Flash:</strong> IA más rápida con historial de conversación</li>
+                                <li>🎤 <strong>Voz a texto:</strong> Dicta al chat IA con el micrófono (Chrome/Edge)</li>
+                                <li>📊 <strong>Dashboard mejorado:</strong> KPIs IVA, facturas vencidas, alertas caducidad</li>
+                                <li>🔍 <strong>OCR para líneas:</strong> Extrae líneas individuales de facturas con IA</li>
                                 <li>🌙 <strong>Tema oscuro:</strong> Dark mode completo en toda la interfaz</li>
-                                <li>📺 <strong>Vídeos tutoriales:</strong> Playlists completas por temática en YouTube
-                                </li>
+                                <li>📺 <strong>Vídeos tutoriales:</strong> Playlists completas por temática en YouTube</li>
                             </ul>
 
-                            <h4 style="margin-top: 20px;">✨ Implementado anteriormente (Oct-Nov 2025)</h4>
+                            <h4 style="margin-top: 20px;">✨ Anteriormente (Oct-Nov 2025)</h4>
                             <ul>
                                 <li>🎨 Logo empresarial personalizable (3 posiciones)</li>
                                 <li>✍️ Firma digital en facturas (3 posiciones)</li>
@@ -1621,7 +1636,7 @@
                             integración con VeriFactu sigue la normativa, pero cada actividad puede tener matices.</p>
                     </div>
 
-                    <p class="last-update"><strong>Última actualización:</strong> 31/10/2025</p>
+                    <p class="last-update"><strong>Última actualización:</strong> 09/03/2026</p>
                 </div>
             </div>
         </div>
@@ -1676,7 +1691,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Fáctico™. Todos los derechos reservados.</p>
+                <p>&copy; 2025–2026 Fáctico™. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
