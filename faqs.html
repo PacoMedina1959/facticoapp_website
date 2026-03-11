@@ -182,10 +182,20 @@
 
                 <div class="faq-item">
                     <h3>¿Tengo que enviar mis facturas a Hacienda?</h3>
-                    <p>Existe mucha confusión sobre este punto.</p>
-                    <p>El sistema VeriFactu contempla el envío de registros de facturación a la Agencia Tributaria,
-                       pero no en todos los casos es obligatorio. Depende del tipo de sistema utilizado
-                       y de la configuración del software.</p>
+                    <p>La normativa contempla dos modalidades para los sistemas informáticos de facturación:</p>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li><strong>Sistemas VERI*FACTU:</strong> envían automáticamente los registros
+                            de facturación a la Agencia Tributaria.</li>
+                        <li><strong>Sistemas NO VERI*FACTU:</strong> no envían los registros, pero deben
+                            cumplir los mismos requisitos técnicos (registros encadenados, hash de integridad,
+                            inalterabilidad).</li>
+                    </ul>
+                    <p>En ambos casos, los registros deben conservarse y estar disponibles.
+                       Quien no envíe automáticamente deberá presentar los registros —incluyendo
+                       el hash de integridad— si la AEAT lo requiere en una comprobación.</p>
+                    <p>En la práctica, no enviar los registros no reduce las obligaciones técnicas;
+                       simplemente traslada la responsabilidad de presentarlos al momento de una
+                       posible inspección.</p>
                 </div>
 
             </div>
