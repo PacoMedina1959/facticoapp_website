@@ -22,7 +22,7 @@
                 "name": "¿Qué es VeriFactu?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "VeriFactu es un sistema promovido por la Agencia Tributaria dentro de la Ley Antifraude. Su objetivo es evitar la manipulación de facturas y mejorar el control fiscal. Los programas de facturación deben generar registros que cumplan ciertos requisitos técnicos y permitir su envío a la AEAT. Fáctico está diseñado cumpliendo estos requisitos."
+                    "text": "VeriFactu es un sistema promovido por la Agencia Tributaria dentro de la Ley Antifraude. Su objetivo es evitar la manipulación de facturas y mejorar el control fiscal. Los sistemas informáticos de facturación (SIF) deben generar registros que cumplan ciertos requisitos técnicos y, en algunos casos, permitir su envío a la AEAT."
                 }
             },
             {
@@ -38,7 +38,7 @@
                 "name": "¿Es obligatorio poner un QR en las facturas?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "La normativa contempla la inclusión de un código QR en facturas generadas por software adaptado a VeriFactu. Sin embargo, hay mucha confusión sobre cuándo es obligatorio y en qué casos aplica."
+                    "text": "La normativa contempla la inclusión de un código QR en facturas expedidas por SIF adaptados al RD 1007/2023. No aplica en SII, ni cuando no se usa SIF, ni en factura electrónica estructurada donde se sustituye por URL de cotejo."
                 }
             },
             {
@@ -62,7 +62,7 @@
                 "name": "¿Necesito certificado digital para usar Fáctico?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Para emitir facturas normales no es necesario. Sin embargo, con la implantación de VeriFactu será necesario identificarse ante la AEAT para enviar registros de facturación, normalmente mediante certificado digital. A partir de 2027, los autónomos y empresas que utilicen VeriFactu deberán disponer de un método de identificación válido."
+                    "text": "Para emitir facturas normales no es necesario. Con VeriFactu será necesario identificarse ante la AEAT mediante certificado electrónico cualificado, Cl@ve Móvil, Cl@ve PIN o DNIe. Para la remisión automática máquina a máquina, se requiere certificado electrónico cualificado. A partir de 2027, los autónomos y empresas que utilicen VeriFactu deberán disponer de un método de identificación válido."
                 }
             }
         ]
@@ -115,7 +115,8 @@
                        Su objetivo es evitar la manipulación de facturas y mejorar el control fiscal.</p>
                     <p>Los programas de facturación deben generar registros que cumplan ciertos requisitos técnicos
                        y, en algunos casos, permitir su envío a la Agencia Tributaria.</p>
-                    <p>Fáctico está diseñado cumpliendo estos requisitos.</p>
+                    <p>Fáctico cumple los requisitos técnicos definidos en el RD 1007/2023
+                       para sistemas informáticos de facturación.</p>
                 </div>
 
                 <div class="faq-item">
@@ -125,16 +126,21 @@
                         <li><strong>Pymes y empresas:</strong> a partir del 1 de enero de 2027</li>
                         <li><strong>Autónomos:</strong> a partir del 1 de julio de 2027</li>
                     </ul>
-                    <p>Los fabricantes de software deben adaptar sus programas antes de esas fechas.
-                       Fáctico ya cumple con los requisitos técnicos de VeriFactu.</p>
+                    <p>Los fabricantes de software deben adaptar sus programas antes de esas fechas.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>¿Es obligatorio poner un QR en las facturas?</h3>
-                    <p>La normativa asociada a la Ley Antifraude contempla la inclusión de ciertos elementos
-                       en las facturas generadas por software adaptado, entre ellos un <strong>código QR</strong>
-                       que permita verificar la factura.</p>
-                    <p>Sin embargo, existen muchas confusiones sobre cuándo es obligatorio y en qué casos aplica.</p>
+                    <p>La normativa contempla la inclusión de un <strong>código QR</strong> en facturas
+                       expedidas por sistemas informáticos de facturación (SIF) adaptados al RD 1007/2023.</p>
+                    <p>Sin embargo, no aplica en todos los casos:</p>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li>Las empresas acogidas al <strong>SII</strong> (Suministro Inmediato de Información) tienen
+                            sus propias obligaciones y no necesitan QR impreso.</li>
+                        <li>Quien no utilice ningún SIF (facturación manual) no está sujeto a esta obligación.</li>
+                        <li>En <strong>factura electrónica estructurada</strong>, el QR impreso no aplica como tal;
+                            se sustituye por el contenido equivalente (URL de cotejo) dentro del propio fichero.</li>
+                    </ul>
                     <p><a href="blog/verifactu-qr-obligatorio-ley-antifraude.html"
                           style="color: var(--primary-color, #1976d2); font-weight: 500;">
                        Leer explicación detallada en nuestro blog →</a></p>
@@ -142,26 +148,35 @@
 
                 <div class="faq-item">
                     <h3>¿Todos los autónomos tienen que usar software de facturación?</h3>
-                    <p>La Ley Antifraude establece requisitos para los programas de facturación
-                       utilizados por empresas y autónomos. El objetivo es evitar programas que permitan
-                       alterar o eliminar registros.</p>
-                    <p>En la práctica, cada vez será más necesario utilizar un software de facturación
-                       adaptado a la normativa.</p>
+                    <p>No necesariamente. La normativa (RD 1007/2023) regula los <strong>Sistemas Informáticos
+                       de Facturación (SIF)</strong>, es decir, los programas que se utilizan para expedir facturas.</p>
+                    <p>Si un autónomo expide <strong>todas</strong> sus facturas de forma manual —por ejemplo,
+                       mediante talonario o a mano—, no está utilizando un SIF y, por tanto, el reglamento
+                       no le afecta directamente.</p>
+                    <p>Sin embargo, quien utilice cualquier software para emitir facturas deberá asegurarse
+                       de que ese programa cumple los requisitos establecidos por la normativa.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>¿Qué pasa si sigo haciendo facturas con Excel o Word?</h3>
-                    <p>Muchos autónomos utilizan todavía Excel o plantillas para emitir facturas.</p>
-                    <p>Sin embargo, con la nueva normativa fiscal estas soluciones pueden resultar
-                       inadecuadas, especialmente si no garantizan la integridad de los registros de facturación.</p>
-                    <p>Por eso muchos profesionales están empezando a utilizar software específico.</p>
+                    <p>Depende de <strong>cómo</strong> se utilicen. La AEAT distingue entre el uso manual
+                       de una herramienta y su uso como sistema informático de facturación (SIF).</p>
+                    <p>Un Excel sencillo donde solo se rellena texto puede no considerarse un SIF.
+                       En cambio, si incorpora macros, fórmulas de numeración automática u otras funciones
+                       que automatizan el proceso de facturación, podría entrar dentro de la definición de SIF
+                       y, por tanto, estar sujeto a la normativa.</p>
+                    <p>No es una cuestión de blanco o negro: lo relevante es si la herramienta
+                       <strong>automatiza funciones propias de un sistema de facturación</strong>.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>¿Fáctico cumple con la Ley Antifraude?</h3>
-                    <p>Fáctico está diseñado cumpliendo los principios de la Ley Antifraude y los requisitos
-                       del sistema VeriFactu: registros encadenados, integridad garantizada y envío
-                       automático a la Agencia Tributaria.</p>
+                    <p>Fáctico cumple los requisitos técnicos definidos en el <strong>RD 1007/2023</strong>
+                       para sistemas informáticos de facturación: registros encadenados, integridad garantizada
+                       y envío automático a la Agencia Tributaria.</p>
+                    <p>El cumplimiento se declara mediante la correspondiente
+                       <strong>declaración responsable del productor del software</strong>,
+                       conforme a la normativa vigente.</p>
                     <p>El desarrollo continúa evolucionando conforme se publican nuevos detalles técnicos.</p>
                 </div>
 
@@ -204,12 +219,19 @@
                     <p>Para emitir facturas normales dentro del programa no es necesario disponer de certificado digital.</p>
                     <p>Sin embargo, algunas integraciones con administraciones públicas o servicios electrónicos
                        pueden requerirlo.</p>
-                    <p>Además, con la implantación del sistema <strong>VeriFactu</strong>, será necesario identificarse
-                       ante la Agencia Tributaria para poder enviar los registros de facturación. Esto normalmente
-                       se realiza mediante <strong>certificado digital o sistemas equivalentes de identificación</strong>.</p>
+                    <p>Con la implantación del sistema <strong>VeriFactu</strong>, será necesario identificarse
+                       ante la Agencia Tributaria para enviar los registros de facturación. Los métodos de
+                       identificación válidos incluyen:</p>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li><strong>Certificado electrónico cualificado</strong> (persona física o de representante)</li>
+                        <li><strong>Cl@ve Móvil</strong> o <strong>Cl@ve PIN</strong> (para acceso de usuario humano, p. ej. en la aplicación gratuita de la AEAT)</li>
+                        <li><strong>DNI electrónico (DNIe)</strong></li>
+                    </ul>
+                    <p>Para la <strong>remisión automática VERI*FACTU</strong> desde un software (máquina a máquina),
+                       la AEAT requiere autenticación mediante <strong>certificado electrónico cualificado</strong>.</p>
                     <p>Si se mantiene el calendario previsto, a partir de <strong>2027</strong> los autónomos y empresas
                        que utilicen sistemas de envío a VeriFactu deberán disponer de un método de identificación
-                       válido ante la Agencia Tributaria, como el certificado digital.</p>
+                       válido ante la Agencia Tributaria.</p>
                 </div>
 
                 <div class="faq-item">
