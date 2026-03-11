@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Fáctico | VeriFactu, Facturación y Normativa Fiscal</title>
+    <meta name="description" content="Respuestas a las dudas más habituales sobre VeriFactu, Ley Antifraude, facturación electrónica, certificado digital y seguridad de datos en Fáctico.">
+    <link rel="canonical" href="https://web.facticoapp.es/faqs.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Schema FAQPage para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es VeriFactu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VeriFactu es un sistema promovido por la Agencia Tributaria dentro de la Ley Antifraude. Su objetivo es evitar la manipulación de facturas y mejorar el control fiscal. Los programas de facturación deben generar registros que cumplan ciertos requisitos técnicos y permitir su envío a la AEAT. Fáctico está diseñado cumpliendo estos requisitos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuándo será obligatorio VeriFactu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Según el calendario oficial vigente: Pymes y empresas a partir del 1 de enero de 2027; autónomos a partir del 1 de julio de 2027. Los fabricantes de software deben adaptar sus programas antes de esas fechas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Es obligatorio poner un QR en las facturas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La normativa contempla la inclusión de un código QR en facturas generadas por software adaptado a VeriFactu. Sin embargo, hay mucha confusión sobre cuándo es obligatorio y en qué casos aplica."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Mis datos están seguros en Fáctico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Los datos se almacenan en servidores PostgreSQL en la Unión Europea (Frankfurt), con cifrado en tránsito (HTTPS/TLS obligatorio), contraseñas protegidas con bcrypt y datos sensibles cifrados con AES. Fáctico cumple con el RGPD y no vende ni comparte datos con terceros."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Fáctico es gratuito?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Fáctico está en fase beta gratuita con acceso completo a todas las funcionalidades: facturación, contabilidad, almacén, TPV, modelos fiscales, VeriFactu y más. Sin límites ocultos ni tarjeta de crédito."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Necesito certificado digital para usar Fáctico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Para emitir facturas normales no es necesario. Sin embargo, con la implantación de VeriFactu será necesario identificarse ante la AEAT para enviar registros de facturación, normalmente mediante certificado digital. A partir de 2027, los autónomos y empresas que utilicen VeriFactu deberán disponer de un método de identificación válido."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>Fáctico</h1>
+                        <span class="nav-tagline">Facturación con IA</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html#demo" class="nav-link">Demo</a>
+                    <a href="precios.html" class="nav-link">Precios</a>
+                    <a href="faqs.html" class="nav-link nav-active">FAQs</a>
+                    <a href="index.html#videos" class="nav-link">Guías</a>
+                    <a href="https://facticoapp.es/#/login" class="nav-link nav-cta" target="_blank">Usar ahora</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="pricing-hero-content">
+                <h1>Preguntas frecuentes</h1>
+                <p class="pricing-hero-subtitle">
+                    Respuestas a las dudas más habituales sobre facturación, normativa fiscal y el uso de Fáctico.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ: VeriFactu y normativa -->
+    <section class="pricing-faq" style="padding-top: 60px;">
+        <div class="container">
+            <h2 class="section-title">VeriFactu y normativa fiscal</h2>
+            <div class="faq-grid">
+
+                <div class="faq-item">
+                    <h3>¿Qué es VeriFactu?</h3>
+                    <p>VeriFactu es un sistema promovido por la Agencia Tributaria dentro de la Ley Antifraude.
+                       Su objetivo es evitar la manipulación de facturas y mejorar el control fiscal.</p>
+                    <p>Los programas de facturación deben generar registros que cumplan ciertos requisitos técnicos
+                       y, en algunos casos, permitir su envío a la Agencia Tributaria.</p>
+                    <p>Fáctico está diseñado cumpliendo estos requisitos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Cuándo será obligatorio VeriFactu?</h3>
+                    <p>Según el calendario oficial vigente:</p>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li><strong>Pymes y empresas:</strong> a partir del 1 de enero de 2027</li>
+                        <li><strong>Autónomos:</strong> a partir del 1 de julio de 2027</li>
+                    </ul>
+                    <p>Los fabricantes de software deben adaptar sus programas antes de esas fechas.
+                       Fáctico ya cumple con los requisitos técnicos de VeriFactu.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Es obligatorio poner un QR en las facturas?</h3>
+                    <p>La normativa asociada a la Ley Antifraude contempla la inclusión de ciertos elementos
+                       en las facturas generadas por software adaptado, entre ellos un <strong>código QR</strong>
+                       que permita verificar la factura.</p>
+                    <p>Sin embargo, existen muchas confusiones sobre cuándo es obligatorio y en qué casos aplica.</p>
+                    <p><a href="blog/verifactu-qr-obligatorio-ley-antifraude.html"
+                          style="color: var(--primary-color, #1976d2); font-weight: 500;">
+                       Leer explicación detallada en nuestro blog →</a></p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Todos los autónomos tienen que usar software de facturación?</h3>
+                    <p>La Ley Antifraude establece requisitos para los programas de facturación
+                       utilizados por empresas y autónomos. El objetivo es evitar programas que permitan
+                       alterar o eliminar registros.</p>
+                    <p>En la práctica, cada vez será más necesario utilizar un software de facturación
+                       adaptado a la normativa.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Qué pasa si sigo haciendo facturas con Excel o Word?</h3>
+                    <p>Muchos autónomos utilizan todavía Excel o plantillas para emitir facturas.</p>
+                    <p>Sin embargo, con la nueva normativa fiscal estas soluciones pueden resultar
+                       inadecuadas, especialmente si no garantizan la integridad de los registros de facturación.</p>
+                    <p>Por eso muchos profesionales están empezando a utilizar software específico.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Fáctico cumple con la Ley Antifraude?</h3>
+                    <p>Fáctico está diseñado cumpliendo los principios de la Ley Antifraude y los requisitos
+                       del sistema VeriFactu: registros encadenados, integridad garantizada y envío
+                       automático a la Agencia Tributaria.</p>
+                    <p>El desarrollo continúa evolucionando conforme se publican nuevos detalles técnicos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Tengo que enviar mis facturas a Hacienda?</h3>
+                    <p>Existe mucha confusión sobre este punto.</p>
+                    <p>El sistema VeriFactu contempla el envío de registros de facturación a la Agencia Tributaria,
+                       pero no en todos los casos es obligatorio. Depende del tipo de sistema utilizado
+                       y de la configuración del software.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ: Sobre Fáctico -->
+    <section class="pricing-faq" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Sobre Fáctico</h2>
+            <div class="faq-grid">
+
+                <div class="faq-item">
+                    <h3>¿Fáctico es gratuito?</h3>
+                    <p><strong>Sí.</strong> Fáctico está en fase beta gratuita con acceso completo a todas
+                       las funcionalidades: facturación, contabilidad PGC, almacén, TPV, modelos fiscales,
+                       VeriFactu y más.</p>
+                    <p>Sin límites ocultos, sin tarjeta de crédito y sin suscripción mensual.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Fáctico sirve para autónomos en módulos?</h3>
+                    <p>Sí. Muchos autónomos en módulos siguen necesitando emitir facturas y llevar un control
+                       de su actividad.</p>
+                    <p>Fáctico puede utilizarse para gestionar facturas emitidas, registrar gastos y tener
+                       una visión clara de la actividad económica.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Necesito certificado digital para usar Fáctico?</h3>
+                    <p>Para emitir facturas normales dentro del programa no es necesario disponer de certificado digital.</p>
+                    <p>Sin embargo, algunas integraciones con administraciones públicas o servicios electrónicos
+                       pueden requerirlo.</p>
+                    <p>Además, con la implantación del sistema <strong>VeriFactu</strong>, será necesario identificarse
+                       ante la Agencia Tributaria para poder enviar los registros de facturación. Esto normalmente
+                       se realiza mediante <strong>certificado digital o sistemas equivalentes de identificación</strong>.</p>
+                    <p>Si se mantiene el calendario previsto, a partir de <strong>2027</strong> los autónomos y empresas
+                       que utilicen sistemas de envío a VeriFactu deberán disponer de un método de identificación
+                       válido ante la Agencia Tributaria, como el certificado digital.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Puedo probar Fáctico?</h3>
+                    <p><strong>Sí.</strong> Puedes probar la aplicación y ver cómo funciona en situaciones reales
+                       de facturación.</p>
+                    <p>La mejor forma de mejorar el programa es que autónomos reales lo utilicen y compartan
+                       su experiencia.</p>
+                    <p><a href="https://facticoapp.es/#/login" target="_blank"
+                          style="color: var(--primary-color, #1976d2); font-weight: 500;">
+                       Probar Fáctico gratis →</a></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ: Seguridad -->
+    <section class="pricing-faq">
+        <div class="container">
+            <h2 class="section-title">Seguridad y privacidad</h2>
+            <div class="faq-grid">
+
+                <div class="faq-item" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+                    <h3>¿Mis datos están seguros en Fáctico?</h3>
+                    <p><strong>Sí.</strong> La seguridad de tus datos es una prioridad. Estas son las medidas
+                       que aplicamos:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px; color: #555; line-height: 1.8;">
+                        <li><strong>Servidores en la UE:</strong> Los datos se almacenan en servidores PostgreSQL
+                            ubicados en Frankfurt (Alemania), dentro de la Unión Europea.</li>
+                        <li><strong>Cifrado en tránsito:</strong> Toda la comunicación viaja por HTTPS con TLS.
+                            No se permite el acceso sin cifrar.</li>
+                        <li><strong>Contraseñas protegidas:</strong> Las contraseñas de usuario se almacenan
+                            con hash bcrypt. Nadie, ni siquiera el administrador, puede verlas.</li>
+                        <li><strong>Datos sensibles cifrados:</strong> Contraseñas de correo, certificados digitales
+                            y otros datos sensibles se cifran con AES antes de guardarse en la base de datos.</li>
+                        <li><strong>Sesiones seguras:</strong> La autenticación se gestiona mediante tokens JWT
+                            con expiración automática.</li>
+                        <li><strong>Cumplimiento RGPD:</strong> Fáctico cumple con el Reglamento General de Protección
+                            de Datos. Puedes consultar nuestra
+                            <a href="politica-privacidad.html" style="color: var(--primary-color, #1976d2);">Política de Privacidad</a>.</li>
+                        <li><strong>Backups:</strong> El sistema incluye copias de seguridad y exportación completa
+                            de datos. Puedes descargar toda tu información en cualquier momento.</li>
+                        <li><strong>Tus datos son tuyos:</strong> No vendemos, compartimos ni utilizamos tus datos
+                            con fines comerciales. Solo se comunican a terceros cuando existe una obligación legal
+                            (por ejemplo, envío a la AEAT vía VeriFactu).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Tienes más dudas?</h2>
+                <p>Escríbenos o pregunta directamente al chat IA integrado en la aplicación.</p>
+                <a href="mailto:administrador@facticoapp.es" class="btn btn-primary btn-large">
+                    📧 Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fáctico</h3>
+                    <p>Facturación con IA para autónomos</p>
+                    <div class="footer-contact">
+                        <p>📧 administrador@facticoapp.es</p>
+                        <p>🌐 facticoapp.es</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="index.html#demo">Demo</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="https://facticoapp.es/#/login" target="_blank">Usar app</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="index.html#videos">Guías</a></li>
+                        <li><a href="faqs.html">Preguntas frecuentes</a></li>
+                        <li><a href="index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="politica-privacidad.html">Privacidad</a></li>
+                        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                        <li><a href="terminos-condiciones.html">Términos</a></li>
+                        <li><a href="politica-cookies.html">Cookies</a></li>
+                        <li><a href="declaracion-responsable-rd1007-2023.html">Declaración RD 1007/2023</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025–2026 Fáctico™. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
